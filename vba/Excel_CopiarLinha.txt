@@ -1,0 +1,7 @@
+Sub CopiarLinha()
+    Rows("6:6").Select
+    Selection.Copy
+    Sheets("Plan2").Select
+    Rows("7:7").Select
+    ActiveSheet.Paste
+End Sub

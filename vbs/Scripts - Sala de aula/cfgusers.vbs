@@ -1,0 +1,7 @@
+' CFGUSER2.VBS
+'
+' This script adds the Domain Users to the SQL Server Administrators group
+
+Set objGroup = GetObject("LDAP://cn=SQL Server Administrators,cn=Users,dc=nwtraders,dc=msft")
+objGroup.add "LDAP://cn=Domain Admins,cn=Users,dc=nwtraders,dc=msft"
+

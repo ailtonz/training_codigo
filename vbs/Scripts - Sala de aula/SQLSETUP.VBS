@@ -1,0 +1,3 @@
+Set WshShell = WScript.CreateObject("WScript.Shell")
+WshShell.RegWrite "HKLM\Software\Microsoft\MSSQLServer\MSSQLServer\MailAccountName", "SQLService" ,"REG_SZ"
+wshshell.regwrite "HKLM\Software\Microsoft\MSSQLServer\SQLServerAgent\EmailProfile", "MS Exchange Settings" ,"REG_SZ"

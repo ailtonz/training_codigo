@@ -1,0 +1,37 @@
+;SetupMgrTag
+[Unattended]
+    OemSkipEula=Yes
+    InstallFilesPath=d:\sysprep\i386
+
+[GuiUnattended]
+    AdminPassword=password
+    AutoLogon=Yes
+    AutoLogonCount=3
+    OEMSkipRegional=1
+    TimeZone=65
+    OemSkipWelcome=1
+
+[UserData]
+    FullName=bf
+    OrgName=bf
+    ComputerName=
+    productid =  "DQFCP-YRGTX-CP8KC-2YYBH-VBQTG"
+
+[Display]
+    BitsPerPel=24
+    Xresolution=800
+    YResolution=600
+
+[TapiLocation]
+    CountryCode=55
+
+[SetupMgr]
+    DistFolder=C:\sysprep\i386
+    DistShare=win2000dist
+
+[Identification]
+    JoinWorkgroup=WORKGROUP
+
+[Networking]
+    InstallDefaultComponents=Yes
+

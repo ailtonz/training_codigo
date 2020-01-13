@@ -1,0 +1,29 @@
+set fso = createobject("scripting.filesystemobject")
+
+'============   Verificar os discos existentes
+set coldiscos = fso.Drives
+
+for each hd in coldiscos
+
+'============   Verificar os dados dos discos
+if hd.
+txt = txt & hd.driverLetter, " - " & _
+          & hd.valuename, " - " & _
+          & hd.totalsize, vbnewline 
+          wscript.Echo hd.DriveLetter
+end if
+next
+
+'============= Criar a pasta
+IF FSO.FolderExists("C:\Lab") = TRUE THEN 
+	WSCRIPT.Echo " A Pasta já existe...."
+else
+	set pasta = fso.CreateFolder("C:\Lab")
+	wscript.Echo "A pasta foi criada."
+end if
+
+'============== Copiar o arquivo na pasta
+set arquivo = fso.CreateTextFile("c:\lab\disco.txt")	
+
+arquivo.Write(txt)
+arquivo.Close

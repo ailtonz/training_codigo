@@ -1,0 +1,8 @@
+
+				'Runs pptview.msi
+
+Dim wshshell
+set wshshell=wscript.createObject("wscript.shell")
+wshshell.run("c:\Pptview\Pptview.msi")
+
+ 

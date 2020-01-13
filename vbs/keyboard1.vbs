@@ -1,0 +1,11 @@
+set WshShell = CreateObject("WScript.Shell")
+WshShell.Run "control intl.cpl"
+wscript.sleep 1000
+
+
+WshShell.SendKeys "{TAB}"
+WshShell.SendKeys "{TAB}"
+WshShell.SendKeys "{TAB}"
+WshShell.SendKeys "{TAB}"
+WshShell.SendKeys "{RIGHT}"
+WshShell.SendKeys "+{F10}"

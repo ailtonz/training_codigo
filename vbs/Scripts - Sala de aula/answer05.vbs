@@ -1,0 +1,6 @@
+'This is a possible answer to lab 4
+Option Explicit
+Dim sName
+
+sName = InputBox("What is your name?","Lab 4","my name")
+MsgBox sName,, "Hello to:"

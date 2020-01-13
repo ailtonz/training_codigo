@@ -1,0 +1,9 @@
+strComputer = "."
+Set objWMIService = GetObject(_
+    "winmgmts:\\" & strComputer & "\root\cimv2")
+Set colItems = objWMIService.ExecQuery(_
+    "Select * from Win32_Desktop")
+For Each objItem in colItems
+    Wscript.Echo "Screen Saver Secure: " _
+        & objItem.ScreenSaverSecure
+Next

@@ -1,0 +1,18 @@
+'Sets premissions on a shared folder
+Option Explicit
+
+Dim oNet, WshShell, sLCName, sLocal
+Set WshShell = wscript.CreateObject("Wscript.Shell")
+Set oNet = CreateObject("wscript.network")
+
+sLCName = LCase(oNet.ComputerName)
+
+if (sLCName = "london") then
+	sLocal = "c:"
+else
+	sLocal = "\\london"
+end if
+
+
+WshShell.Run sLocal & "\setup\subinacl /share \\" & sLCName & "\Workspace /grant=everyone=F", 6, true
+

@@ -1,0 +1,70 @@
+Option Explicit
+Option Compare Text
+
+Public ConnectionAdoDB As Object
+
+
+Public Function blnConexao() As Boolean
+'Função faz conexão com o banco de dados e retorna uma variavel boleana
+'para informar se a conexão é true ou false.
+'===================================================================================================================
+    
+    On Error GoTo Err_bolConexao                'Tratamento de Erro
+    Dim strArquivo As String                    'Variavel que armazena o caminho do banco de dados.
+    Dim strPasta   As String
+    Dim strConn    As String
+    
+    Set ConnectionAdoDB = CreateObject("ADODB.Connection")
+    'Set ConnectionAdoDB = New ADODB.Connection
+    
+    strPasta = shtConfig.Range("CaminhoDiretorio").Value & "\"
+    strArquivo = Dir(strPasta & shtConfig.Range("nomeBD").Value, vbArchive)
+    
+    'Verifica se aconexão existe. Se existir faz a conexão com o banco e retorna true à variavel.
+    'Caso não existir, encerra a função de conexão, e passa o valor false à variavel.
+    If strArquivo = "" Then
+        blnConexao = False
+        MsgBox "Conexão com a base de dados Access não estabelecida, " & _
+                "verifique se o caminho do banco de dados está correto!", vbCritical
+        Exit Function
+    Else
+        
+        'Define as premissas da conexão ADO e estabece a conexão
+        '========================================================
+        With ConnectionAdoDB
+            strArquivo = strPasta & strArquivo
+            strConn = "Provider=Microsoft.ACE.OLEDB.12.0;"
+            strConn = strConn & "Data Source=" & strArquivo & ";"
+            strConn = strConn & "Persist Security Info = false;"
+            strConn = strConn & "Jet OLEDB:Database;"
+            .ConnectionString = strConn
+            .Open
+        End With
+        
+        blnConexao = True
+        Exit Function
+    End If
+    
+    Exit Function
+Err_bolConexao:
+
+    If Err.Number = 52 Then
+       blnConexao = False
+       Exit Function
+    End If
+    
+    MsgBox "Conexão com a base de dados Access não estabelecida, " & _
+            "verifique se o caminho do banco de dados está correto!", vbCritical
+End Function
+
+Public Function FecharConexao()
+    
+    'Função verifica o status da conexão
+    'Caso o status seja 1, função decha conexão
+    '======================================================
+    'Set ConnectionAdoDB = CreateObject("ADODB.connection")
+    If ConnectionAdoDB.State = 1 Then
+       ConnectionAdoDB.Close
+    End If
+    '=======================================================
+End Function

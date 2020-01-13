@@ -1,0 +1,8 @@
+Set objSet = GetObject("winmgmts:\\Server1").ExecQuery("Select * From Win32_printJob")
+For Each obj in objSet
+	strResult = strResult & "Printer: " & obj.name & _
+							" Owner: " & obj.owner & _
+							" From: " & obj.hostprintQueue & _
+							" Document: " & obj.document & vbcrlf
+Next
+Wscript.echo strResult

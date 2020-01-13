@@ -1,0 +1,13 @@
+Public Function Excluir_Guia(Guia As String)
+Dim x As Long
+
+For x = 1 To Worksheets.Count
+    If Sheets(x).Name = Guia Then
+        Application.DisplayAlerts = False
+        Sheets(x).Delete
+        Application.DisplayAlerts = True
+        Exit For
+    End If
+Next x
+
+End Function

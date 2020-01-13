@@ -1,0 +1,23 @@
+Set objOutl = WScript.CreateObject("Outlook.Application")
+Set objMailItem = objOutl.CreateItem(olMailItem)
+
+Const olMailItem = 0 ' Constants for new items
+Const olAppointmentItem = 1
+Const olContactItem = 2
+Const olTaskItem = 3
+Const olJournalItem = 4
+Const olNoteItem = 5
+Const olPostItem = 6
+
+objMailItem.Recipients.Add "teste_01@teste.com.br"       ' 1st E-mail address
+objMailItem.Recipients.Add "teste_02@teste.com.br"  ' 2nd recipient
+
+objMailItem.subject = "tst-01" ' subject
+objMailItem.Body = "Isso é a msg!!!!" ' the message
+
+Set objNameSpace = objOutl.GetNameSpace("MAPI")
+
+' now we are ready to "logon" to outlook (using Logon method)
+objNameSpace.Logon "profile", "password"
+objMailItem.Send                                    ' send method
+objNameSpace.Logoff                                 ' logoff

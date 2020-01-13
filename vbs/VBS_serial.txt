@@ -1,0 +1,98 @@
+' Filename: files.vbs
+'
+' Purpose: Automatically generates an Excel 97 listing of 
+' all files in a local directory, along with their file 
+' attributes.  Place files.vbs in the directory you wish 
+' to list and double click it.  Does not list subfolders 
+' or itself.  Requires that you have Windows Scripting Host
+' installed and activated.
+' Created by: Peter Kosenko, May 14, 2000.
+' Use at your own risk.
+' *********************************************************
+
+Dim objXL       ' Excel application object
+Dim fso         ' file system object
+Dim f           ' file
+Dim fl          ' folder
+Dim fc          ' file collection
+Dim scriptfile  ' path and filename of the running script
+Dim scriptpath  ' path of running script
+Dim count       ' generic counter
+
+
+Welcome_MsgBox_Message = "This WSH application lists all " & _
+	"files in a directory in an Excel 97 workbook."
+Welcome_MsgBox_Title = "File Lister"
+Call Welcome()
+
+' Get the full path and filename of the script file
+
+scriptfile = WScript.ScriptFullName 
+
+' Get the path to the script file
+
+Set fso = WScript.CreateObject("Scripting.FileSystemObject")
+Set f = fso.GetFile(scriptfile)
+scriptpath = f.ParentFolder
+Set f = Nothing
+
+' *********************************************************
+' *
+' * Excel File Creation
+' *
+' *********************************************************
+
+Set objXL = WScript.CreateObject("Excel.Application")
+
+objXL.Visible = TRUE
+
+   Set fl = fso.GetFolder(scriptpath)
+   Set fc = fl.Files
+
+   objXL.Workbooks.Add
+   objXL.Cells(1,1).Value = "Folder:"
+   objXL.Cells(1,2).Value = scriptpath
+   objXL.Cells(2,1).Value = "Filename"
+   objXL.Cells(2,2).Value = "Type"
+   objXL.Cells(2,3).Value = "Size (bytes)"
+   objXL.Cells(2,4).Value = "Date Created"
+   objXL.Cells(2,5).Value = "Date Last Modified"
+   objXL.Cells(2,6).Value = "Date Last Accessed"
+
+   count = 3
+   For Each f in fc
+	If f.name <> "files.vbs" Then
+	     objXL.Cells(count,1).Value = f.name
+	     objXL.Cells(count,2).Value = f.type
+	     objXL.Cells(count,3).Value = f.size
+	     objXL.Cells(count,4).Value = f.DateCreated
+	     objXL.Cells(count,5).Value = f.DateLastModified
+	     objXL.Cells(count,6).Value = f.DateLastAccessed
+	     count = count + 1
+	End If
+   Next
+
+' Cleanup
+
+Set fc = Nothing
+Set fl = Nothing
+Set fso = Nothing
+Set objXL = Nothing
+
+WScript.Quit
+
+' ********************************************************
+' *
+' * Welcome
+' *
+' ********************************************************
+Sub Welcome()
+    Dim intDoIt
+    intDoIt =  MsgBox(Welcome_MsgBox_Message, _
+                      vbOKCancel + vbInformation, _
+                      Welcome_MsgBox_Title )
+    If intDoIt = vbCancel Then
+        WScript.Quit
+    End If
+End Sub
+

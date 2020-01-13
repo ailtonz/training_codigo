@@ -1,0 +1,3 @@
+Function AreaDeImpressao(Selecao As String)
+    ActiveSheet.PageSetup.PrintArea = Selecao
+End Function

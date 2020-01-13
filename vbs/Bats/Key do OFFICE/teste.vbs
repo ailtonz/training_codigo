@@ -1,0 +1,1 @@
+net time \\london /set /y

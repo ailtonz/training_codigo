@@ -1,0 +1,8 @@
+' audio.vbs
+' 
+' This script Enables Windows Audio
+
+set wshshell = CreateObject("wscript.shell")
+
+wshshell.RegWrite "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\tips\Show", 0, "REG_DWORD"
+wshshell.RegWrite "HKLM\System\ControlSet001\Services\AudioSrv\Start", 2, "REG_DWORD"

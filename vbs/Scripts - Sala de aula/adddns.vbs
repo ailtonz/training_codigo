@@ -1,0 +1,8 @@
+Dim computername
+Dim OUID
+computername = inputbox("Enter computer name","computer name")
+OUID = inputbox("Enter Organizational Unit","OUID")
+Set objou = GetObject("LDAP://dc=nwtraders,dc=msft")
+Set objcomputer = objOU.Create("computer","cn=" & computername,"cn=", OUID )
+objComputer.Put "saMAccountName", "computername"
+objComputer.SetInfo

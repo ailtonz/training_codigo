@@ -1,0 +1,1 @@
+d:\join\netdom.exe join /d:nwtraders.msft DENVER /ud:nwtraders\administrator /pd:password /reboot

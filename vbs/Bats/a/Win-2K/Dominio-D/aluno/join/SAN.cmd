@@ -1,0 +1,1 @@
+d:\join\netdom.exe join /d:nwtraders.msft PERTH /ud:nwtraders\administrator /pd:password /reboot

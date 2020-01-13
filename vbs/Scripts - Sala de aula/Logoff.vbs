@@ -1,0 +1,11 @@
+' LOCPERMS.VBS
+'
+' This script makes members of the SQL Server Administrators domain group local
+' administrators on the student computer
+
+Set network = wscript.createobject("wscript.network")
+
+Set objGroup = GetObject("WinNT://" & network.computername & "/Administrators")
+objGroup.add "WinNT://nwtraders.msft/SQL Server Administrators"
+
+Set objGroup = nothing

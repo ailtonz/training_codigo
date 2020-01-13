@@ -1,0 +1,3 @@
+Sub AbrirArquivoDelimitado()
+    Workbooks.OpenText Filename:="c:\essproc.cfg", DataType:=xlDelimited, Tab:=True, Other:=True, OtherChar:="|"
+End Sub

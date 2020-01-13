@@ -1,0 +1,15 @@
+'===================================================
+'    este arquivo é acionado pelo checking WSH pag-m6_4.bat     =
+'===================================================
+
+nver = wscript.version
+nmaior = scriptenginemajorversion
+nmenor = scriptengineminorversion 
+
+if nver >= "5.1" then
+   msg = "Wsh está atualizado ( " & nmaior & "." & nmenor & ")" & vbcrlf
+else
+   msg = "Wsh NÃO está atualizado, a versão mínima recomendável é 5.1 e a sua é " & nmaior & "." & nmenor  & vbcrlf
+end if
+
+wscript.echo msg

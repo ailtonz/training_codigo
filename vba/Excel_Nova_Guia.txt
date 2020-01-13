@@ -1,0 +1,5 @@
+sub NovaGuia()
+	Dim Guia As Variant
+	Set Guia = Sheets.Add(Type:=xlWorksheet)
+	Guia.Name = "Nova Guia"
+end sub

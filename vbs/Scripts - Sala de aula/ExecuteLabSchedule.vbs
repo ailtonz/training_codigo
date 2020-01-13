@@ -1,0 +1,9 @@
+On Error Resume Next
+Set objSet = GetObject("WinMgmts:").ExecQuery("select * from Win32_Share Where Type = 0")
+If Err <> 0 or objSet.count=0 Then
+	Wscript.Echo "Something went wrong " & Hex(err.number), err.description, err,source
+End If
+For Each obj in objSet
+	strShare = strShare & obj.name & " on "	& obj.path & vbcrlf
+Next
+Wscript.Echo strShare

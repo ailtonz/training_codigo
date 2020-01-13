@@ -1,0 +1,5 @@
+Sub HistoricoDeArquivosRecentes()
+
+Application.RecentFiles.Add Name:="Oscar.xls"
+
+End Sub

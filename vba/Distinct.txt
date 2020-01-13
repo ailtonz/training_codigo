@@ -1,0 +1,3 @@
+=IF(COUNTIF(A$1:A1,A1)=1,A1,"") 
+
+=SE(CONT.SE(A$1:A1;A1)=1;A1;"")

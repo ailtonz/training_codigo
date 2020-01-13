@@ -1,0 +1,11 @@
+Set objReg = GetObject("WinMgmts:Win32_Registry")
+
+Set objProposedSizeProperty =  objReg.properties_.item("proposedSize")
+
+Set objWriteQualifier = objProposedSizeProperty.qualifiers_.item("write")
+
+
+Wscript.Echo "The Write Qualifier For the " & vbcrlf & _
+				objProposedSizeProperty.name & " property" & vbcrlf & _
+				"---------------------------------" & vbcrlf & _
+				objWriteQualifier.name & " = " & objWriteQualifier.value

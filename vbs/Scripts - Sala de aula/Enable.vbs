@@ -1,0 +1,15 @@
+
+Dim fso, fileSource, fileDest, fileobjSource, OneLooongLine
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+set fileSource = fso.OpenTextFile(WScript.Arguments(0), 1, false)
+set fileDest   = fso.CreateTextFile(WScript.Arguments(1), true)
+set fileobjSource = fso.GetFile(WScript.Arguments(0))
+
+
+OneLooongLine = fileSource.Read(fileobjSource.size)
+
+EndOfLineAndSpace = CHR(13) & CHR(10) & CHR(32)
+OneLooongLine = Replace(OneLooongLine, EndOfLineAndSpace, "")
+
+fileDest.Write(OneLooongLine)

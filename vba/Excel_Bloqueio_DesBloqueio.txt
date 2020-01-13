@@ -1,0 +1,10 @@
+Sub Bloqueio()
+    Cells.Select
+    Selection.Locked = True
+    Selection.FormulaHidden = False
+    ActiveSheet.Protect "##", DrawingObjects:=True, Contents:=True, Scenarios:=True
+End Sub
+
+Sub DesBloqueio()
+    ActiveSheet.Unprotect "##"
+End Sub

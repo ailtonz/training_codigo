@@ -1,0 +1,1 @@
+wscript.echo "Sales Log On Script", Chr(10), Chr(10), "Welcome to the Sales OU"

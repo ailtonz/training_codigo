@@ -1,0 +1,11 @@
+'Create security Principals
+
+	Set WshShell = WScript.CreateObject("WScript.Shell")
+	'Create student domain user accounts
+	wshShell.Run("c:\tools\uGla_Acc.cmd"), 6, True
+
+	'Create global groups
+	wshShell.Run("c:\tools\Grps_Gla.cmd"), 6, True
+	
+	'Add users to groups
+	wshShell.Run("c:\tools\Grps_GAd.cmd"), 6, True

@@ -1,0 +1,24 @@
+             ACESSO  AS  TRANSACOES - SERVICO  DE  TELEFONIA  FIXA      O010-01 
+                                                                                
+     CCCCCC                 O P C O E S  (O)                          TIPOS (T) 
+    CC       1- CAD COM        D- INTERESSE D.A. P- PEX             T- TELEFONE 
+   CC        2- CAR            E- LT/CPCT        Q- INSCR PEND      I- INSCRICAO
+  CC         3- CSO LP         F- HIST ORDENS    R- REPAROS         N- NRC      
+ CCCCCC      4- CSO ORDENS     G- EQUIPAMENTOS   S- SUMARIO         O- NO. OS   
+             5- LOGR           H- LOC/PREF       T- TARIFA          F- CPF      
+     SSSSSS  6- EMIS OS        I- IMPUGNACAO     U- CONTA UNICA     J- CGC      
+    SS       7- BANCOS         J- COMPEX         V- LISCLA          C- COD CLI  
+   SSSSSS    8- CAD INT        K- DES A PEDIDO   W- DISP. SERVICOS  L- NM LOGICO
+      SS     9- AREAS MUD      L- TABELAS        X- SERVICO 900     A- TEL ANT  
+ SSSSSS      A- REC LISTAS     M- CONTA HABILIT  Y- ALERTA TRAASS   M- IRL BUSCA
+             B- AREAS PEX      N- CAD CLI        Z- LI BUSCA        P- PORTABIL 
+     OOOOOO  C- NEWS           O- CTA DETALHADA                     U- AGRUPACAO
+    OO  OO                                                                      
+   OO  OO               O T NUMERO     LOCAL                                    
+  OO  OO          REF = 6 N 0109805399 11000                    AT COM - 6227740
+ OOOOOO           NAT =                                         E S    - SP     
+                                                                SENHA  -        
+                                                                                
+ O0100996 - O.S. REGISTRADA  BC      890.137.155                                
+                                                                                
+     ENTER- ENTRAR DADOS     PA1- REINICIAR     CLEAR- ENCERRAR TRANSACAO    V83

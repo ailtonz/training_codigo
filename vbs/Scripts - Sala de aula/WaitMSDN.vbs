@@ -1,0 +1,12 @@
+' vviewer.vbs
+'
+' This script installs the Visio Viewer
+
+set wshshell = wscript.CreateObject("wscript.shell")
+set fso = CreateObject("Scripting.FileSystemObject")
+Const TemporaryFolder = 2
+
+tempdir = fso.GetSpecialFolder(TemporaryFolder)
+
+wshshell.run "C:\MOC\2192\Labfiles\Setup\vviewer.exe /t:" & tempdir & "\vviewer /c", 0, true
+wshshell.run "msiexec /qb /i " & tempdir & "\vviewer\vviewer.msi ACCEPTEULA=1", 0, true

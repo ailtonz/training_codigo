@@ -1,0 +1,38 @@
+;SetupMgrTag
+[Unattended]
+    OemSkipEula=Yes
+
+[GuiUnattended]
+    AdminPassword="password"
+    EncryptedAdminPassword=NO
+    AutoLogon=Yes
+    AutoLogonCount=5
+    OEMSkipRegional=1
+    TimeZone=65
+    OemSkipWelcome=1
+
+[UserData]
+    ProductID=FCKGW-RHQQ2-YXRKT-8TG6W-2B7Q8
+    FullName="bf"
+    OrgName="bf"
+    ComputerName=
+
+[Display]
+    BitsPerPel=16
+    Xresolution=800
+    YResolution=600
+
+[RegionalSettings]
+    LanguageGroup=1
+    Language=00000416
+
+[SetupMgr]
+    DistFolder=C:\sysprep\i386
+    DistShare=whistlerdist
+
+[Identification]
+    JoinWorkgroup=WORKGROUP
+
+[Networking]
+    InstallDefaultComponents=Yes
+

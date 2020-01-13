@@ -1,0 +1,19 @@
+Public Function NovoCodigo(Tabela, Campo)
+
+Dim rstTabela As DAO.Recordset
+
+Set rstTabela = CurrentDb.OpenRecordset("SELECT Max([" & Campo & "])+1 AS CodigoNovo FROM " & Tabela & ";")
+
+If Not rstTabela.EOF Then
+   NovoCodigo = rstTabela.Fields("CodigoNovo")
+   If IsNull(NovoCodigo) Then
+      NovoCodigo = 1
+   End If
+Else
+   NovoCodigo = 1
+End If
+
+rstTabela.Close
+
+
+End Function

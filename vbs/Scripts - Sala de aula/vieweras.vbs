@@ -1,0 +1,3 @@
+set wshshell = wscript.createobject("wscript.shell")
+wshshell.run "c:\pptview\ppview97.exe /auto", 6, true
+wshshell.run "%temp%\setup.exe /q1",6, true

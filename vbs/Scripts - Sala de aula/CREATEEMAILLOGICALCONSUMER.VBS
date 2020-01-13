@@ -1,0 +1,12 @@
+On Error Resume Next
+Set myFilter = GetObject("WinMgmts:").GET("__EventFilter").spawnInstance_
+	myFilter.Name 	  = "printJobFilter"
+	myFilter.Query 	  = "SELECT * FROM __InstanceCreationEvent WITHIN 2 WHERE TargetInstance ISA 'Win32_PrintJob'AND TargetInstance.size >10000"
+	myFilter.QueryLanguage = "WQL"
+myFilter.put_
+If Err = 0 Then
+	Wscript.Echo "Success! printJob Filter instance created"
+Else
+	Wscript.Echo hex(err.number), err.Description
+End If
+wscript.quit

@@ -1,0 +1,15 @@
+' import.vbs
+' 
+' This script calls the import.bat file, which populates Active Directory
+
+set wshshell = CreateObject("wscript.shell")
+CurrDir = wshshell.CurrentDirectory
+wshshell.CurrentDirectory = "c:\Moc\2192\Labfiles\Setup"
+
+'Populate Active Directory
+WshShell.run "import.bat", 6, true
+
+'set the password for each user account to be P@ssw0rd
+WshShell.run "setpass.vbs", 1, true
+
+wshshell.CurrentDirectory = CurrDir

@@ -1,0 +1,9 @@
+set WshShell = CreateObject("WScript.Shell")
+WshShell.Run "d:\exchange\setup\i386\setup.exe /unattendfile c:\tools\dprep.ini", 3
+
+wscript.sleep 60000
+
+
+
+
+

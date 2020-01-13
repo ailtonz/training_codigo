@@ -1,0 +1,13 @@
+'declarar constantes do ADSI
+ADS_SECURE_AUTHENTICATION = 1	'EXIGE AUTENTICAÇÃO POR KERBEROS e/ou NTLM
+ADS_USE_SIGNING=64				'VERIFICA SE O DADO RECEBIDO É O MESMO QUE FOI ENVIADO
+ADS_USE_SEALING=128				'CRIPTOGRAFA OS DADOS TRANSMITIDOS UTILIZANDO KERBEROS
+
+dim matriz
+matriz = array("defaultNamingContext","schemaNamingContext","configurationNamingContext","RootdomainNamingContext","DnsHostName","ServerName","dsServiceName")
+set oroot = getobject("LDAP://RootDSE")
+
+for x=0 to ubound(matriz)
+set odomain = getobject("LDAP://"& oroot.get(matriz(x)))
+wscript.echo matriz(x) & " : " & odomain.name
+next

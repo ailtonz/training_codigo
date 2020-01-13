@@ -1,0 +1,9 @@
+'This is a possible answer to lab 8a
+Function TimesTime(iNum)
+    TimesTime = iNum * Hour(Now)
+End Function
+
+Dim Test
+
+Test = 47
+MsgBox TimesTime(Test)

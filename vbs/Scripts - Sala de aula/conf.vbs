@@ -1,0 +1,16 @@
+option explicit
+
+Dim oCF
+
+Set oCF = CreateObject("ComFactor.Factorial")
+
+Dim lFactNum 'As Long
+Dim lRetVal 'As Double
+Dim dTimeLapse 'As Double
+Dim sMachineName 'As String
+    
+    
+lFactNum = 6
+lRetVal = oCF.GenerateFactorial(lFactNum, sMachineName, dTimeLapse)
+    
+MsgBox "lFactNum =" & lFactNum & vbCrLf & "lRetVal =" & lRetVal & vbCrLf & "Elapsed Time:" & dTimeLapse & vbCrLf & "Machine Name: " & sMachineName

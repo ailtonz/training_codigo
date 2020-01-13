@@ -1,0 +1,5 @@
+Dim WshShell
+Set WshShell = CreateObject("WScript.Shell")
+
+'immediatly restart Windows 98
+WshShell.Run "RunDll32.exe Shell32.dll,SHExitWindowsEx 0x02", 6, true

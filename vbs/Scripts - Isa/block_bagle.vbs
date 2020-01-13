@@ -1,0 +1,15 @@
+set obj = getobject("winmgmts:" & _  
+ "win32_networkadapterconfiguration" & ".index=0")
+ip = obj.EnableStatic(array("192.168.1.55"))
+ 
+ 
+wscript.Echo obj.caption & vbnewline & obj.MACAddress & vbnewline & ip(
+			
+			
+			
+			
+			
+			
+			
+			
+			'"winmgmts:\\london/root/cimv2:" máq especificada

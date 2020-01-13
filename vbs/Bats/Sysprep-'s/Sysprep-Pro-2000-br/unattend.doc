@@ -1,0 +1,37 @@
+;SetupMgrTag
+[Unattended]
+    OemSkipEula=Yes
+    InstallFilesPath=C:\sysprep\i386
+
+[GuiUnattended]
+    AdminPassword=
+    AutoLogon=Yes
+    AutoLogonCount=3
+    OEMSkipRegional=1
+    TimeZone=65
+    OemSkipWelcome=1
+
+[UserData]
+    FullName=bf
+    OrgName=bf
+    ComputerName=
+    productid =  "KQQWY-BQ7P6-8BBYB-WJ8PT-MDRDG"
+
+[Display]
+    BitsPerPel=24
+    Xresolution=800
+    YResolution=600
+
+[TapiLocation]
+    CountryCode=55
+
+[SetupMgr]
+    DistFolder=C:\sysprep\i386
+    DistShare=win2000dist
+
+[Identification]
+    JoinWorkgroup=WORKGROUP
+
+[Networking]
+    InstallDefaultComponents=Yes
+

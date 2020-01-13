@@ -1,0 +1,6 @@
+Function GetPath(path As String)
+' Retrieve the script path
+ 
+ GetPath = Left(path, InStrRev(path, "\"))
+ 
+End Function

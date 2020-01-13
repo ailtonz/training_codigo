@@ -1,0 +1,17 @@
+
+				'Creates Tools and PPt folder in c:\
+AddNewFolder "C:\", "Tools"
+AddNewFolder "C:\", "Pptview"
+
+Sub AddNewFolder(path, folderName)
+   Dim fso, f, fc, nf
+    
+   Set fso =CreateObject("Scripting.FileSystemObject")
+   Set f = fso.GetFolder(path)
+   Set fc = f.SubFolders
+   If folderName <> "" Then
+      Set nf = fc.Add(folderName)
+   Else
+      Set nf = fc.Add(foldrName)
+   End If
+End Sub

@@ -1,0 +1,61 @@
+Dim IE, fso, MyFile
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set IE = CreateObject("InternetExplorer.Application")
+set wshshell = wscript.CreateObject("wscript.shell")
+ie.left=0
+ie.top=0
+ie.height=600
+ie.width=800
+ie.menubar=0
+ie.toolbar=0
+ie.addressbar=0
+ie.statusbar=0
+ie.navigate "file:///c:\moc\setup\glahtml\glacust3.htm"
+ie.visible=1
+
+'Wait for London to be available
+done = 0
+while done = 0
+	if fso.FolderExists("\\london\setup") then
+		done = 1
+	else
+		wscript.sleep 5000
+	end if
+wend
+
+'set glafinal.vbs to run after reboot
+if fso.FileExists ("c:\moc\setup\glafinal.vbs") then
+	set strt = fso.getfolder("c:\documents and settings\all users\start menu\programs\startup")
+	fn = "runnext.vbs"
+	set nxt = fso.getfile("c:\moc\setup\glafinal.vbs")
+	set fl = fso.createtextfile(strt & "\" & fn, true)
+	fl.writeline("set wshshell = wscript.createobject" & chr(40) & chr(34) & "wscript.shell" & chr(34) & chr(41))
+	fl.writeline("wshshell.run " & chr(34) & nxt & chr(34))
+	fl.Close
+else
+	set MyFile = fso.GetFile("C:\Documents and Settings\All Users\Start Menu\Programs\Startup\runnext.vbs")
+	MyFile.Delete
+end if
+
+
+'Set the wallpaper now that we are logged in using the nwtraders domain
+WshShell.run "c:\setup\images\display.vbs", 6, true
+
+'Add Administrative Privilege to the Glasgow Computer
+ie.Navigate "file:///c:\moc\setup\glahtml\glacust3.htm"
+wshshell.Run "c:\moc\setup\glaadmin.vbs", 1, true
+
+'Enable Remote Desktop
+ie.Navigate "file:///c:\moc\setup\glahtml\glacust4.htm"
+WshShell.Run "c:\moc\setup\enablerd.vbs", 6, true
+
+'Create a Shared Folder
+ie.Navigate "file:///c:\moc\setup\glahtml\glacust5.htm"
+WshShell.Run "c:\moc\setup\glashare.vbs", 6, true
+
+'Configure a Print Share
+ie.Navigate "file:///c:\moc\setup\glahtml\glacust6.htm"
+WshShell.Run "c:\moc\setup\printer.vbs", 6, true
+
+'Reboot the machine
+WshShell.run "c:\tools\reboot.cmd", 6, true

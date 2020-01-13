@@ -1,0 +1,10 @@
+Sub Open_XML_File_As_List()
+
+Dim oWX As Workbook
+Dim caminho As String
+
+caminho = "C:\Documents and Settings\user\Desktop\Duplicata.xml"
+
+Set oWX = Workbooks.OpenXML(Filename:=caminho, LoadOption:=XlXmlLoadOption.xlXmlLoadImportToList)
+
+End Sub

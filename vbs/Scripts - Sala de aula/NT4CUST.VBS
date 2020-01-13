@@ -1,0 +1,13 @@
+' notepad.vbs
+'
+' This script configures Notepad for optimal presentation.
+' It sets the following defaults:
+'	Font: MS Sans Serif
+'	Font style: Bold
+'	Size: 12
+
+set wshshell = wscript.CreateObject("wscript.shell")
+
+WshShell.RegWrite "HKCU\Software\Microsoft\Notepad\lfFaceName", "MS Sans Serif" ,"REG_SZ"
+WshShell.RegWrite "HKCU\Software\Microsoft\Notepad\lfWeight", &h000002bc& ,"REG_DWORD"
+WshShell.RegWrite "HKCU\Software\Microsoft\Notepad\iPointSize", &h00000078& ,"REG_DWORD"

@@ -1,0 +1,1 @@
+c:\join\netdom.exe join /d:nwtraders.msft SUVA /ud:nwtraders\administrator /pd:password /reboot

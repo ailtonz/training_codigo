@@ -1,0 +1,1 @@
+wscript.echo "Retail Config Script", Chr(10), Chr(10), "Your computer has been configured."

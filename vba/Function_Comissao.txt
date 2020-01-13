@@ -1,0 +1,6 @@
+'Calculo da comissão usando a regra de três
+Public Function Comissao(valParcela, valAvista, valComissao)
+
+	Comissao = (valcomissao * (valParcela / valAvista * 100)) / 100
+
+End Function

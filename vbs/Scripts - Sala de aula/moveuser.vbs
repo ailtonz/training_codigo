@@ -1,0 +1,6 @@
+Set oSHApp = CreateObject("Shell.Application") 
+sSrc = "c:\setup\i386\*.*"    
+sDest = "d:\i386"  
+oSHApp.Namespace(sDest).MoveHere sSrc, &H10&
+Set oSHApp = nothing
+WScript.Quit

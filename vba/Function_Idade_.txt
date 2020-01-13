@@ -1,0 +1,5 @@
+Public Function Idade(Data_Nascimento As Date)
+
+    Idade = DateDiff("yyyy", Data_Nascimento, Now()) + Int(Format(Now(), "mmdd") < Format(Data_Nascimento, "mmdd"))
+
+End Function

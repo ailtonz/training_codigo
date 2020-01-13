@@ -1,0 +1,5 @@
+c:\tools\dhcpcmd.exe 192.168.1.200 createsubnet 192.168.1.0 255.255.255.0 van-gc
+c:\tools\dhcpcmd.exe 192.168.1.200 addiprange 192.168.1.0 192.168.1.101 192.168.1.199
+c:\tools\dhcpcmd.exe 192.168.1.200 setsubnetoptionvalue 192.168.1.0 6 string "192.168.1.200"
+c:\tools\dhcpcmd.exe 192.168.1.200 setsubnetoptionvalue 192.168.1.0 15 string "nwtraders.msft"
+c:\tools\dhcpcmd.exe 192.168.1.200 /norpc addserver van-gc.nwtraders.msft 192.168.1.200 

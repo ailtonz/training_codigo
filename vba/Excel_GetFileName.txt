@@ -1,0 +1,4 @@
+Function GetFileName(path As String)
+'Retrieve the script File name
+    GetName = Right(path, Len(path) - InStrRev(path, "\"))
+End Function

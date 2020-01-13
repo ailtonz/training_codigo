@@ -1,0 +1,12 @@
+On Error Resume Next
+Set objSvc = GetObject("WinMgmts:")
+Set objSet = objSvc.ExecQuery("Select * From Win32_NtEventLogFile Where Filename='appevent'")
+For Each obj in objSet
+	obj.clearEventLog
+	If err<> 0 Then
+		Wscript.echo " Something went wrong"
+	Else
+		Wscript.Echo obj.Filename & " has been cleared"
+	End If
+Next
+Wscript.quit

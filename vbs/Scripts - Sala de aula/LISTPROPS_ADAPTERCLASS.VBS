@@ -1,0 +1,5 @@
+Set MyNameSpace=GetObject("winmgmts://./root/MicrosoftHIS")
+Set LUs = MyNameSpace.InstancesOf("MsSna_LUDisplay")
+For each LU in LUs
+Wscript.Echo LU.Name
+Next

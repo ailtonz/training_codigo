@@ -1,0 +1,1 @@
+wscript.echo "Retail Log On Script", Chr(10), Chr(10), "Welcome to the Retail OU"

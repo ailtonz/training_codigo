@@ -1,0 +1,18 @@
+set obj = getobject("winmgmts:" &_
+"{impersonationlevel=impersonate," &_
+"authenticationlevel=pktprivacy}!" &_
+"\\denver/root/cimv2:"& _
+"win32_useraccount."&_
+"domain='denver',Name='administrator'")
+
+
+
+
+
+
+
+
+for each p in obj.properties_
+txt = txt & p.name & ":   " & p.value & vbnewline
+next
+wscript.Echo txt

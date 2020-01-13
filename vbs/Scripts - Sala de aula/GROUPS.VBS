@@ -1,0 +1,12 @@
+on error resume next
+set wshshell = wscript.CreateObject("wscript.shell")
+set objnet = wscript.createobject("wscript.network")
+compname = objnet.ComputerName
+
+First = Array("VANCOUVER","PERTH","LISBON","LIMA","BANGALORE","CASABLANCA","ACAPULCO","AUCKLAND","STOCKHOLM","CARACAS","MANILA","KHARTOUM")
+
+for each i in First
+	if compname = i then
+		wshshell.Run "net group Managers /add", 6, true
+	end if
+next

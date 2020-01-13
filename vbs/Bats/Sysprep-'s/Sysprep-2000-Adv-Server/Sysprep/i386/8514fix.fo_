@@ -1,0 +1,48 @@
+;SetupMgrTag
+[Unattended]
+    OemSkipEula=Yes
+    InstallFilesPath=C:\sysprep\i386
+    TargetPath=\WINNT
+
+[GuiUnattended]
+    AdminPassword=password
+    Autologon=yes
+    Autologoncount=1
+    OEMSkipRegional=1
+    TimeZone=65
+    OemSkipWelcome=1
+
+[UserData]
+    FullName=B&F
+    OrgName=B&F
+    ComputerName=
+
+[Display]
+    BitsPerPel=8
+    Xresolution=800
+    YResolution=600
+    Vrefresh=60
+
+[LicenseFilePrintData]
+    AutoMode=PerServer
+    AutoUsers=50
+
+[Identification]
+    JoinWorkgroup=WORKGROUP
+
+[Networking]
+    InstallDefaultComponents=Yes
+
+[Branding]
+    BrandIEUsingUnattended=Yes
+
+[Proxy]
+    Proxy_Enable=0
+    Use_Same_Proxy=0
+
+[RegionalSettings]
+    LanguageGroup=1
+    SystemLocale=00000409
+    UserLocale=00000409
+    InputLocale=0416:00000416
+

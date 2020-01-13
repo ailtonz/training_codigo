@@ -1,0 +1,40 @@
+;SetupMgrTag
+[Unattended]
+    OemSkipEula=Yes
+    InstallFilesPath=C:\sysprep\i386
+
+[GuiUnattended]
+    AdminPassword="password"
+    EncryptedAdminPassword=NO
+    AutoLogon=Yes
+    AutoLogonCount=2
+    OEMSkipRegional=1
+    TimeZone=85
+    OemSkipWelcome=1
+
+[UserData]
+    ProductKey=JB88F-WT2Q3-DPXTT-Y8GHG-7YYQY
+    FullName="bf"
+    OrgName="contoso"
+    ComputerName=
+
+[Display]
+    BitsPerPel=16
+    Xresolution=800
+    YResolution=600
+    Vrefresh=60
+
+[LicenseFilePrintData]
+    AutoMode=PerServer
+    AutoUsers=50
+
+[SetupMgr]
+    DistFolder=C:\sysprep\i386
+    DistShare=windist
+
+[Identification]
+    JoinWorkgroup=WORKGROUP
+
+[Networking]
+    InstallDefaultComponents=Yes
+

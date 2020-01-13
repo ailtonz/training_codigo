@@ -1,0 +1,16 @@
+'Get the Class (not an instance)
+Set objShareClass = GetObject("WinMgmts:Win32_Share")
+'Three paramaters are required in the create method.
+retVal = objShareClass.Create("c:\temp","Temp",0)
+If retVal = 0 Then
+	wscript.Echo "The Share Temp has been created"
+Else
+	wscript.Echo "Error: " & retVal
+'	wscript.quit
+End If
+Set shareSet = objShareClass.instances_
+For Each share in ShareSet
+	strShare = strShare & share.name & vbcrlf
+Next
+Wscript.Echo strShare
+

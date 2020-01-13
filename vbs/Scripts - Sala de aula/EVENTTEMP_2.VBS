@@ -1,0 +1,17 @@
+Dim objSvc, objEventSource, objEvent
+Const wbemErrTimedout = -2147209215
+On Error Resume Next
+Set objSvc = GetOBject("WinMgmts:")
+Set objEventSource = objSvc.ExecNotificationQuery("Select * from __instanceCreationEvent Within 1 Where targetInstance ISA 'Win32_Process'")
+WScript.Echo "Ready to go......"
+Set ObjEvent = objEventSource.NextEvent
+If Err <> 0 Then
+    If Err.Number = wbemErrTimedout Then     
+        MsgBox ("There were no events")
+    Else
+         MsgBox (Err.Number & " " & Err.Description)
+    End If
+Else
+	WScript.Echo objEvent.targetInstance.name
+End If
+WScript.quit

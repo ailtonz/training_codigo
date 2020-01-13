@@ -1,0 +1,5 @@
+Set WshShell = WScript.CreateObject("WScript.Shell")
+WshShell.RegWrite "HKLM\System\CurrentControlSet\Services\Netbt\Parameters\EnableProxy", 1 ,"REG_DWORD"
+
+'CMD type IPCONFIG /ALL and press Enter.
+'Verify the entry WINS Proxy Enabled

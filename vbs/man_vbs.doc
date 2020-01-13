@@ -1,0 +1,4 @@
+set ofs = createobject("scripting.filesystemobject")
+set arquivo = ofs.OpenTextFile("c:\boot.ini", 1)
+wscript.Echo arquivo.ReadLine
+wscript.Echo arquivo.ReadAll

@@ -1,0 +1,6 @@
+set t = getobject("winmgmts:")
+set olog = t.execquery("select * from win32_ntlogevent where logfile='system'")
+for each l in olog
+txt = txt & l.message & vbnewline
+next
+wscript.Echo txt

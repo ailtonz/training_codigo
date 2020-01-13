@@ -1,0 +1,5 @@
+Public Function ImportarPlanilha()
+
+    DoCmd.TransferSpreadsheet acImport, acSpreadsheetTypeExcel8, "tblClientes", "C:\Clientes.xls", True, "Plan1!a1:b35"
+
+End Function

@@ -1,0 +1,12 @@
+Set MyNameSpace = GetObject("winmgmts://./root/MicrosoftHIS")
+Set MyClass = MyNameSpace.Get("MsSna_ConnectionSdlc")
+Set MyInstance = MyClass.SpawnInstance_
+
+MyInstance.Name = "MYCONN"
+MyInstance.Adapter = "SNADemo1"
+MyInstance.Service = "Your_server_name"
+MyInstance.SDLCMultiPrimary = "False"
+MyInstance.SDLCPollAddress = "C5"
+
+
+MyInstance.Put_

@@ -1,0 +1,400 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Sigma - Centro de Informa&ccedil;&atilde;o</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="sd_back.jpg">
+&nbsp;
+<TABLE BORDER=0 WIDTH="585" >
+<TR>
+<TD ROWSPAN="4" WIDTH="25">&nbsp;</TD>
+
+<TD WIDTH="565">&nbsp;
+<CENTER><TABLE BORDER=0 CELLSPACING=5 CELLPADDING=2 >
+<TR>
+<TD>&nbsp;</TD>
+
+<TD>&nbsp;<IMG SRC="t_vbscp.gif" HEIGHT=27 WIDTH=430></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;</TD>
+</TR>
+
+<TR>
+<TD WIDTH="565">
+
+<P><B><FONT FACE="Arial"><FONT SIZE=-1>O que &eacute; VBScript? (VBS)</FONT></FONT></B>
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; O vbscript &eacute; uma vers&atilde;o
+"light" do Visual Basic destinada &agrave; Internet, possui v&aacute;rias
+limita&ccedil;&otilde;es para que n&atilde;o seja criados problemas com
+seguran&ccedil;a, atrav&eacute;s dele n&atilde;o &eacute; poss&iacute;vel
+salvar um arquivo para o HD ou usar alguma api do Windows, entre algumas
+limita&ccedil;&otilde;es.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Para escrever um script com
+vbs, pode-se usar o bloco de notas como qualquer p&aacute;gina html, mas
+est&aacute; a disposi&ccedil;&atilde;o no site da Microsoft o ActiveX Control
+Pad, que torna esta tarefa mais produtiva, mostrando um ambiente parecido
+com o do vb, embora n&atilde;o seja t&atilde;o sofisticado.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp;</FONT></FONT>
+<BR><B><FONT FACE="Arial"><FONT SIZE=-1>O ActiveX Control Pad</FONT></FONT></B>
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; O Control Pad usa o Layout Control
+da Microsoft, que torna poss&iacute;vel posicionar um elemento em coordenadas
+x e y em rela&ccedil;&atilde;o &agrave; p&aacute;gina, ao inv&eacute;s
+das limitadas op&ccedil;&otilde;es de alinhamento do html, que s&oacute;
+entendem left, center e right.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; A interface do Control Pad
+n&atilde;o tem muitas novidades, no menu File existem as op&ccedil;&otilde;es
+new html e new html Layout:</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; New html cria uma nova p&aacute;gina
+html, bem no estilo bloco de notas.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; New html layout &eacute; a
+parte interessante, &eacute; criado um novo layout, que &eacute; tipo um
+form do VB, onde s&atilde;o colocados labels, text boxes, images,etc.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT COLOR="#000000"><FONT SIZE=-1>O ActiveX Control
+Pad(2.8 MB) &eacute; freeware, para fazer o download v&aacute; no site
+da Microsoft. Aproveite e veja exemplos muito interessantes feito com ele
+no endere&ccedil;o <A HREF="http://www.microsoft.com/cpad">www.microsoft.com/cpad</A>,
+vale a pena.</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#000000"><FONT SIZE=-1><B>OBS:</B>
+Para ver qualquer layout feito no ActiveX Control Pad, n&atilde;o &eacute;
+preciso ter ele instalado na m&aacute;quina, ele &eacute; apenas uma ferramenta
+para facilitar a vida. O Internet Explorer 3.0 ou 4.0 j&aacute; instalam
+o Layout Control durante o setup, o que significa que se voc&ecirc; possui
+este browser, j&aacute; pode ver os exemplos acima mesmo sem ter o Control
+Pad instalado no seu computador.</FONT></FONT></FONT>
+
+<P><B><FONT FACE="Arial"><FONT SIZE=-1>O Exemplo "Sites Preferidos"</FONT></FONT></B>
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Seria perda de tempo ficar explicando
+propriedades e m&eacute;todos dos labels, options, etc. Qualquer pessoa
+que saiba VB deve conhec&ecirc;-los muito bem, por isso fiz um exemplo
+simples, que mostra algumas novidades do Control Pad e alguns aspectos
+do vbs, somente o pontap&eacute; inicial. A partir dele e de algumas horas
+de estudo, o Control Pad e vbs n&atilde;o ter&atilde;o muitos mist&eacute;rios.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Este exemplo mostra um combo
+box que guarda uma lista de sites, o bot&atilde;o de OK que quando &eacute;
+clicado vai para a p&aacute;gina escolhida.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; V&aacute; no menu File>New
+html layout. Voc&ecirc; dever&aacute; ver algo parecido com a figura mostrada
+abaixo:</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER=0 >
+<TR>
+<TD><IMG SRC="vbscp01.gif" HEIGHT=240 WIDTH=320></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; No layout, adicione o combo
+box, o bot&atilde;o de comando e o label.</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER=0 >
+<TR>
+<TD><IMG SRC="vbscp02.gif" HEIGHT=110 WIDTH=331></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;<FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Agora vamos adicionar dois
+images, um servir&aacute; de background image, enquanto o outro mostrar&aacute;
+um logotipo.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; As imagens ser&atilde;o as
+seguintes:</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER >
+<TR>
+<TD><IMG SRC="axback.jpg" HEIGHT=44 WIDTH=80></TD>
+
+<TD><IMG SRC="x_transp.gif" HEIGHT=56 WIDTH=96></TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER>axback.jpg</TD>
+
+<TD ALIGN=CENTER>x_transp.gif</TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Neste layout estou usando os
+seguintes nomes para os objetos:</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER >
+<TR>
+<TD><B><FONT FACE="Arial"><FONT SIZE=-1>Nome</FONT></FONT></B></TD>
+
+<TD><B><FONT FACE="Arial"><FONT SIZE=-1>Descri&ccedil;&atilde;o</FONT></FONT></B></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Arial"><FONT SIZE=-1>cboPaginas</FONT></FONT></TD>
+
+<TD><FONT FACE="Arial"><FONT SIZE=-1>Combo box para armazenar a lista de
+sites</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Arial"><FONT SIZE=-1>cmdOk</FONT></FONT></TD>
+
+<TD><FONT FACE="Arial"><FONT SIZE=-1>Bot&atilde;o de OK</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Arial"><FONT SIZE=-1>lblText</FONT></FONT></TD>
+
+<TD><FONT FACE="Arial"><FONT SIZE=-1>Label explicativo</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Arial"><FONT SIZE=-1>imgBackground</FONT></FONT></TD>
+
+<TD><FONT FACE="Arial"><FONT SIZE=-1>Imagem de background</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Arial"><FONT SIZE=-1>imgActiveX</FONT></FONT></TD>
+
+<TD><FONT FACE="Arial"><FONT SIZE=-1>Imagem que mostra o logotipo</FONT></FONT></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;<FONT FACE="Arial"><FONT SIZE=-1>&nbsp; D&ecirc; um clique duplo
+nos images para que apare&ccedil;a a janela de propriedades, use a propriedade
+<B>picturepath</B> para definir a imagem usada em cada controle. No primeiro
+image, a figura deve se repetir durante todo o controle, por esta raz&atilde;o
+deixe a propriedade <B>picturetiling</B> como true e <B>picturesizemode</B>
+como clip, para que a imagem se repita no image e n&atilde;o "estique",
+respectivamente.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Voc&ecirc; dever&aacute; estar
+vendo algo parecido com a imagem abaixo:</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER=0 >
+<TR>
+<TD><IMG SRC="vbscp03.gif" HEIGHT=185 WIDTH=532></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Os images est&atilde;o por cima
+dos outros objetos, devem ter seus tamanhos ajustados e mandados para tr&aacute;s,
+os bot&otilde;es da figura abaixo que ficam no toolbar colocam servem para
+posicionar os objetos, mandando-os para tr&aacute;s ou para frente. mande
+ent&atilde;o os dois images para tr&aacute;s.</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER=0 >
+<TR>
+<TD><IMG SRC="vbscp04.gif" HEIGHT=22 WIDTH=92></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;<FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Defina agora a propriedade
+<B>backstyle</B> do combo, do text e do label para transparent, para que
+n&atilde;o fiquem com o fundo branco, nem o bot&atilde;o cinza, como mostra
+a figura abaixo, mas que fiquem vazados e as figuras por tr&aacute;s possam
+aparecer melhor.</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER=0 >
+<TR>
+<TD><IMG SRC="vbscp05.gif" HEIGHT=111 WIDTH=331></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Com a interface pronta, resta
+adicionar o c&oacute;digo para que o bot&atilde;o funcione. No toolbar,
+clique no bot&atilde;o Script Wizard.</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER=0 >
+<TR>
+<TD><IMG SRC="vbscp06.gif" HEIGHT=22 WIDTH=23></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;<FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Na janela Script Wizard,
+com a op&ccedil;&atilde;o em <B>code view</B>, procure o evento <FONT COLOR="#0000FF">Layout1_Onload</FONT>,
+nele voc&ecirc; deve preencher o combo box com o j&aacute; conhecido m&eacute;todo
+additem do VB.</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER=0 >
+<TR>
+<TD><IMG SRC="vbscp07.gif" HEIGHT=316 WIDTH=393></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+
+<P><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Sub Layout1_Onload()</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>cboPaginas.additem
+"Adobe Systems"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>cboPaginas.additem
+"Computer Graphics World"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>cboPaginas.additem
+"Epic Games"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>cboPaginas.additem
+"Microsoft"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>cboPaginas.additem
+"Next Generation"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>cboPaginas.additem
+"Sigma"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>cboPaginas.additem
+"Visual Basic Brasil"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>End Sub</FONT></FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; No evento Click do bot&atilde;o
+vai o c&oacute;digo da mudan&ccedil;a de p&aacute;gina, que &eacute; controlada
+pelo Internet Explorer ou por outro browser com <B>window.location.href</B>,
+no caso o Select Case veria o conte&uacute;do do combo e mandaria o usu&aacute;rio
+para a p&aacute;gina escolhida:</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Sub cmdOk_Click()</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Select Case
+cboPaginas.Text</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Case "Adobe
+Systems"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>window.location.href="http://www.adobe.com"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Case "Computer
+Graphics World"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>window.location.href="http://www.cgw.com"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Case "Epic Games"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>window.location.href="http://www.epicgames.com"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Case "Microsoft"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>window.location.href="http://www.microsoft.com"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Case "Next Generation"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>window.location.href="http://www.next-generation.com"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Case "Sigma"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>window.location.href="http://www.geocities.com/SiliconValley/Heights/2773/sigma.htm"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Case "Visual
+Basic Brasil"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>window.location.href="http://www.vbbrasil.com"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>End Select</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>End Sub</FONT></FONT></FONT>
+<BR>&nbsp;
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Salve o layout, que ser&aacute;
+um arquivo de extens&atilde;o alx. Resta ent&atilde;o colocar uma refer&ecirc;ncia
+numa p&aacute;gina html que chame este layout. Abra a p&aacute;gina html
+que for usada, deixe o cursosr na posi&ccedil;&atilde;o desejada e v&aacute;
+no menu Edit>Insert html layout, o Control Pad ir&aacute; adicionar algumas
+linhas que ficar&atilde;o encarregadas por isso.</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER=0 >
+<TR>
+<TD><IMG SRC="vbscp08.gif" HEIGHT=228 WIDTH=524></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;<FONT FACE="Arial"><FONT SIZE=-1>Agora o Layout rodando, pode conferir.</FONT></FONT>&nbsp;
+<CENTER><TABLE BORDER=0 >
+<TR>
+<TD><OBJECT id=artigo_alx classid=CLSID:812AE312-8B8E-11CF-93C8-00AA00C08FDF align=baseline border=0 width=319 height=80 style=LEFT:0;TOP:0><PARAM name=ALXPATH valuetype=ref value=artigo.cab></OBJECT></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+
+<P><B><FONT FACE="Arial"><FONT SIZE=-1>Um pouco mais sobre VBS:</FONT></FONT></B>
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>Vari&aacute;veis s&oacute; variant,
+para verificar se o conte&uacute;do de uma vari&aacute;vel &eacute; de
+um determinado tipo, como integer, deve-se usar as seguintes fun&ccedil;&otilde;es,
+que retornam true se a vari&aacute;vel for do tipo associado.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>IsDate</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>IsEmpty</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>IsNumeric</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>IsNull&nbsp;</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>IsObject</FONT></FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Dim dia</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>dia="50/30/97"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1><FONT COLOR="#0000FF">If IsDate(dia)
+= True Then&nbsp;&nbsp; </FONT><FONT COLOR="#008000">'IsDate(dia) retorna
+falso, j&aacute; que esta data n&atilde;o existe</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Msgbox "Parab&eacute;ns,
+voc&ecirc; digitou uma data correta."</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Else</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Msgbox "Esta
+data n&atilde;o existe."</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>End If</FONT></FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>Ou ent&atilde;o <FONT COLOR="#0000FF">VarType</FONT><FONT COLOR="#400040">,
+que retorna o tipo de uma vari&aacute;vel.</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>Dim x, tipo</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>x = 2</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1><FONT COLOR="#0000FF">tipo = Vartype
+(x) </FONT><FONT COLOR="#008000">'tipo receber&aacute; 2, o que significa
+que x &eacute; inteiro.</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=-1>x = "Jo&atilde;o"</FONT></FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1><FONT COLOR="#0000FF">tipo = Vartype
+(x) </FONT><FONT COLOR="#008000">'tipo receber&aacute; 8, o que significa
+que x &eacute; string.</FONT></FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>Podem ser criados arrays, por&eacute;m
+sempre come&ccedil;am a partir do &iacute;ndice 0;</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>Constantes n&atilde;o existem, trabalha-se
+apenas com vari&aacute;veis;</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>Todos os operadores presentes, como
++, - , / , OR, AND, XOR, NOT;</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>A maioria das fun&ccedil;&otilde;es
+para trabalhar com strings est&atilde;o presentes, como <FONT COLOR="#0000FF">left</FONT>,
+<FONT COLOR="#0000FF">mid</FONT> e <FONT COLOR="#0000FF">right</FONT>;</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>A maioria da fun&ccedil;&otilde;es
+para convers&atilde;o de tipos tamb&eacute;m est&atilde;o presentes, como
+<FONT COLOR="#0000FF">CStr</FONT> e <FONT COLOR="#0000FF">CInt</FONT>.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>Functions e Subs podem ser criados,
+mas Propety Procedures n&atilde;o;</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>For - Next, Do While - Loop, If -
+Else - End If todos presentes;</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1><FONT COLOR="#400040">Obs: </FONT>Quando
+usar o Next n&atilde;o coloque o nome da vari&aacute;vel em seguida, no
+vbs isto &eacute; obrigat&oacute;rio.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>Tratamento de erros com On Error Resume
+Next presente;</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>Para uma documenta&ccedil;&atilde;o
+bem mais completa, visite <A HREF="http://www.microsoft.com/vbscript">www.microsoft.com/vbscript</A>.
+Procure se informar melhor sobre os objetos do Internet Explorer.</FONT></FONT>
+
+<P><B><FONT FACE="Arial"><FONT SIZE=-1>Considera&ccedil;&otilde;es Finais</FONT></FONT></B>
+
+<P><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; O vbs n&atilde;o foi feito para
+concorrer com o Visual Basic, mas sim para ser uma solu&ccedil;&atilde;o
+para pequenos e m&eacute;dios problemas, e principalmente "fazer funcionar"
+controles ActiveX, inicialmente os que j&aacute; v&ecirc;m junto com o
+Internet Explorer, como o label, combo, list, image, hotspot, webbrowser,
+etc.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; O Macromedia Flash, um dos
+plugins mais promissores e festejados do momento, que est&aacute; por tr&aacute;s
+do show existente no site da <A HREF="http://www.macromedia.com">Macromedia</A>
+e <A HREF="http://msn.com">MSN</A>, na sua vers&atilde;o ActiveX pode n&atilde;o
+apenas executar anima&ccedil;&otilde;es e fazer bot&otilde;es, mas ser
+controlado por vbscript, como voltar a anima&ccedil;&atilde;o, definir
+o n&iacute;vel de qualidade e tudo que estamos acostumados a fazer com
+qualquer controle no VB, o que conta muitos pontos, j&aacute; que &eacute;
+tudo de maneira r&aacute;pida, eficiente e sem quase nenhuma novidade para
+os programadores, que automaticamente passam a desenvolver para internet
+sem ter que aprender outra linguagem, sem contar ainda que o Control Pad,
+VB5 CCE e o IE s&atilde;o gratuitos.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp;O IE4 n&atilde;o &eacute; apenas
+um browser, ele tamb&eacute;m altera o ambiente do Windows, tornando-o
+totalmente integrado &agrave; Internet e inteligente, tudo est&aacute;
+a "a cara" do IE, os desavisados com certeza v&atilde;o jurar que o Windows
+Explorer, &Aacute;rea de Trabalho ou at&eacute; mesmo o Painel do Controle
+s&atilde;o o Internet Explorer, e v&atilde;o rir quando come&ccedil;arem
+escrever uma endere&ccedil;o www e o IE "adivinhar" o final e escrever
+o que est&aacute; faltando, depois de v&ecirc;-lo, o Win95 sem ele perde
+a gra&ccedil;a, parecendo o Win 3.1 depois que saiu o 95. N&atilde;o perca
+tempo, d&ecirc; uma passada em <A HREF="http://www.microsoft.com/ie">www.microsoft.com/ie</A>
+e antecipe o Windows97, ou ser&aacute; Windows98?, caso a MS para variar
+atrase mais uma vez.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Os n&uacute;meros atestam o
+sucesso, no site da <A HREF="http://www.zdnet.com">ZDnet</A>, grupo que
+possui quase todas as revistas de inform&aacute;tica nos Estados Unidos,
+mostrava no final de abril que o Netscape 4 tinha 15.000 downloads por
+dia, enquanto o IE4 56.000, no Windows95.com, um dos mais visitados em
+toda WWW, h&aacute; um m&ecirc;s atras 50% dos internautas j&aacute; entravam
+com o IE.</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=-1>&nbsp; Para as intranets que pipocam
+nas empresas, o NT &eacute; o preferido por todos e j&aacute; vem com o
+IE, assim como Win 95 e o Win97, ActiveX/VBS t&ecirc;m de tudo para se
+tornar uma op&ccedil;&atilde;o excelente e definitiva para aplica&ccedil;&otilde;es
+Internet/Intranets.</FONT></FONT>
+<BR>&nbsp;
+<TABLE BORDER=0 >
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;&nbsp;
+<BR>&nbsp;
+</BODY>
+
+</HTML>

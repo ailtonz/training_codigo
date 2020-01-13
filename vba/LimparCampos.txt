@@ -1,0 +1,101 @@
+Public Function LiberarEstacao()
+
+Dim fLote   ' Arquivo texto
+Dim Lote    ' Variável do arquivo de lote
+Dim Caminho ' Caminho da aplicação
+Dim rVal As Variant
+Dim Liberacao
+
+rVal = MsgBox("ATENÇÃO: Você Deseja liberar o aplicativo para uso", vbQuestion + vbYesNo, "Liberação de aplicativo")
+
+If rVal = vbYes Then
+    
+    GerarLiberacao
+    
+    MsgBox SerialHD, vbInformation + vbOKOnly, "Código da estação"
+    
+    Liberacao = InputBox("Informe o código de liberação", "Serial de liberação")
+    
+    Caminho = Application.CurrentProject.Path
+    
+    Set fLote = CreateObject("Scripting.FileSystemObject")
+    Set Lote = fLote.CreateTextFile(Caminho & "\Liberacao.csv", True)
+    
+    Lote.WriteLine Liberacao
+    
+    Lote.Close
+    
+    MsgBox "Liberação concluída", vbInformation + vbOKOnly
+End If
+
+
+End Function
+
+Public Function GerarLiberacao()
+
+Dim n
+Dim x
+Dim xx
+Dim yy
+Dim zz
+
+Dim base As DAO.Database
+Dim Liberacao As DAO.Recordset
+
+Set base = CurrentDb
+Set Liberacao = base.OpenRecordset("Select id, hd from MsysLib")
+
+x = 0
+xx = "1A2B3C"
+yy = SerialHD
+zz = "AZ"
+
+For n = 6 To 5 Step -1
+    zz = zz & Mid(xx, n, 1) & Mid(yy, n, 1)
+Next n
+
+zz = zz & "-"
+For n = 4 To 3 Step -1
+    zz = zz & Mid(xx, n, 1) & Mid(yy, n, 1)
+Next n
+
+zz = zz & "-"
+For n = 2 To 1 Step -1
+    zz = zz & Mid(xx, n, 1) & Mid(yy, n, 1)
+Next n
+
+'Limpa tabela de liberação
+DoCmd.SetWarnings False
+DoCmd.RunSQL "DELETE * FROM MsysLib"
+DoCmd.SetWarnings True
+
+'Atualiza tabela de liberação
+Liberacao.AddNew
+Liberacao.Fields("id") = zz
+Liberacao.Fields("hd") = yy
+Liberacao.Update
+
+Liberacao.Close
+base.Close
+
+End Function
+
+Public Function SerialHD() As Long
+'===================================================================
+'   É importante adicionar aos references do seu projeto a seguinte
+'   biblioteca "Microsoft Scripting Runtime" para que funcione.
+'===================================================================
+
+Dim lSerial As Long
+Dim fso As New FileSystemObject, drvDrive As Drive
+
+'Pega as informações do drive c:
+Set drvDrive = fso.GetDrive(Left(fso.GetDriveName("c:\"), 2))
+
+'Pega o número de série do HD
+lSerial = drvDrive.SerialNumber
+
+SerialHD = lSerial
+
+End Function
+

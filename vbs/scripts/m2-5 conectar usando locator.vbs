@@ -1,0 +1,8 @@
+set svc = getobject("winmgmts:{impersonationlevel=impersonate}!"& _
+	"\\pc2xp/root/cimv2:Win32_UserAccount.Domain="&_
+	"'PC2XP',Name='Administrador'")
+
+for each p in svc.properties_
+txt = txt & p.name & "  -  "  & p.value & vbnewline
+next
+wscript.Echo txt

@@ -1,0 +1,2 @@
+set wshshell = wscript.CreateObject("wscript.shell")
+wshshell.run """\\london\AC\Microsoft Application Center 2000.msi"" /q PIDKEY=H6TWQTQQM8HXJYGD69F7R84VM", 6, true

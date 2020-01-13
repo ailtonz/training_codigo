@@ -1,0 +1,3 @@
+Public Function pathDesktopAddress() As String
+    pathDesktopAddress = CreateObject("WScript.Shell").SpecialFolders("Desktop") & "\"
+End Function

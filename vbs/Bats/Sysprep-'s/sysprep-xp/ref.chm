@@ -1,0 +1,320 @@
+                         Microsoft Windows XP
+                             Deploy.cab
+                             Readme File
+                             August 2001
+
+
+Information in this document, including URL and other Internet Web
+site references, is subject to change without notice and is provided
+for informational purposes only. The entire risk of the use or 
+results of the use of this document remains with the user, and 
+Microsoft Corporation makes no warranties, either express or implied. 
+Unless otherwise noted, the example companies, organizations, 
+products, people, and events depicted herein are fictitious. No 
+association with any real company, organization, product, person, 
+or event is intended or should be inferred. Complying with all 
+applicable copyright laws is the responsibility of the user. Without 
+limiting the rights under copyright, no part of this document may be 
+reproduced, stored in or introduced into a retrieval system, or 
+transmitted in any form or by any means (electronic, mechanical, 
+photocopying, recording, or otherwise), or for any purpose, without 
+the express written permission of Microsoft Corporation.
+
+Microsoft may have patents, patent applications, trademarks,
+copyrights, or other intellectual property rights covering subject
+matter in this document. Except as expressly provided in any written
+license agreement from Microsoft, the furnishing of this document 
+does not give you any license to these patents, trademarks, 
+copyrights, or other intellectual property.
+
+(c) 2001 Microsoft Corporation. All rights reserved.
+
+Microsoft, MS-DOS, Windows, and Windows NT are either registered
+trademarks or trademarks of Microsoft Corporation in the United States
+and/or other countries or regions.
+
+The codename "Windows 2002 [___] Server" may change before the final 
+release of these products. References in this document to these 
+products or family of products are codename placeholders only.
+
+The names of actual companies and products mentioned herein may be 
+the trademarks of their respective owners.
+
+========================
+How to Use This Document
+========================
+
+To view the Readme file in Microsoft Windows Notepad, maximize 
+the Notepad window. On the Format menu, click Word Wrap. 
+
+To print the Readme file, open it in Notepad or another word 
+processor, and then use the Print command on the File menu.
+
+========
+CONTENTS
+========
+
+1.0 INTRODUCTION
+2.0 KNOWN ISSUES
+3.0 CORRECTIONS
+
+----------------
+1.0 INTRODUCTION
+----------------
+
+This document provides current information about the tools included 
+in the deploy.cab for Microsoft Windows XP Home Edition and 
+Windows XP Professional. 
+
+
+NOTE: The Setup Manager tool (Setupmgr.exe) contained in Deploy.cab 
+is intended to be used only by corporate administrators. If you are 
+a system builder, install the tools and documentation contained on 
+the OEM Preinstallation Kit (OPK) CD. An OPK CD is contained in every
+multi-pack of Windows distributed by an OEM distributer to original 
+computer manufacturers, assemblers, reassemblers, and/or software 
+preinstallers of computer hardware a Microsoft Distribution and 
+Preinstallation Agreement which is a “Break-the-Seal” license 
+agreement.
+
+
+----------------
+2.0 KNOWN ISSUES
+----------------
+
+This is a list of known issues for this release of Windows XP.
+
+*  In Setup Manager, change [Pre-populated time-zone selection] value 
+from "<Use Default>" to your customer's time zone. If you leave it as 
+"<Use Default>", your customer must manually change the time-zone 
+setting from "(GMT -08:00) Pacific Time (US & Canada); Tijuana" to 
+the local time-zone. 
+
+
+* Running Sysprep on an installation of Windows on a drive other 
+than C: (for example, D:\Windows) can make the installation unusable.
+
+Workaround: Only run Sysprep on Windows installations located on 
+C: drive.
+
+
+*  If Factory.exe is not in the same folder as Sysprep.exe, the 
+command sysprep -factory does not run.
+
+Solution: Place Factory.exe in the same folder as Sysprep.exe.
+
+
+*  Sysprep has an additional command-line option not mentioned in 
+the documentation. The command-line option is -bmsd.
+
+If the [SysprepMassStorage] section header exists in Sysprep.inf 
+and you run the command Sysprep -bmsd, then Sysprep populates 
+[SysprepMassStorage] with the entries <Plug_and_Play_ID>=
+<path_to_device_inf_file> corresponding to the Plug and Play IDs 
+specified in Machine.inf, Scsi.inf, Pnpscsi.inf, and Mshdc.inf. 
+Sysprep only builds the list of mass-storage devices; it does not 
+install these devices in the critical device database or complete 
+any other processing. 
+
+You may delete items from the [SysprepMassStorageSection] before 
+running Sysprep -reseal or Sysprep –factory on this installation. 
+Installing a smaller number of items in the critical device database 
+reduces the time required for this image to reboot into the operating 
+system.
+
+Do not use the -bmsd command-line option with any other command-line 
+options.
+
+
+* Opening expandable links in Deploy.chm or Ref.chm can cause an 
+"Error in the DLL" message.
+ 
+This only happens when all of the following conditions are present: 
+  -- The operating system is Windows XP.
+  -- A retail debugger, such as the Visual Studio Debugger, 
+     is installed.
+  -- "Script-debugging" is enabled on Internet Options in 
+     Internet Explorer.
+
+Workaround: Disable script-debugging or uninstall your script 
+debugger.
+
+
+* Preinstalling without using Sysprep.inf causes entries from 
+Unattend.txt to be reprocessed after Windows Welcome. The entries 
+are added by Unattend.txt to $winnt$.sif.
+ 
+Workaround (safest method): Manually remove any entries from 
+$winnt$.sif added by Unattend.txt.
+
+Workaround (easiest method): Completely delete $winnt$.sif.
+
+
+*  When using the [OEMRunOnce] section of the Winbom.ini file to 
+install applications that use InstallShield-based installers, you 
+must add an "-SMS" switch (without the quotation marks) to the 
+command line.  The "-SMS" must be capitalized. This command-line 
+option ensures that the process created by the installer completes 
+its operation before processing the next entry in the [OEMRunOnce] 
+section.
+
+
+* Driver ranking schemes differ between Windows 2000 and Windows XP. 
+Both use driver-ranking schemes to determine which driver to load 
+when multiple drivers are available for a device. Drivers are ranked 
+based on whether they are signed and how closely they match the 
+device's hardware ID (HW ID). The following lists summarize the 
+driver ranking schemes for Windows 2000 and Windows XP in order of 
+highest ranking to lowest: 
+
+Windows 2000 driver ranking scheme: 
+1. Signed driver with a perfect four-part HW ID match to the driver. 
+2. Unsigned driver with a perfect four-part HW ID match to the driver.
+3. Signed driver with a two-part HW ID match to the driver. 
+4. Unsigned driver with a two-part HW ID match to the driver.
+
+Windows XP driver ranking scheme: 
+1. Signed driver with a perfect four-part HW ID match to the driver. 
+2. Signed driver with a two-part HW ID match to the driver. 
+3. Unsigned driver with a perfect four-part HW ID match to the driver
+   (with NT-decorated INF section). 
+4. Unsigned driver with a two-part HW ID match to the driver (with 
+   NT-decorated INF section). 
+5. Unsigned driver with a perfect four-part HW ID match to the driver
+   (with undecorated INF section). 
+6. Unsigned driver with a two-part HW ID match to the driver (with 
+   undecorated INF section).
+
+
+*  On Windows XP Home Edition, if you run Windows Welcome all the 
+way to completion and then run the command Sysprep -reseal, then 
+the account you created in Windows Welcome is still visible the 
+next time you (or the end user) run Windows Welcome. This owner 
+account cannot be deleted by Sysprep.
+
+Workaround: Skip Windows Welcome during the manufacturing process. 
+Either include the OEMAuditBoot entry in the [StartupOptions] 
+section of the Oobeinfo.ini file, or press CTRL + SHIFT + F3 on 
+the first page of Windows Welcome.
+
+
+*  In Windows XP Home Edition, if you run Windows Welcome all the 
+way to completion, run the command Sysprep -factory, and restart 
+the computer in Factory mode, then the operating system appears to 
+be locked at the Welcome page in Windows Welcome.
+
+Workaround: Skip Windows Welcome during the manufacturing process. 
+You can either include the OEMAuditBoot entry in the [StartupOptions] 
+section of the Oobeinfo.ini file, or press CTRL + SHIFT + F3 on the 
+first page of Windows Welcome. Alternatively, when you restart the 
+computer in Factory mode, press ALT + TAB to return focus to the 
+Welcome page in Windows Welcome. You must log on using the account 
+created during the first time you ran Windows Welcome.
+
+
+* 48-bit Logical Block Address (LBA) support is included in Windows XP
+for ATAPI disk drives, enabling capacities to extend past the 137 GB 
+barrier. This feature is not on by default. 
+
+This feature will be enabled in the Windows 2002 Server release and 
+Windows XP client service packs, pending availability of additional 
+PC BIOSs and drives.
+
+To enable this feature, add an entry to the [Unattended] section of 
+Sysprep.inf as follows: 
+
+	[Unattended]
+	EnableBigLba=Yes
+
+It is possible that an end-user might attempt to enable the 48-bit 
+LBA registry settings without having the correct BIOS to support a 
+hard drive with greater than 137 gigabytes capacity. In such cases, 
+only the first 137 gigabytes of the hard disk are addressable. The 
+rest of the drive is not used. If a user enables the 48-bit LBA 
+registry settings on a system that lacks both a 48-bit LBA-compatible 
+BIOS and a drive larger than 137 gigabytes, there will be no effect 
+to the system. The drive would continue to work as a standard hard 
+drive. 
+
+
+---------------
+3.0 CORRECTIONS
+---------------
+
+*  In the Microsoft Windows Preinstallation Reference, the AdminPW 
+and JoinDomain entries in the [Options] section of Oobeinfo.ini are 
+not documented.
+
+Correction: In the Oobeinfo.ini book, add the following to the 
+[Options] topic:
+
+AdminPW
+Value: 0 | 1
+Default: 1
+
+0 Do not include the Administrator Password page in Windows Welcome.
+1 Include the Administrator Password page in Windows Welcome.
+
+JoinDomain
+Value: 0 | 1
+Default: 1
+
+0 Do not include the Join a Domain page in Windows Welcome.
+1 Include the Join a Domain page in Windows Welcome.
+
+
+*  In the Microsoft Windows Preinstallation Reference, the 
+RemoveApplicationPartitionsentry in the [DCInstall] section of 
+Unattend.txt is not documented. 
+
+Correction: In the Unattend.txt book, add the following to the
+[DCInstall] topic:
+
+RemoveApplicationPartitions
+Value: Yes | No
+Default: No
+
+Yes	Specifies that application partitions are removed 
+        during the demotion of a domain controller to a 
+        member service.
+No	Do not remove application partitions on the domain 
+        controller. If the domain controller hosts the last 
+        replica of any application directory partition, you 
+        must manually confirm that these partitions are to 
+        be removed.
+
+Important:  If you remove the last replica of any application 
+            directory partition, the partition and all data it 
+            contains are destroyed.
+
+
+*  The [TerminalServices] topic in the Windows Preinstallation 
+Reference incorrectly states that Remote Desktop is installed by 
+default but is not enabled in Windows XP Home Edition, and that 
+Remote Desktop is enabled by default for the Windows 2002 Server 
+family of operating systems.
+ 
+Correction: Remote Desktop is not installed in Windows XP Home 
+Edition, and it is disabled by default in Windows XP Professional 
+and the Windows 2002 Server family of operating systems.
+
+
+* The Windows Preinstallation Reference misstates the syntax of 
+the [OEMLink] section of Winbom.ini.
+
+OEMBrandLinkIconTip and OEMBrandInfoTip are NOT valid entries in 
+the [OEMLink] section. The correct entry is OEMBrandLinkInfoTip.
+
+The complete set of entries in [OEMLink] are as follows:
+OEMBrandIcon
+OEMBrandLink
+OEMBrandLinkInfoTip
+OEMBrandLinkText
+
+Here is an example:
+	[OEMLink]
+	OEMBrandIcon=%windir%\System32\OemLinkIcon.ico
+	OEMBrandLink=%windir%\System32\OemLink.htm
+	OEMBrandLinkInfoTip="Click here to learn more about Fabrikam."
+	OEMBrandLinkText="Welcome to Fabrikam"
+
