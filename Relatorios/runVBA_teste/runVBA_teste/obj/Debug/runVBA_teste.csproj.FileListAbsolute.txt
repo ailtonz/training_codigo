@@ -1,0 +1,6 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA_teste\runVBA_teste\bin\Debug\runVBA_teste.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA_teste\runVBA_teste\obj\Debug\runVBA_teste.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA_teste\runVBA_teste\bin\Debug\runVBA_teste.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA_teste\runVBA_teste\bin\Debug\runVBA_teste.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA_teste\runVBA_teste\obj\Debug\runVBA_teste.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA_teste\runVBA_teste\obj\Debug\runVBA_teste.pdb

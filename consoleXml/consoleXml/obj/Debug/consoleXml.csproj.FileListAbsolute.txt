@@ -1,0 +1,12 @@
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\consoleXml\bin\Debug\consoleXml.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\consoleXml\obj\Debug\consoleXml.csprojResolveAssemblyReference.cache
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\consoleXml\bin\Debug\consoleXml.exe
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\consoleXml\bin\Debug\consoleXml.pdb
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\consoleXml\obj\Debug\consoleXml.exe
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\consoleXml\obj\Debug\consoleXml.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\consoleXml\bin\Debug\consoleXml.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\consoleXml\obj\Debug\consoleXml.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\consoleXml\obj\Debug\consoleXml.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\consoleXml\bin\Debug\consoleXml.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\consoleXml\bin\Debug\consoleXml.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\consoleXml\obj\Debug\consoleXml.csprojResolveAssemblyReference.cache

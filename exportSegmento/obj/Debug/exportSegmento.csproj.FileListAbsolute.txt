@@ -1,0 +1,8 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportSegmento\bin\Debug\exportSegmento.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportSegmento\bin\Debug\exportSegmento.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportSegmento\bin\Debug\exportSegmento.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportSegmento\obj\Debug\exportSegmento.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportSegmento\obj\Debug\exportSegmento.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportSegmento\obj\Debug\exportSegmento.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportSegmento\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportSegmento\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb

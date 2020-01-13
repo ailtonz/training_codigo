@@ -1,0 +1,9 @@
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\convertInt64\bin\Debug\convertInt64.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\convertInt64\bin\Debug\convertInt64.exe
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\convertInt64\bin\Debug\convertInt64.pdb
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\convertInt64\obj\Debug\convertInt64.csprojResolveAssemblyReference.cache
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\convertInt64\obj\Debug\convertInt64.exe
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\convertInt64\obj\Debug\convertInt64.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\convertInt64\bin\Debug\convertInt64.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\convertInt64\obj\Debug\convertInt64.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\convertInt64\obj\Debug\convertInt64.pdb

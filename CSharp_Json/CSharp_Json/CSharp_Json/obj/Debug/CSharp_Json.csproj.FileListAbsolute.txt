@@ -1,0 +1,12 @@
+c:\users\user\documents\visual studio 2015\Projects\CSharp_Json\CSharp_Json\bin\Debug\CSharp_Json.exe.config
+c:\users\user\documents\visual studio 2015\Projects\CSharp_Json\CSharp_Json\obj\Debug\CSharp_Json.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\CSharp_Json\CSharp_Json\bin\Debug\CSharp_Json.exe
+c:\users\user\documents\visual studio 2015\Projects\CSharp_Json\CSharp_Json\bin\Debug\CSharp_Json.pdb
+c:\users\user\documents\visual studio 2015\Projects\CSharp_Json\CSharp_Json\obj\Debug\CSharp_Json.exe
+c:\users\user\documents\visual studio 2015\Projects\CSharp_Json\CSharp_Json\obj\Debug\CSharp_Json.pdb
+C:\Users\a.dasilva\Desktop\CSharp_Json\CSharp_Json\CSharp_Json\bin\Debug\CSharp_Json.exe.config
+C:\Users\a.dasilva\Desktop\CSharp_Json\CSharp_Json\CSharp_Json\obj\Debug\CSharp_Json.exe
+C:\Users\a.dasilva\Desktop\CSharp_Json\CSharp_Json\CSharp_Json\obj\Debug\CSharp_Json.pdb
+C:\Users\a.dasilva\Desktop\CSharp_Json\CSharp_Json\CSharp_Json\bin\Debug\CSharp_Json.exe
+C:\Users\a.dasilva\Desktop\CSharp_Json\CSharp_Json\CSharp_Json\bin\Debug\CSharp_Json.pdb
+C:\Users\a.dasilva\Desktop\CSharp_Json\CSharp_Json\CSharp_Json\obj\Debug\CSharp_Json.csprojResolveAssemblyReference.cache

@@ -1,0 +1,18 @@
+select 
+   distinct 
+			ID_CONSOLIDADO,
+    REPLACE(REPLACE(REPLACE(stuff((
+			select '|' + u.HISTORICO_DETALHADO
+			from 
+				[DB_SISCOB].[CONSOLIDADO].[TB_HISTORICO] u
+			where u.ID_CONSOLIDADO = H.ID_CONSOLIDADO
+		
+        order by u.ID desc
+        for xml path('')
+    ),1,1,''),'&#X0D',''),'amp',''),';','') as HD
+
+into [DB_SISCOB].[BKP].[TB_HISTORICO_DETALHADO_ACUMULADO_20170208_v1]
+from [DB_SISCOB].[CONSOLIDADO].[TB_HISTORICO] H
+
+where ID_CONSOLIDADO IN (SELECT ID_CONSOLIDADO FROM [DB_SISCOB].[CONSOLIDADO].[TB_CONSUMO_SISCOB]) 
+group by ID_CONSOLIDADO

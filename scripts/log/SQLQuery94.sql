@@ -1,0 +1,37 @@
+USE [DB_SISCOB]
+GO
+-- CARREGAR DADOS DA PLANILHA
+DECLARE @sql varchar(1024)
+SET @sql='SELECT * FROM   OPENROWSET(''Microsoft.ACE.OLEDB.12.0'',''Excel 12.0 Xml;HDR=YES;Database=y:\sftp_files\FTP_User\SISCOB\CARTEIRA_CONSOLIDADA.xlsx'',''SELECT * FROM [Planilha1$]'')'
+INSERT INTO [DB_SISCOB].[TRANSITO].[tmp_CARTEIRA_MKT] (
+       [RAIZ]
+      ,[RAZAO_SOCIAL]
+      ,[RAIZ_GRUPO]
+      ,[NOME_GRUPO]
+      ,[GN]
+      ,[GV]
+      ,[DIRETOR]
+      ,[SEGMENTO_CARTEIRA_FIXA]
+      ,[SEGMENTO_CARTEIRA_MOVEL]
+      ,[ID_TASK]
+      ,[DT_ATUALIZACAO]
+)EXEC (@sql)
+
+
+
+
+SELECT * FROM OPENROWSET('Microsoft.ACE.OLEDB.12.0', 'Excel 12.0;Database=f:\SISCOB\CARTEIRA_MKT_CONSOLIDADA.xlsx', [dados$]) -- CARTEIRA_MKT_CONSOLIDADA.xlsx', [Dados$])  
+
+SELECT TOP 1000 [ID]
+      ,[RAIZ]
+      ,[RAZAO_SOCIAL]
+      ,[RAIZ_GRUPO]
+      ,[NOME_GRUPO]
+      ,[GN]
+      ,[GV]
+      ,[DIRETOR]
+      ,[SEGMENTO_CARTEIRA_FIXA]
+      ,[SEGMENTO_CARTEIRA_MOVEL]
+      ,[ID_TASK]
+      ,[DT_ATUALIZACAO]
+  FROM [DB_SISCOB].[TRANSITO].[tmp_CARTEIRA_MKT]

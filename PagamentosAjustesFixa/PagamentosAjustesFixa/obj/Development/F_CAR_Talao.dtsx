@@ -1,0 +1,1634 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/6/2017 2:26:18 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CPX-OYW06SYPJOS"
+  DTS:CreatorName="DIR\a.dasilva"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{AAC26313-9A95-4370-87CF-78C12C472541}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.2165.0"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="F_CAR_Talao"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{C9167CB6-7348-4143-8D05-847D9FF8B777}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CD250073-364C-4AAF-96B4-3144F394738C}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=172.16.0.13;User ID=a.dasilva;Initial Catalog=DB_SISCOB_HML;Provider=SQLOLEDB.1;Auto Translate=false;Application Name=SSIS-F_CAR_Talao-{CD250073-364C-4AAF-96B4-3144F394738C}DestinationConnectionOLEDB;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzJnW35eeakCDgzKukruaGwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAChfrWeUJ4WMmJtFZIq/RgxAAAAAASAAACgAAAAEAAAAI+t8GZAAESVdtBi83f+tKUYAAAA199LHO79o3eotBnoXbUrDonzM8A/HswFFAAAAFkqdM9Ecgr76iSE6NsqaF41zZke</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{81EE550E-2122-4366-9D4C-AD12E0D7B6A4}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\_DB\PagamentosAjustesFixa\Banco_CAR_Talão_25\Banco_CAR_Talão.mdb;Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info=False;OLE DB Services=0;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{1409843C-E9E1-433E-B54A-E91DFFED0551}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input].Columns[Raiz]"
+                      cachedDataType="r8"
+                      cachedName="Raiz"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Raiz]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Raiz]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Raiz]"
+                      name="Copy of Raiz"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Raiz]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Destination - F_CAR_Talao"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - F_CAR_Talao"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TRANSITO].[F_CAR_Talao]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Origem]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Origem"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Origem]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Origem]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Empresa]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Empresa"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Empresa]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Empresa]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Raiz]"
+                      cachedDataType="r8"
+                      cachedName="Raiz"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Raiz]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Raiz]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Cliente"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Cliente]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Cliente]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Vcto]"
+                      cachedDataType="date"
+                      cachedName="Vcto"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Vcto]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Vcto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[NF]"
+                      cachedDataType="i4"
+                      cachedName="NF"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[NF]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[NF]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Aging]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Aging"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Aging]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Aging]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Aging1]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Aging1"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Aging1]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Aging1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Valor_Fat]"
+                      cachedDataType="r8"
+                      cachedName="Valor_Fat"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Valor_Fat]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Valor_Fat]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[CSLL_1]"
+                      cachedDataType="r8"
+                      cachedName="CSLL_1"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[CSLL_1]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[CSLL_1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[PIS_0,65]"
+                      cachedDataType="r8"
+                      cachedName="PIS_0,65"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[PIS_0,65]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[PIS_0,65]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Cofins_3]"
+                      cachedDataType="r8"
+                      cachedName="Cofins_3"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Cofins_3]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Cofins_3]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[IR_1,5]"
+                      cachedDataType="r8"
+                      cachedName="IR_1,5"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[IR_1,5]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[IR_1,5]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[INSS_11]"
+                      cachedDataType="r8"
+                      cachedName="INSS_11"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[INSS_11]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[INSS_11]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Despesa_Financeira]"
+                      cachedDataType="r8"
+                      cachedName="Despesa_Financeira"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Despesa_Financeira]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Despesa_Financeira]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Outros_Desc]"
+                      cachedDataType="r8"
+                      cachedName="Outros_Desc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Outros_Desc]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Outros_Desc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Arrecadado]"
+                      cachedDataType="r8"
+                      cachedName="Arrecadado"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Arrecadado]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Arrecadado]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Pago_Maior]"
+                      cachedDataType="r8"
+                      cachedName="Pago_Maior"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Pago_Maior]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Pago_Maior]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Dt_Pagto]"
+                      cachedDataType="date"
+                      cachedName="Dt_Pagto"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Dt_Pagto]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Pagto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Canc]"
+                      cachedDataType="r8"
+                      cachedName="Canc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Canc]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Canc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Dt_Canc]"
+                      cachedDataType="date"
+                      cachedName="Dt_Canc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Dt_Canc]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Canc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Perdao_divida]"
+                      cachedDataType="r8"
+                      cachedName="Perdao_divida"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Perdao_divida]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Perdao_divida]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Data_perdao_divida]"
+                      cachedDataType="date"
+                      cachedName="Data_perdao_divida"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Data_perdao_divida]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Data_perdao_divida]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[CAR]"
+                      cachedDataType="r8"
+                      cachedName="CAR"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[CAR]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[CAR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[OBS]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OBS"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[OBS]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[OBS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Dt_Baixa]"
+                      cachedDataType="date"
+                      cachedName="Dt_Baixa"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Dt_Baixa]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Baixa]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[OBS_Smart]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OBS_Smart"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[OBS_Smart]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[OBS_Smart]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Produto]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Produto"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Produto]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Produto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Num_Invoice]"
+                      cachedDataType="i4"
+                      cachedName="Num_Invoice"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Num_Invoice]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Num_Invoice]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Valor_invoce_dolar]"
+                      cachedDataType="r8"
+                      cachedName="Valor_invoce_dolar"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Valor_invoce_dolar]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Valor_invoce_dolar]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Atualizado]"
+                      cachedDataType="date"
+                      cachedName="Atualizado"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Atualizado]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Atualizado]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[AtualizadoC]"
+                      cachedDataType="date"
+                      cachedName="AtualizadoC"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[AtualizadoC]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[AtualizadoC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Dt_Inserção]"
+                      cachedDataType="date"
+                      cachedName="Dt_Inserção"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Dt_Insercao]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Inserção]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Divisão]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Divisão"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Divisao]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Divisão]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Emissão]"
+                      cachedDataType="date"
+                      cachedName="Emissão"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Emissao]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Emissão]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Variação_Cambial]"
+                      cachedDataType="r8"
+                      cachedName="Variação_Cambial"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Variacao_Cambial]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Variação_Cambial]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Doc_Contábil]"
+                      cachedDataType="i4"
+                      cachedName="Doc_Contábil"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Doc_Contabil]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Doc_Contábil]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].Columns[Conta_Contábil]"
+                      cachedDataType="i4"
+                      cachedName="Conta_Contábil"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Conta_Contabil]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Conta_Contábil]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Origem]"
+                      dataType="wstr"
+                      length="255"
+                      name="Origem" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Empresa]"
+                      dataType="wstr"
+                      length="50"
+                      name="Empresa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Raiz]"
+                      dataType="wstr"
+                      length="255"
+                      name="Raiz" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Vcto]"
+                      dataType="dbTimeStamp"
+                      name="Vcto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[NF]"
+                      dataType="i4"
+                      name="NF" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Aging]"
+                      dataType="wstr"
+                      length="50"
+                      name="Aging" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Aging1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Aging1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Valor_Fat]"
+                      dataType="wstr"
+                      length="255"
+                      name="Valor_Fat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[CSLL_1]"
+                      dataType="r8"
+                      name="CSLL_1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[PIS_0,65]"
+                      dataType="r8"
+                      name="PIS_0,65" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Cofins_3]"
+                      dataType="r8"
+                      name="Cofins_3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[IR_1,5]"
+                      dataType="r8"
+                      name="IR_1,5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[INSS_11]"
+                      dataType="r8"
+                      name="INSS_11" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Despesa_Financeira]"
+                      dataType="r8"
+                      name="Despesa_Financeira" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Outros_Desc]"
+                      dataType="r8"
+                      name="Outros_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Arrecadado]"
+                      dataType="r8"
+                      name="Arrecadado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Pago_Maior]"
+                      dataType="r8"
+                      name="Pago_Maior" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Dt_Pagto]"
+                      dataType="dbTimeStamp"
+                      name="Dt_Pagto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Canc]"
+                      dataType="r8"
+                      name="Canc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Dt_Canc]"
+                      dataType="dbTimeStamp"
+                      name="Dt_Canc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Perdao_divida]"
+                      dataType="r8"
+                      name="Perdao_divida" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Data_perdao_divida]"
+                      dataType="dbTimeStamp"
+                      name="Data_perdao_divida" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[CAR]"
+                      dataType="r8"
+                      name="CAR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[OBS]"
+                      dataType="wstr"
+                      length="255"
+                      name="OBS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Dt_Baixa]"
+                      dataType="dbTimeStamp"
+                      name="Dt_Baixa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[OBS_Smart]"
+                      dataType="wstr"
+                      length="255"
+                      name="OBS_Smart" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Produto]"
+                      dataType="wstr"
+                      length="255"
+                      name="Produto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Num_Invoice]"
+                      dataType="i4"
+                      name="Num_Invoice" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Valor_invoce_dolar]"
+                      dataType="r8"
+                      name="Valor_invoce_dolar" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Atualizado]"
+                      dataType="dbTimeStamp"
+                      name="Atualizado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[AtualizadoC]"
+                      dataType="dbTimeStamp"
+                      name="AtualizadoC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Dt_Insercao]"
+                      dataType="dbTimeStamp"
+                      name="Dt_Insercao" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Divisao]"
+                      dataType="wstr"
+                      length="255"
+                      name="Divisao" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Emissao]"
+                      dataType="dbTimeStamp"
+                      name="Emissao" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Variacao_Cambial]"
+                      dataType="r8"
+                      name="Variacao_Cambial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Doc_Contabil]"
+                      dataType="i4"
+                      name="Doc_Contabil" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input].ExternalColumns[Conta_Contabil]"
+                      dataType="i4"
+                      name="Conta_Contabil" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - F_CAR_Talão"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - F_CAR_Talão"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">F_CAR_Talão</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Origem]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Origem]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Origem]"
+                      name="Origem"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Empresa]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Empresa]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Empresa]"
+                      name="Empresa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Inserção]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Dt_Inserção]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Inserção]"
+                      name="Dt_Inserção"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Divisão]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Divisão]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Divisão]"
+                      name="Divisão"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Raiz]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Raiz]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Raiz]"
+                      name="Raiz"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Cliente]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Cliente]"
+                      name="Cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Emissão]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Emissão]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Emissão]"
+                      name="Emissão"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Vcto]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Vcto]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Vcto]"
+                      name="Vcto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[NF]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[NF]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[NF]"
+                      name="NF"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Aging]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Aging]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Aging]"
+                      name="Aging"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Aging1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Aging1]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Aging1]"
+                      name="Aging1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Valor_Fat]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Valor_Fat]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Valor_Fat]"
+                      name="Valor_Fat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[CSLL_1]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[CSLL_1]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[CSLL_1]"
+                      name="CSLL_1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[PIS_0,65]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[PIS_0,65]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[PIS_0,65]"
+                      name="PIS_0,65"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Cofins_3]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Cofins_3]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Cofins_3]"
+                      name="Cofins_3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[IR_1,5]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[IR_1,5]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[IR_1,5]"
+                      name="IR_1,5"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[INSS_11]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[INSS_11]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[INSS_11]"
+                      name="INSS_11"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Despesa_Financeira]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Despesa_Financeira]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Despesa_Financeira]"
+                      name="Despesa_Financeira"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Outros_Desc]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Outros_Desc]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Outros_Desc]"
+                      name="Outros_Desc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Arrecadado]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Arrecadado]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Arrecadado]"
+                      name="Arrecadado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Pago_Maior]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Pago_Maior]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Pago_Maior]"
+                      name="Pago_Maior"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Variação_Cambial]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Variação_Cambial]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Variação_Cambial]"
+                      name="Variação_Cambial"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Pagto]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Dt_Pagto]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Pagto]"
+                      name="Dt_Pagto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Canc]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Canc]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Canc]"
+                      name="Canc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Canc]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Dt_Canc]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Canc]"
+                      name="Dt_Canc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Perdao_divida]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Perdao_divida]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Perdao_divida]"
+                      name="Perdao_divida"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Data_perdao_divida]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Data_perdao_divida]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Data_perdao_divida]"
+                      name="Data_perdao_divida"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[CAR]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[CAR]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[CAR]"
+                      name="CAR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[OBS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[OBS]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[OBS]"
+                      name="OBS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Baixa]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Dt_Baixa]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Dt_Baixa]"
+                      name="Dt_Baixa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Doc_Contábil]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Doc_Contábil]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Doc_Contábil]"
+                      name="Doc_Contábil"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[OBS_Smart]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[OBS_Smart]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[OBS_Smart]"
+                      name="OBS_Smart"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Produto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Produto]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Produto]"
+                      name="Produto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Num_Invoice]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Num_Invoice]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Num_Invoice]"
+                      name="Num_Invoice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Valor_invoce_dolar]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Valor_invoce_dolar]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Valor_invoce_dolar]"
+                      name="Valor_invoce_dolar"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Conta_Contábil]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Conta_Contábil]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Conta_Contábil]"
+                      name="Conta_Contábil"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Atualizado]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Atualizado]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[Atualizado]"
+                      name="Atualizado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[AtualizadoC]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[AtualizadoC]"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].Columns[AtualizadoC]"
+                      name="AtualizadoC"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Origem]"
+                      dataType="wstr"
+                      length="255"
+                      name="Origem" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Empresa]"
+                      dataType="wstr"
+                      length="50"
+                      name="Empresa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Dt_Inserção]"
+                      dataType="date"
+                      name="Dt_Inserção" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Divisão]"
+                      dataType="wstr"
+                      length="255"
+                      name="Divisão" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Raiz]"
+                      dataType="r8"
+                      name="Raiz" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Emissão]"
+                      dataType="date"
+                      name="Emissão" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Vcto]"
+                      dataType="date"
+                      name="Vcto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[NF]"
+                      dataType="i4"
+                      name="NF" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Aging]"
+                      dataType="wstr"
+                      length="50"
+                      name="Aging" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Aging1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Aging1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Valor_Fat]"
+                      dataType="r8"
+                      name="Valor_Fat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[CSLL_1]"
+                      dataType="r8"
+                      name="CSLL_1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[PIS_0,65]"
+                      dataType="r8"
+                      name="PIS_0,65" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Cofins_3]"
+                      dataType="r8"
+                      name="Cofins_3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[IR_1,5]"
+                      dataType="r8"
+                      name="IR_1,5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[INSS_11]"
+                      dataType="r8"
+                      name="INSS_11" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Despesa_Financeira]"
+                      dataType="r8"
+                      name="Despesa_Financeira" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Outros_Desc]"
+                      dataType="r8"
+                      name="Outros_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Arrecadado]"
+                      dataType="r8"
+                      name="Arrecadado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Pago_Maior]"
+                      dataType="r8"
+                      name="Pago_Maior" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Variação_Cambial]"
+                      dataType="r8"
+                      name="Variação_Cambial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Dt_Pagto]"
+                      dataType="date"
+                      name="Dt_Pagto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Canc]"
+                      dataType="r8"
+                      name="Canc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Dt_Canc]"
+                      dataType="date"
+                      name="Dt_Canc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Perdao_divida]"
+                      dataType="r8"
+                      name="Perdao_divida" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Data_perdao_divida]"
+                      dataType="date"
+                      name="Data_perdao_divida" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[CAR]"
+                      dataType="r8"
+                      name="CAR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[OBS]"
+                      dataType="wstr"
+                      length="255"
+                      name="OBS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Dt_Baixa]"
+                      dataType="date"
+                      name="Dt_Baixa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Doc_Contábil]"
+                      dataType="i4"
+                      name="Doc_Contábil" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[OBS_Smart]"
+                      dataType="wstr"
+                      length="255"
+                      name="OBS_Smart" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Produto]"
+                      dataType="wstr"
+                      length="255"
+                      name="Produto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Num_Invoice]"
+                      dataType="i4"
+                      name="Num_Invoice" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Valor_invoce_dolar]"
+                      dataType="r8"
+                      name="Valor_invoce_dolar" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Conta_Contábil]"
+                      dataType="i4"
+                      name="Conta_Contábil" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[Atualizado]"
+                      dataType="date"
+                      name="Atualizado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output].ExternalColumns[AtualizadoC]"
+                      dataType="date"
+                      name="AtualizadoC" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Origem]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Origem]"
+                      name="Origem" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Empresa]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Empresa]"
+                      name="Empresa" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Dt_Inserção]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Dt_Inserção]"
+                      name="Dt_Inserção" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Divisão]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Divisão]"
+                      name="Divisão" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Raiz]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Raiz]"
+                      name="Raiz" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Cliente]"
+                      name="Cliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Emissão]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Emissão]"
+                      name="Emissão" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Vcto]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Vcto]"
+                      name="Vcto" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[NF]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[NF]"
+                      name="NF" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Aging]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Aging]"
+                      name="Aging" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Aging1]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Aging1]"
+                      name="Aging1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Valor_Fat]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Valor_Fat]"
+                      name="Valor_Fat" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[CSLL_1]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[CSLL_1]"
+                      name="CSLL_1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[PIS_0,65]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[PIS_0,65]"
+                      name="PIS_0,65" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Cofins_3]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Cofins_3]"
+                      name="Cofins_3" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[IR_1,5]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[IR_1,5]"
+                      name="IR_1,5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[INSS_11]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[INSS_11]"
+                      name="INSS_11" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Despesa_Financeira]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Despesa_Financeira]"
+                      name="Despesa_Financeira" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Outros_Desc]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Outros_Desc]"
+                      name="Outros_Desc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Arrecadado]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Arrecadado]"
+                      name="Arrecadado" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Pago_Maior]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Pago_Maior]"
+                      name="Pago_Maior" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Variação_Cambial]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Variação_Cambial]"
+                      name="Variação_Cambial" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Dt_Pagto]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Dt_Pagto]"
+                      name="Dt_Pagto" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Canc]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Canc]"
+                      name="Canc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Dt_Canc]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Dt_Canc]"
+                      name="Dt_Canc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Perdao_divida]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Perdao_divida]"
+                      name="Perdao_divida" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Data_perdao_divida]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Data_perdao_divida]"
+                      name="Data_perdao_divida" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[CAR]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[CAR]"
+                      name="CAR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[OBS]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[OBS]"
+                      name="OBS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Dt_Baixa]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Dt_Baixa]"
+                      name="Dt_Baixa" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Doc_Contábil]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Doc_Contábil]"
+                      name="Doc_Contábil" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[OBS_Smart]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[OBS_Smart]"
+                      name="OBS_Smart" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Produto]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Produto]"
+                      name="Produto" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Num_Invoice]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Num_Invoice]"
+                      name="Num_Invoice" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Valor_invoce_dolar]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Valor_invoce_dolar]"
+                      name="Valor_invoce_dolar" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Conta_Contábil]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Conta_Contábil]"
+                      name="Conta_Contábil" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Atualizado]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[Atualizado]"
+                      name="Atualizado" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[AtualizadoC]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[AtualizadoC]"
+                      name="AtualizadoC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task 1\Destination - F_CAR_Talao.Inputs[Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - F_CAR_Talão.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{B7E0AF94-11D8-4613-9E9F-FB00D20005EA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CD250073-364C-4AAF-96B4-3144F394738C}"
+          SQLTask:SqlStatementSource="&#xA;CREATE TABLE [TRANSITO].[F_CAR_Talao] (&#xA;[Origem] nvarchar(255),&#xA;[Empresa] nvarchar(50),&#xA;[Dt_Insercao] datetime,&#xA;[Divisao] nvarchar(255),&#xA;[Raiz] nvarchar(255),&#xA;[Cliente] nvarchar(255),&#xA;[Emissao] datetime,&#xA;[Vcto] datetime,&#xA;[NF] int,&#xA;[Aging] nvarchar(50),&#xA;[Aging1] nvarchar(50),&#xA;[Valor_Fat] decimal(10,2),&#xA;[CSLL_1] float,&#xA;[PIS_0,65] float,&#xA;[Cofins_3] float,&#xA;[IR_1,5] float,&#xA;[INSS_11] float,&#xA;[Despesa_Financeira] float,&#xA;[Outros_Desc] float,&#xA;[Arrecadado] float,&#xA;[Pago_Maior] float,&#xA;[Variacao_Cambial] float,&#xA;[Dt_Pagto] datetime,&#xA;[Canc] float,&#xA;[Dt_Canc] datetime,&#xA;[Perdao_divida] float,&#xA;[Data_perdao_divida] datetime,&#xA;[CAR] float,&#xA;[OBS] nvarchar(255),&#xA;[Dt_Baixa] datetime,&#xA;[Doc_Contabil] int,&#xA;[OBS_Smart] nvarchar(255),&#xA;[Produto] nvarchar(255),&#xA;[Num_Invoice] int,&#xA;[Valor_invoce_dolar] float,&#xA;[Conta_Contabil] int,&#xA;[Atualizado] datetime,&#xA;[AtualizadoC] datetime&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{40074C63-6681-4122-B055-6B0CDA76EF4E\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{40074C63-6681-4122-B055-6B0CDA76EF4E}"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{40074C63-6681-4122-B055-6B0CDA76EF4E}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="20.5,107.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Preparation SQL Task 1"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{40074C63-6681-4122-B055-6B0CDA76EF4E\}]"
+          TopLeft="100.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Data Flow Task 1\Source - F_CAR_Talão"
+          TopLeft="16,5.5" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Data Flow Task 1\Destination - F_CAR_Talao"
+          TopLeft="81.5,178.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task 1\Data Conversion"
+          TopLeft="279,85" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+          TopLeft="108,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="249,37.5"
+              Start="0,0"
+              End="249,30">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.75"
+                    Point2="0,18.75"
+                    Point3="4,18.75" />
+                  <mssgle:LineSegment
+                    End="245,18.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="245,18.75"
+                    Point2="249,18.75"
+                    Point3="249,22.75" />
+                  <mssgle:LineSegment
+                    End="249,30" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Data Conversion Output]"
+          TopLeft="357,127">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-173,51.5"
+              Start="0,0"
+              End="-173,44">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.75"
+                    Point2="0,25.75"
+                    Point3="-4,25.75" />
+                  <mssgle:LineSegment
+                    End="-169,25.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-169,25.75"
+                    Point2="-173,25.75"
+                    Point3="-173,29.75" />
+                  <mssgle:LineSegment
+                    End="-173,44" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Destination - F_CAR_Talao">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

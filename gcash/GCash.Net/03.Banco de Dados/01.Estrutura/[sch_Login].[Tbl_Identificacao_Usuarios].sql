@@ -1,0 +1,35 @@
+USE [DB_G_CASH_BBRIL]
+GO
+
+/****** Object:  Table [sch_Login].[Tbl_Identificacao_Usuarios]    Script Date: 4/24/2017 4:47:17 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [sch_Login].[Tbl_Identificacao_Usuarios](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[EID] [varchar](20) NOT NULL,
+	[SENHA] [varchar](100) NOT NULL,
+	[NOME] [varchar](100) NOT NULL,
+	[TELEFONE] [varchar](11) NULL,
+	[AREA] [int] NULL,
+	[EMAIL] [varchar](100) NULL,
+	[BLOQUEADO] [bit] NULL,
+	[INATIVO] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

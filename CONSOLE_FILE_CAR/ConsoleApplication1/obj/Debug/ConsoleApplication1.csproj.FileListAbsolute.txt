@@ -1,0 +1,12 @@
+c:\users\a.dasilva\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\a.dasilva\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\a.dasilva\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\a.dasilva\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\a.dasilva\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\tmp\wkspace\Projetos\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\tmp\wkspace\Projetos\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\tmp\wkspace\Projetos\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\tmp\wkspace\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\tmp\wkspace\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\tmp\wkspace\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

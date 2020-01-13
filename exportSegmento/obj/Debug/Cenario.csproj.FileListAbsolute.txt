@@ -1,0 +1,12 @@
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Cenario\bin\Debug\Cenario.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Cenario\bin\Debug\Cenario.exe
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Cenario\bin\Debug\Cenario.pdb
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Cenario\obj\Debug\Cenario.csprojResolveAssemblyReference.cache
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Cenario\obj\Debug\Cenario.exe
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Cenario\obj\Debug\Cenario.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\bin\Debug\Cenario.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\obj\Debug\Cenario.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\obj\Debug\Cenario.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\bin\Debug\Cenario.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\bin\Debug\Cenario.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\obj\Debug\Cenario.csprojResolveAssemblyReference.cache

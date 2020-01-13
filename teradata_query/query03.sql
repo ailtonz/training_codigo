@@ -1,0 +1,1 @@
+﻿select * from PW_VIEDB.PARQUE_CONTRATADO_hist  where  LENGTH(ID_PRODUTO_COMERCIAL)=15

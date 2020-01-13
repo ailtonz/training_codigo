@@ -1,0 +1,2929 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/6/2017 3:00:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CPX-OYW06SYPJOS"
+  DTS:CreatorName="DIR\a.dasilva"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{5F75ED3E-E786-44F7-AEC9-3FA76F623375}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.2165.0"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="mov_0217__tmp_LEGADO"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{D6E962A3-AEB3-456C-A52B-6C0A7A8AB756}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{46F207D5-71C8-4031-A158-123E4779EF52}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=172.16.0.13;User ID=a.dasilva;Initial Catalog=DB_SISCOB;Provider=SQLOLEDB;Auto Translate=false;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzJnW35eeakCDgzKukruaGwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAufkCf40YSXiRidwTy4etbAAAAAASAAACgAAAAEAAAAChrj1X/fiSuSXyE3uzCB+sYAAAAbXMyme5lcbJm2o17A/1DEKE+6Mf+MYlEFAAAAKmOAfzYHrRzSoYuHKtgC+VVD0Xk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{AD20A407-B087-402C-BBBA-5698DFAC4FCD}"
+      DTS:ObjectName="SourceConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x003B_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\G-CASH\PAGAMENTOS_AJUSTES_FIXA\mov_0217\mov_0217.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nrc"
+              DTS:DTSID="{DF87923A-7EF2-4F63-BD77-360C1DBD0931}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tel"
+              DTS:DTSID="{03429C0A-C26E-4CB9-818F-45BA60AFB18F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dtConta"
+              DTS:DTSID="{011806BF-4D45-41A5-BE19-4E2286816069}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dtVencto"
+              DTS:DTSID="{2235F188-F4E3-44D7-BB7B-C71062AAEC87}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dtProc"
+              DTS:DTSID="{7D7BF429-04B5-491A-A045-54FCC97E2995}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dtPagto"
+              DTS:DTSID="{C4B66A07-F869-4BE5-8251-268E467DD968}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Seg"
+              DTS:DTSID="{FA35CA8C-216B-4052-8F41-12B4DC653A56}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Aging"
+              DTS:DTSID="{B14124E6-CD62-4368-B1E7-125FBDB0D415}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Faixa"
+              DTS:DTSID="{6C846E6B-425B-4646-8308-48AFFB6D94FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cdStatus"
+              DTS:DTSID="{642E94D4-C318-4159-BC0A-CCDC10A0F3AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dtStatus"
+              DTS:DTSID="{2E940E69-18C1-4DFD-9BBF-DD375168F1E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlConta"
+              DTS:DTSID="{6F961730-AAB6-456E-ACBE-3DB20FB09C39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlAssinat"
+              DTS:DTSID="{7D083A59-8297-4050-A120-48418CE453D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_TEL"
+              DTS:DTSID="{319C02A1-25B9-4729-A16E-2EEC9AC124C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDI_TEL"
+              DTS:DTSID="{AD736ECE-7D93-420F-B583-42ABF10C5BA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_INT"
+              DTS:DTSID="{3DD35267-7C40-4948-A74A-67E5C295C12B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDI_INT"
+              DTS:DTSID="{3E85A08E-FA6F-4E95-824F-9091C7493CDE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_EMB"
+              DTS:DTSID="{EC841CBF-C448-45DB-9C2A-0EEA33455222}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDI_EMB"
+              DTS:DTSID="{087CCC05-429F-4647-B5D0-87BA57A6E24C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_VSP"
+              DTS:DTSID="{0ABFB1A6-0EC3-4A56-9AA9-91DFFBD9BEA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_ANT"
+              DTS:DTSID="{ECDA774C-30AC-4A13-A782-E8B801524CF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_FID"
+              DTS:DTSID="{41AA82D7-2A2A-4AD3-AD24-780D45503D9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_TLM"
+              DTS:DTSID="{5E2EC047-1658-4CE1-A8C6-1130A2613F8F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_TNL"
+              DTS:DTSID="{2E78E5DB-7250-40D6-AC06-A27767B55EE1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_BRTEL"
+              DTS:DTSID="{FAE67446-E04A-44F5-BAA0-B7CC6335B3F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_TIM"
+              DTS:DTSID="{4F225F97-2FF6-4ED0-8FDB-674416F21DC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_TESS"
+              DTS:DTSID="{CC0F58DA-2F43-4437-A88C-788094FBFFDC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_GVT"
+              DTS:DTSID="{232EF9B8-661E-4EB6-9984-B40325D5B354}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLDN_CTBC"
+              DTS:DTSID="{49F52A77-309B-40E0-93AB-EE5C78280EE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlSerMedi"
+              DTS:DTSID="{BCF8BBCB-9465-499C-B922-50125B5678A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlSerTerc"
+              DTS:DTSID="{79EDF6A3-FEE8-4597-A94F-B076B86FF998}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlSer0900"
+              DTS:DTSID="{2C6C52B2-97D6-48EE-8447-19977280562C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlSerOutr"
+              DTS:DTSID="{476D23D6-D51D-4986-9B81-6D33E9EC087D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlCelular"
+              DTS:DTSID="{0CEECCC2-2A9F-4CC0-A3A8-90047A5A690F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlLocACob"
+              DTS:DTSID="{C4C427F6-6377-4960-A4C1-D4F63C35E337}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlCredCed"
+              DTS:DTSID="{5265B974-9B79-436F-9774-4B61796FE461}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlDescCed"
+              DTS:DTSID="{D5DAFA86-CAA7-467E-805E-96C20479D7CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlVTexto"
+              DTS:DTSID="{1B81EA2C-577E-4341-8DB4-A0B9BCD17BC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vlDados"
+              DTS:DTSID="{34B6C86A-5DAE-46E7-8086-A3E2882851DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tpNRF"
+              DTS:DTSID="{86C1B1F6-1E70-428D-B328-157442A35D44}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nrf"
+              DTS:DTSID="{7A4ADB69-9311-4497-9721-77AC8317DD26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="segCompleto"
+              DTS:DTSID="{7D751DD4-209B-481A-8728-BAB5377D16A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Zona"
+              DTS:DTSID="{10F85A7B-9A12-4425-99A7-87AE9A4F3EC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ClassAss"
+              DTS:DTSID="{4E6760FA-0B5C-4512-8451-C6D107DDA7D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pConta"
+              DTS:DTSID="{60F2C331-AED8-4145-A9AD-04D1724ABBA1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cep"
+              DTS:DTSID="{73EB789A-C9B5-4777-82F8-2A1D75A2C8DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dtInstalacao"
+              DTS:DTSID="{B0672F6D-4747-4CC0-BF20-E081AFDFE9F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cdBanco"
+              DTS:DTSID="{74D8C506-9637-4614-ADCE-A56EDB0E810C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tpCaixa"
+              DTS:DTSID="{9AC0DC8A-2464-4112-AED1-D2A2698F5347}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_mm"
+              DTS:DTSID="{0C79E010-2A5C-44A2-A79A-9C802B59825D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_dd"
+              DTS:DTSID="{C91E8191-7386-4751-AB18-B5A6CB419967}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{5B7630A1-360F-469C-9370-25FAE382BD67}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - tmp_mov_0217"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - tmp_mov_0217"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TRANSITO].[tmp_mov_0217]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[Nrc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nrc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Nrc]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Nrc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[Tel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Tel"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Tel]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Tel]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[dtConta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dtConta"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtConta]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtConta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[dtVencto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dtVencto"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtVencto]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtVencto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[dtProc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dtProc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtProc]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtProc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[dtPagto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dtPagto"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtPagto]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtPagto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[Seg]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Seg"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Seg]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Seg]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[Aging]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Aging"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Aging]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Aging]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[Faixa]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Faixa"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Faixa]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Faixa]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[cdStatus]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cdStatus"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[cdStatus]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[cdStatus]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[dtStatus]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dtStatus"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtStatus]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtStatus]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlConta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlConta"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlConta]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlConta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlAssinat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlAssinat"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlAssinat]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlAssinat]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_TEL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_TEL"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TEL]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TEL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDI_TEL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDI_TEL"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDI_TEL]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDI_TEL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_INT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_INT"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_INT]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_INT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDI_INT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDI_INT"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDI_INT]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDI_INT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_EMB]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_EMB"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_EMB]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_EMB]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDI_EMB]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDI_EMB"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDI_EMB]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDI_EMB]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_VSP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_VSP"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_VSP]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_VSP]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_ANT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_ANT"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_ANT]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_ANT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_FID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_FID"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_FID]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_FID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_TLM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_TLM"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TLM]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TLM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_TNL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_TNL"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TNL]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TNL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_BRTEL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_BRTEL"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_BRTEL]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_BRTEL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_TIM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_TIM"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TIM]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TIM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_TESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_TESS"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TESS]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TESS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_GVT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_GVT"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_GVT]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_GVT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLDN_CTBC]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLDN_CTBC"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_CTBC]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_CTBC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlSerMedi]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlSerMedi"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlSerMedi]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSerMedi]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlSerTerc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlSerTerc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlSerTerc]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSerTerc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlSer0900]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlSer0900"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlSer0900]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSer0900]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlSerOutr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlSerOutr"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlSerOutr]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSerOutr]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlCelular]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlCelular"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlCelular]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlCelular]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlLocACob]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlLocACob"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLocACob]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLocACob]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlCredCed]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlCredCed"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlCredCed]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlCredCed]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlDescCed]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlDescCed"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlDescCed]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlDescCed]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlVTexto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlVTexto"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlVTexto]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlVTexto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[vlDados]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vlDados"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlDados]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlDados]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[tpNRF]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tpNRF"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[tpNRF]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[tpNRF]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[Nrf]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nrf"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Nrf]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Nrf]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[segCompleto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="segCompleto"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[segCompleto]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[segCompleto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[Zona]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Zona"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Zona]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Zona]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[ClassAss]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ClassAss"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[ClassAss]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[ClassAss]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[pConta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="pConta"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[pConta]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[pConta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[Cep]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Cep"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Cep]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Cep]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[dtInstalacao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dtInstalacao"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtInstalacao]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtInstalacao]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[cdBanco]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cdBanco"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[cdBanco]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[cdBanco]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[tpCaixa]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tpCaixa"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[tpCaixa]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[tpCaixa]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[_mm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="_mm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[_mm]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[_mm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].Columns[_dd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="_dd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[_dd]"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[_dd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Nrc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nrc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Tel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tel" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtConta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtConta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtVencto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtVencto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtProc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtProc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtPagto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtPagto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Seg]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Seg" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Aging]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Aging" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Faixa]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Faixa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[cdStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cdStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlConta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlConta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlAssinat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlAssinat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TEL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDI_TEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDI_TEL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_INT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_INT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDI_INT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDI_INT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_EMB]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_EMB" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDI_EMB]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDI_EMB" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_VSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_VSP" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_ANT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_ANT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_FID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_FID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TLM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TLM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TNL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TNL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_BRTEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_BRTEL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TIM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_TESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_GVT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_GVT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLDN_CTBC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_CTBC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlSerMedi]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlSerMedi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlSerTerc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlSerTerc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlSer0900]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlSer0900" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlSerOutr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlSerOutr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlCelular]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlCelular" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlLocACob]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLocACob" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlCredCed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlCredCed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlDescCed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlDescCed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlVTexto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlVTexto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[vlDados]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlDados" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[tpNRF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tpNRF" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Nrf]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nrf" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[segCompleto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="segCompleto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Zona]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Zona" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[ClassAss]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ClassAss" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[pConta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="pConta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[Cep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Cep" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[dtInstalacao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtInstalacao" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[cdBanco]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cdBanco" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[tpCaixa]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tpCaixa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[_mm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="_mm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input].ExternalColumns[_dd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="_dd" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - mov_0217_txt"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1046"
+              name="Source - mov_0217_txt"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - mov_0217_txt.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Nrc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Nrc]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Nrc]"
+                      name="Nrc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Tel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Tel]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Tel]"
+                      name="Tel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtConta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtConta]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtConta]"
+                      name="dtConta"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtVencto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtVencto]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtVencto]"
+                      name="dtVencto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtProc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtProc]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtProc]"
+                      name="dtProc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtPagto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtPagto]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtPagto]"
+                      name="dtPagto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Seg]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Seg]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Seg]"
+                      name="Seg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Aging]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Aging]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Aging]"
+                      name="Aging"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Faixa]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Faixa]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Faixa]"
+                      name="Faixa"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[cdStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[cdStatus]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[cdStatus]"
+                      name="cdStatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtStatus]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtStatus]"
+                      name="dtStatus"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlConta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlConta]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlConta]"
+                      name="vlConta"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlAssinat]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlAssinat]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlAssinat]"
+                      name="vlAssinat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TEL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TEL]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TEL]"
+                      name="vlLDN_TEL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDI_TEL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDI_TEL]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDI_TEL]"
+                      name="vlLDI_TEL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_INT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_INT]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_INT]"
+                      name="vlLDN_INT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDI_INT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDI_INT]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDI_INT]"
+                      name="vlLDI_INT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_EMB]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_EMB]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_EMB]"
+                      name="vlLDN_EMB"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDI_EMB]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDI_EMB]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDI_EMB]"
+                      name="vlLDI_EMB"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_VSP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_VSP]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_VSP]"
+                      name="vlLDN_VSP"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_ANT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_ANT]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_ANT]"
+                      name="vlLDN_ANT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_FID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_FID]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_FID]"
+                      name="vlLDN_FID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TLM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TLM]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TLM]"
+                      name="vlLDN_TLM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TNL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TNL]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TNL]"
+                      name="vlLDN_TNL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_BRTEL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_BRTEL]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_BRTEL]"
+                      name="vlLDN_BRTEL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TIM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TIM]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TIM]"
+                      name="vlLDN_TIM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TESS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TESS]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_TESS]"
+                      name="vlLDN_TESS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_GVT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_GVT]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_GVT]"
+                      name="vlLDN_GVT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_CTBC]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_CTBC]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLDN_CTBC]"
+                      name="vlLDN_CTBC"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSerMedi]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlSerMedi]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSerMedi]"
+                      name="vlSerMedi"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSerTerc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlSerTerc]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSerTerc]"
+                      name="vlSerTerc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSer0900]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlSer0900]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSer0900]"
+                      name="vlSer0900"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSerOutr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlSerOutr]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlSerOutr]"
+                      name="vlSerOutr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlCelular]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlCelular]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlCelular]"
+                      name="vlCelular"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLocACob]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLocACob]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlLocACob]"
+                      name="vlLocACob"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlCredCed]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlCredCed]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlCredCed]"
+                      name="vlCredCed"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlDescCed]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlDescCed]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlDescCed]"
+                      name="vlDescCed"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlVTexto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlVTexto]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlVTexto]"
+                      name="vlVTexto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlDados]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlDados]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[vlDados]"
+                      name="vlDados"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[tpNRF]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[tpNRF]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[tpNRF]"
+                      name="tpNRF"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Nrf]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Nrf]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Nrf]"
+                      name="Nrf"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[segCompleto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[segCompleto]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[segCompleto]"
+                      name="segCompleto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Zona]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Zona]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Zona]"
+                      name="Zona"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[ClassAss]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[ClassAss]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[ClassAss]"
+                      name="ClassAss"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[pConta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[pConta]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[pConta]"
+                      name="pConta"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Cep]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Cep]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[Cep]"
+                      name="Cep"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtInstalacao]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtInstalacao]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[dtInstalacao]"
+                      name="dtInstalacao"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[cdBanco]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[cdBanco]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[cdBanco]"
+                      name="cdBanco"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[tpCaixa]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[tpCaixa]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[tpCaixa]"
+                      name="tpCaixa"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[_mm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[_mm]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[_mm]"
+                      name="_mm"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[_dd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[_dd]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].Columns[_dd]"
+                      name="_dd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Nrc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nrc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Tel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tel" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtConta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtConta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtVencto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtVencto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtProc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtProc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtPagto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtPagto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Seg]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Seg" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Aging]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Aging" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Faixa]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Faixa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[cdStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cdStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlConta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlConta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlAssinat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlAssinat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TEL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDI_TEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDI_TEL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_INT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_INT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDI_INT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDI_INT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_EMB]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_EMB" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDI_EMB]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDI_EMB" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_VSP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_VSP" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_ANT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_ANT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_FID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_FID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TLM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TLM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TNL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TNL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_BRTEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_BRTEL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TIM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_TESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_TESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_GVT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_GVT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLDN_CTBC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLDN_CTBC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlSerMedi]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlSerMedi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlSerTerc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlSerTerc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlSer0900]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlSer0900" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlSerOutr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlSerOutr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlCelular]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlCelular" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlLocACob]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlLocACob" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlCredCed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlCredCed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlDescCed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlDescCed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlVTexto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlVTexto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[vlDados]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vlDados" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[tpNRF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tpNRF" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Nrf]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nrf" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[segCompleto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="segCompleto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Zona]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Zona" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[ClassAss]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ClassAss" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[pConta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="pConta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[Cep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Cep" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[dtInstalacao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dtInstalacao" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[cdBanco]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cdBanco" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[tpCaixa]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tpCaixa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[_mm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="_mm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output].ExternalColumns[_dd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="_dd" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task 1\Destination - tmp_mov_0217.Inputs[Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - mov_0217_txt.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{AB04B0BA-3DAC-48EF-84DE-F9C5EF4C3635}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{46F207D5-71C8-4031-A158-123E4779EF52}"
+          SQLTask:SqlStatementSource="CREATE TABLE [TRANSITO].[tmp_mov_0217] (&#xA;[Nrc] varchar(50),&#xA;[Tel] varchar(50),&#xA;[dtConta] varchar(50),&#xA;[dtVencto] varchar(50),&#xA;[dtProc] varchar(50),&#xA;[dtPagto] varchar(50),&#xA;[Seg] varchar(50),&#xA;[Aging] varchar(50),&#xA;[Faixa] varchar(50),&#xA;[cdStatus] varchar(50),&#xA;[dtStatus] varchar(50),&#xA;[vlConta] varchar(50),&#xA;[vlAssinat] varchar(50),&#xA;[vlLDN_TEL] varchar(50),&#xA;[vlLDI_TEL] varchar(50),&#xA;[vlLDN_INT] varchar(50),&#xA;[vlLDI_INT] varchar(50),&#xA;[vlLDN_EMB] varchar(50),&#xA;[vlLDI_EMB] varchar(50),&#xA;[vlLDN_VSP] varchar(50),&#xA;[vlLDN_ANT] varchar(50),&#xA;[vlLDN_FID] varchar(50),&#xA;[vlLDN_TLM] varchar(50),&#xA;[vlLDN_TNL] varchar(50),&#xA;[vlLDN_BRTEL] varchar(50),&#xA;[vlLDN_TIM] varchar(50),&#xA;[vlLDN_TESS] varchar(50),&#xA;[vlLDN_GVT] varchar(50),&#xA;[vlLDN_CTBC] varchar(50),&#xA;[vlSerMedi] varchar(50),&#xA;[vlSerTerc] varchar(50),&#xA;[vlSer0900] varchar(50),&#xA;[vlSerOutr] varchar(50),&#xA;[vlCelular] varchar(50),&#xA;[vlLocACob] varchar(50),&#xA;[vlCredCed] varchar(50),&#xA;[vlDescCed] varchar(50),&#xA;[vlVTexto] varchar(50),&#xA;[vlDados] varchar(50),&#xA;[tpNRF] varchar(50),&#xA;[Nrf] varchar(50),&#xA;[segCompleto] varchar(50),&#xA;[Zona] varchar(50),&#xA;[ClassAss] varchar(50),&#xA;[pConta] varchar(50),&#xA;[Cep] varchar(50),&#xA;[dtInstalacao] varchar(50),&#xA;[cdBanco] varchar(50),&#xA;[tpCaixa] varchar(50),&#xA;[_mm] varchar(50),&#xA;[_dd] varchar(50)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{E0135297-AB62-4DBF-84DD-1777D3B834E2\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{E0135297-AB62-4DBF-84DD-1777D3B834E2}"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{E0135297-AB62-4DBF-84DD-1777D3B834E2}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="20.5,107.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Preparation SQL Task 1"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{E0135297-AB62-4DBF-84DD-1777D3B834E2\}]"
+          TopLeft="100.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

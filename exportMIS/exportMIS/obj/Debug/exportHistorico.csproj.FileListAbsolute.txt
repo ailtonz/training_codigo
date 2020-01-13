@@ -1,0 +1,12 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Banco\exportHistorico\exportHistorico\bin\Debug\exportHistorico.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Banco\exportHistorico\exportHistorico\bin\Debug\exportHistorico.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Banco\exportHistorico\exportHistorico\bin\Debug\exportHistorico.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Banco\exportHistorico\exportHistorico\obj\Debug\exportHistorico.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Banco\exportHistorico\exportHistorico\obj\Debug\exportHistorico.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Banco\exportHistorico\exportHistorico\obj\Debug\exportHistorico.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\exportHistorico\bin\Debug\exportHistorico.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\exportHistorico\obj\Debug\exportHistorico.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\exportHistorico\obj\Debug\exportHistorico.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\exportHistorico\bin\Debug\exportHistorico.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\exportHistorico\bin\Debug\exportHistorico.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\exportHistorico\obj\Debug\exportHistorico.csprojResolveAssemblyReference.cache

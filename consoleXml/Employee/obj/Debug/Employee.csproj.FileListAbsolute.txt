@@ -1,0 +1,9 @@
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Employee\bin\Debug\Employee.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Employee\bin\Debug\Employee.exe
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Employee\bin\Debug\Employee.pdb
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Employee\obj\Debug\Employee.csprojResolveAssemblyReference.cache
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Employee\obj\Debug\Employee.exe
+C:\Users\l.a.junior\Desktop\wkspace\consoleXml\Employee\obj\Debug\Employee.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Employee\bin\Debug\Employee.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Employee\obj\Debug\Employee.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Employee\obj\Debug\Employee.pdb

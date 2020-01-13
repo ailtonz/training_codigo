@@ -1,0 +1,7 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\xml_to_excel\bin\Debug\xml_to_excel.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\xml_to_excel\obj\Debug\xml_to_excel.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\xml_to_excel\bin\Debug\xml_to_excel.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\xml_to_excel\bin\Debug\xml_to_excel.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\xml_to_excel\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\xml_to_excel\obj\Debug\xml_to_excel.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\xml_to_excel\obj\Debug\xml_to_excel.pdb

@@ -1,0 +1,44 @@
+USE [DB_G_CASH_BBRIL]
+GO
+
+/****** Object:  Table [sch_Carga].[Tbl_Import_Car_Bril]    Script Date: 4/26/2017 2:44:30 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+--DROP TABLE [sch_Carga].[Tbl_Import_Car_Bril]
+CREATE TABLE [sch_Carga].[Tbl_Import_Car_Bril](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[DT_CARGA]	DATETIME DEFAULT GETDATE() NOT NULL,
+	[COD_EMPRESA] INT NOT NULL,
+	[CLIENTE] [int] NULL,
+	[NOME_CLIENTE] [varchar](100) NULL,
+	[TIPO] [varchar](2) NULL,
+	[REFERENCIA] [varchar](20) NULL,
+	[DATA_DOC] [date] NULL,
+	[VENCTO_LIQ] [date] NULL,
+	[VALOR_MI] [decimal](18, 2) NULL,
+	[DATRAS] [int] NULL,
+	[CPGT] [varchar](4) NULL,
+	[N_DOC] [bigint] NULL,
+	[CHAVE_REFERENCIA] [varchar](50) NULL,
+	[BANC_EMPRE] [varchar](10) NULL,
+	[TEXTO] [varchar](100) NULL,
+	[LNEG] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

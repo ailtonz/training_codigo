@@ -1,0 +1,6 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\bin\Debug\exportAcordo.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\bin\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\bin\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\obj\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\obj\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\obj\Debug\exportAcordo.csprojResolveAssemblyReference.cache

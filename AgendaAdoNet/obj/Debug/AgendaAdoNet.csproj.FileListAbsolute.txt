@@ -1,0 +1,13 @@
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\bin\Debug\AgendaAdoNet.exe.config
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\bin\Debug\AgendaAdoNet.exe
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\bin\Debug\AgendaAdoNet.pdb
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\obj\Debug\AgendaAdoNet.csprojResolveAssemblyReference.cache
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\obj\Debug\AgendaAdoNet.Properties.Resources.resources
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\obj\Debug\AgendaAdoNet.csproj.GenerateResource.Cache
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\obj\Debug\AgendaAdoNet.exe
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\obj\Debug\AgendaAdoNet.pdb
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\obj\Debug\AgendaAdoNet.frmIncluirAlterarContato.resources
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\AgendaAdoNet\obj\Debug\AgendaAdoNet.frmAgenda.resources
+C:\Users\l.a.junior\Desktop\wkspace\AgendaAdoNet\bin\Debug\AgendaAdoNet.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\AgendaAdoNet\obj\Debug\AgendaAdoNet.exe
+C:\Users\l.a.junior\Desktop\wkspace\AgendaAdoNet\obj\Debug\AgendaAdoNet.pdb

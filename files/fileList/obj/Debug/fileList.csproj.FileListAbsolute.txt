@@ -1,0 +1,18 @@
+C:\tmp\wkspace\EAD_CSCHARP\files\fileList\bin\Debug\fileList.exe.config
+C:\tmp\wkspace\EAD_CSCHARP\files\fileList\bin\Debug\fileList.exe
+C:\tmp\wkspace\EAD_CSCHARP\files\fileList\bin\Debug\fileList.pdb
+C:\tmp\wkspace\EAD_CSCHARP\files\fileList\obj\Debug\fileList.csprojResolveAssemblyReference.cache
+C:\tmp\wkspace\EAD_CSCHARP\files\fileList\obj\Debug\fileList.exe
+C:\tmp\wkspace\EAD_CSCHARP\files\fileList\obj\Debug\fileList.pdb
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileList\bin\Debug\fileList.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileList\bin\Debug\fileList.exe
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileList\bin\Debug\fileList.pdb
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileList\obj\Debug\fileList.csprojResolveAssemblyReference.cache
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileList\obj\Debug\fileList.exe
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileList\obj\Debug\fileList.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileList\bin\Debug\fileList.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileList\bin\Debug\fileList.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileList\bin\Debug\fileList.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileList\obj\Debug\fileList.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileList\obj\Debug\fileList.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileList\obj\Debug\fileList.pdb

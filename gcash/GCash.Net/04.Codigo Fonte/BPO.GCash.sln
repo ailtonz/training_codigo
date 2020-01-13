@@ -1,0 +1,105 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPO.GCash.Web", "BPO.GCash.Web\BPO.GCash.Web.csproj", "{86CADB26-5817-46B6-88C7-76D5753722C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPO.Arquitetura.Autenticacao", "BPO.Arquitetura.Autenticacao\BPO.Arquitetura.Autenticacao.csproj", "{238C3019-21C8-4751-A9EF-2BD14D3CAE54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPO.GCash.Entidade", "BPO.GCash.Entidade\BPO.GCash.Entidade.csproj", "{7B986386-F3C8-45CB-83A9-7921BDE86124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPO.GCash.Negocio", "BPO.GCash.Negocio\BPO.GCash.Negocio.csproj", "{A8103C39-844E-4B56-8DB4-8D75B2B23168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPO.Arquitetura.Negocio", "BPO.Arquitetura.Negocio\BPO.Arquitetura.Negocio.csproj", "{DBE7D554-59CA-4C9C-99F6-A600048B49D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPO.Arquitetura.Entidade", "BPO.Arquitetura.Entidade\BPO.Arquitetura.Entidade.csproj", "{BAB69326-F08F-4C68-A75E-9B082B2D4494}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BPO.Arquitetura", "BPO.Arquitetura", "{2864D514-401B-4567-B93C-44F29115A7EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPO.Arquitetura.Web", "BPO.Arquitetura.Web\BPO.Arquitetura.Web.csproj", "{7E484AA4-B931-4AFC-BD96-F2B8A3804E71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BPO.GCash", "BPO.GCash", "{B5B6FEE7-48F6-4452-A931-BABD898F80C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86CADB26-5817-46B6-88C7-76D5753722C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CADB26-5817-46B6-88C7-76D5753722C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CADB26-5817-46B6-88C7-76D5753722C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CADB26-5817-46B6-88C7-76D5753722C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{238C3019-21C8-4751-A9EF-2BD14D3CAE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{238C3019-21C8-4751-A9EF-2BD14D3CAE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{238C3019-21C8-4751-A9EF-2BD14D3CAE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{238C3019-21C8-4751-A9EF-2BD14D3CAE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B986386-F3C8-45CB-83A9-7921BDE86124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B986386-F3C8-45CB-83A9-7921BDE86124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B986386-F3C8-45CB-83A9-7921BDE86124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B986386-F3C8-45CB-83A9-7921BDE86124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8103C39-844E-4B56-8DB4-8D75B2B23168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8103C39-844E-4B56-8DB4-8D75B2B23168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8103C39-844E-4B56-8DB4-8D75B2B23168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8103C39-844E-4B56-8DB4-8D75B2B23168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE7D554-59CA-4C9C-99F6-A600048B49D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE7D554-59CA-4C9C-99F6-A600048B49D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE7D554-59CA-4C9C-99F6-A600048B49D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE7D554-59CA-4C9C-99F6-A600048B49D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB69326-F08F-4C68-A75E-9B082B2D4494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB69326-F08F-4C68-A75E-9B082B2D4494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB69326-F08F-4C68-A75E-9B082B2D4494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB69326-F08F-4C68-A75E-9B082B2D4494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E484AA4-B931-4AFC-BD96-F2B8A3804E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E484AA4-B931-4AFC-BD96-F2B8A3804E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E484AA4-B931-4AFC-BD96-F2B8A3804E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E484AA4-B931-4AFC-BD96-F2B8A3804E71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86CADB26-5817-46B6-88C7-76D5753722C3} = {B5B6FEE7-48F6-4452-A931-BABD898F80C6}
+		{238C3019-21C8-4751-A9EF-2BD14D3CAE54} = {2864D514-401B-4567-B93C-44F29115A7EF}
+		{7B986386-F3C8-45CB-83A9-7921BDE86124} = {B5B6FEE7-48F6-4452-A931-BABD898F80C6}
+		{A8103C39-844E-4B56-8DB4-8D75B2B23168} = {B5B6FEE7-48F6-4452-A931-BABD898F80C6}
+		{DBE7D554-59CA-4C9C-99F6-A600048B49D6} = {2864D514-401B-4567-B93C-44F29115A7EF}
+		{BAB69326-F08F-4C68-A75E-9B082B2D4494} = {2864D514-401B-4567-B93C-44F29115A7EF}
+		{7E484AA4-B931-4AFC-BD96-F2B8A3804E71} = {2864D514-401B-4567-B93C-44F29115A7EF}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://gcashnet.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BPO.Arquitetura.Autenticacao\\BPO.Arquitetura.Autenticacao.csproj
+		SccProjectTopLevelParentUniqueName1 = BPO.GCash.sln
+		SccProjectName1 = BPO.Arquitetura.Autenticacao
+		SccLocalPath1 = BPO.Arquitetura.Autenticacao
+		SccProjectUniqueName2 = BPO.Arquitetura.Entidade\\BPO.Arquitetura.Entidade.csproj
+		SccProjectTopLevelParentUniqueName2 = BPO.GCash.sln
+		SccProjectName2 = BPO.Arquitetura.Entidade
+		SccLocalPath2 = BPO.Arquitetura.Entidade
+		SccProjectUniqueName3 = BPO.Arquitetura.Negocio\\BPO.Arquitetura.Negocio.csproj
+		SccProjectTopLevelParentUniqueName3 = BPO.GCash.sln
+		SccProjectName3 = BPO.Arquitetura.Negocio
+		SccLocalPath3 = BPO.Arquitetura.Negocio
+		SccProjectUniqueName4 = BPO.Arquitetura.Web\\BPO.Arquitetura.Web.csproj
+		SccProjectTopLevelParentUniqueName4 = BPO.GCash.sln
+		SccProjectName4 = BPO.Arquitetura.Web
+		SccLocalPath4 = BPO.Arquitetura.Web
+		SccProjectUniqueName5 = BPO.GCash.Entidade\\BPO.GCash.Entidade.csproj
+		SccProjectTopLevelParentUniqueName5 = BPO.GCash.sln
+		SccProjectName5 = BPO.GCash.Entidade
+		SccLocalPath5 = BPO.GCash.Entidade
+		SccProjectUniqueName6 = BPO.GCash.Negocio\\BPO.GCash.Negocio.csproj
+		SccProjectTopLevelParentUniqueName6 = BPO.GCash.sln
+		SccProjectName6 = BPO.GCash.Negocio
+		SccLocalPath6 = BPO.GCash.Negocio
+		SccProjectUniqueName7 = BPO.GCash.Web\\BPO.GCash.Web.csproj
+		SccProjectTopLevelParentUniqueName7 = BPO.GCash.sln
+		SccProjectName7 = BPO.GCash.Web
+		SccLocalPath7 = BPO.GCash.Web
+	EndGlobalSection
+EndGlobal

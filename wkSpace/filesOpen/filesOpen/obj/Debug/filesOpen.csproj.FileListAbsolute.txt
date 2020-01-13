@@ -1,0 +1,6 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\filesOpen\filesOpen\bin\Debug\filesOpen.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\filesOpen\filesOpen\bin\Debug\filesOpen.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\filesOpen\filesOpen\bin\Debug\filesOpen.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\filesOpen\filesOpen\obj\Debug\filesOpen.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\filesOpen\filesOpen\obj\Debug\filesOpen.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\filesOpen\filesOpen\obj\Debug\filesOpen.pdb

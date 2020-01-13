@@ -1,0 +1,21 @@
+USE [DB_SISCOB]
+GO
+
+INSERT INTO [AUXILIAR].[TB_PAGTO_AJUSTE_BAIXADOS]
+           ([ID_CONSOLIDADO]
+           ,[VALOR_PGTO]
+           ,[VALOR_AJUSTE]
+           ,[DT_IMPORTACAO]
+           ,[DT_BAIXA_SISTEMA]
+           ,[STATUS])
+SELECT 
+      [ID_CONSOLIDADO]
+      ,[VALOR_PGTO]
+      ,[VALOR_AJUSTE]
+      ,[DT_IMPORTACAO]
+      ,[DT_BAIXA_SISTEMA]
+      ,[STATUS]
+  FROM [DB_SISCOB].[TRANSITO].[tmp_TB_PAGTO_AJUSTE_BAIXADOS]
+GO
+
+

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="172.16.0.13.DB_SISCOB.a.dasilva"
+  DTS:DTSID="{B32E0720-83B9-43F2-94FE-AEDE142EC24D}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=172.16.0.13;User ID=a.dasilva;Initial Catalog=DB_SISCOB_HML;Provider=SQLOLEDB.1;Auto Translate=False;Application Name=SSIS-PagamentosAjustesFixa-{B32E0720-83B9-43F2-94FE-AEDE142EC24D}172.16.0.13.DB_SISCOB.a.dasilva;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzJnW35eeakCDgzKukruaGwAAAAACAAAAAAADZgAAwAAAABAAAABf8+dqwd/SUEnE1JVvjaOxAAAAAASAAACgAAAAEAAAAGtQgPr4oRz86paCacmzM654AAAASu4GdOgPPX8htXaRfyrfKDRzIN8Gs6yxx1lA4lE1odr0menw/3p9iKmnomULJGhlOskxxzV+0UZF64AZDRimvgzW1TGiSFCXURiQ7c9ssb6cxDn8Xhr9/ZOiBdh8y/eki2NvnfMjtjSHxdkNKvZd2oHmiEzHfFcPFAAAAOA80AnioLJF62pZSQnTfbQT3PS+</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

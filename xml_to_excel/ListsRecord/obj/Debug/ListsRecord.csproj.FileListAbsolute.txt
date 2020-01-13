@@ -1,0 +1,6 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\ListsRecord\bin\Debug\ListsRecord.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\ListsRecord\bin\Debug\ListsRecord.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\ListsRecord\bin\Debug\ListsRecord.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\ListsRecord\obj\Debug\ListsRecord.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\ListsRecord\obj\Debug\ListsRecord.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\ListsRecord\obj\Debug\ListsRecord.pdb

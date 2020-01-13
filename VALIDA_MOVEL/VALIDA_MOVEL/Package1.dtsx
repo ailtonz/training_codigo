@@ -1,0 +1,861 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/10/2017 2:14:58 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CPX-OYW06SYPJOS"
+  DTS:CreatorName="DIR\a.dasilva"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{BF7FC888-0006-4EDD-800B-26D40E87B216}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.2165.0"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Package1"
+  DTS:VersionGUID="{2C11DF49-C848-425C-BE46-32D1A320EFF9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionExcel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{5AB01AA2-F3F6-4FC1-8865-D91C97512CD6}"
+      DTS:ObjectName="DestinationConnectionExcel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\a.dasilva\Desktop\VALIDA_MOVEL_2003.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{704520A5-7CC3-4280-B89C-8EA42ABFED5F}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=172.16.0.13;User ID=a.dasilva;Initial Catalog=db_siscob;Provider=SQLOLEDB;Auto Translate=false;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzJnW35eeakCDgzKukruaGwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA2SCtASIa1yOQktmAwYJFtAAAAAASAAACgAAAAEAAAAG15juN9xSWPksQA18eOk6YYAAAAO6maOi2DJ+d9rmU/VU1tevl4V4qIfjjrFAAAAND7bywIgtDsTh1+9wHHg4LVHwys</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionExcel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{81EDCDA9-65FD-412D-A21F-B1248DF97E99}"
+      DTS:ObjectName="SourceConnectionExcel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\a.dasilva\Desktop\VALIDA_MOVEL_2003.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{05D6E83D-9FD0-406A-B7B2-615FCEC05E3A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TRANSITO].['TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$']</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].Columns[RAIZ_GRUPO]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RAIZ_GRUPO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[RAIZ_GRUPO]"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RAIZ_GRUPO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].Columns[CONTA]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CONTA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[CONTA]"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[CONTA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].Columns[DT_PROCESS]"
+                      cachedDataType="date"
+                      cachedName="DT_PROCESS"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[DT_PROCESS]"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[DT_PROCESS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="VIVO_CARTEIRA#FORNECEDOR"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[VIVO_CARTEIRA#FORNECEDOR]"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[VIVO_CARTEIRA#FORNECEDOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].Columns[RELATÓRIO#FORNECEDOR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RELATÓRIO#FORNECEDOR"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[RELATÓRIO#FORNECEDOR]"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RELATÓRIO#FORNECEDOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      cachedDataType="r8"
+                      cachedName="SumOfSumOfSumOfSALDO_CAR_ATUAL"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[RAIZ_GRUPO]"
+                      dataType="wstr"
+                      length="255"
+                      name="RAIZ_GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[CONTA]"
+                      dataType="wstr"
+                      length="255"
+                      name="CONTA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[DT_PROCESS]"
+                      dataType="date"
+                      name="DT_PROCESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[VIVO_CARTEIRA#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      name="VIVO_CARTEIRA#FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[RELATÓRIO#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      name="RELATÓRIO#FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      dataType="r8"
+                      name="SumOfSumOfSumOfSALDO_CAR_ATUAL" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TRANSITO].['TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$']</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].Columns[RAIZ_GRUPO]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RAIZ_GRUPO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[RAIZ_GRUPO]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RAIZ_GRUPO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].Columns[CONTA]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CONTA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[CONTA]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[CONTA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].Columns[DT_PROCESS]"
+                      cachedDataType="date"
+                      cachedName="DT_PROCESS"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[DT_PROCESS]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[DT_PROCESS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="VIVO_CARTEIRA#FORNECEDOR"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[VIVO_CARTEIRA#FORNECEDOR]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[VIVO_CARTEIRA#FORNECEDOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].Columns[RELATÓRIO#FORNECEDOR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RELATÓRIO#FORNECEDOR"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[RELATÓRIO#FORNECEDOR]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RELATÓRIO#FORNECEDOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      cachedDataType="r8"
+                      cachedName="SumOfSumOfSumOfSALDO_CAR_ATUAL"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[RAIZ_GRUPO]"
+                      dataType="wstr"
+                      length="255"
+                      name="RAIZ_GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[CONTA]"
+                      dataType="wstr"
+                      length="255"
+                      name="CONTA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[DT_PROCESS]"
+                      dataType="date"
+                      name="DT_PROCESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[VIVO_CARTEIRA#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      name="VIVO_CARTEIRA#FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[RELATÓRIO#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      name="RELATÓRIO#FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input].ExternalColumns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      dataType="r8"
+                      name="SumOfSumOfSumOfSALDO_CAR_ATUAL" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Source - 'CORRIGIR FORNECEDOR$'"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'CORRIGIR FORNECEDOR$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionExcel]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RAIZ_GRUPO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[RAIZ_GRUPO]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RAIZ_GRUPO]"
+                      name="RAIZ_GRUPO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[CONTA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[CONTA]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[CONTA]"
+                      name="CONTA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[DT_PROCESS]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[DT_PROCESS]"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[DT_PROCESS]"
+                      name="DT_PROCESS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[VIVO_CARTEIRA#FORNECEDOR]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      name="VIVO_CARTEIRA#FORNECEDOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RELATÓRIO#FORNECEDOR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[RELATÓRIO#FORNECEDOR]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RELATÓRIO#FORNECEDOR]"
+                      name="RELATÓRIO#FORNECEDOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      name="SumOfSumOfSumOfSALDO_CAR_ATUAL"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[RAIZ_GRUPO]"
+                      dataType="wstr"
+                      length="255"
+                      name="RAIZ_GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[CONTA]"
+                      dataType="wstr"
+                      length="255"
+                      name="CONTA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[DT_PROCESS]"
+                      dataType="date"
+                      name="DT_PROCESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[VIVO_CARTEIRA#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      name="VIVO_CARTEIRA#FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[RELATÓRIO#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      name="RELATÓRIO#FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      dataType="r8"
+                      name="SumOfSumOfSumOfSALDO_CAR_ATUAL" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[RAIZ_GRUPO]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[RAIZ_GRUPO]"
+                      name="RAIZ_GRUPO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[CONTA]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[CONTA]"
+                      name="CONTA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[DT_PROCESS]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[DT_PROCESS]"
+                      name="DT_PROCESS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      name="VIVO_CARTEIRA#FORNECEDOR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[RELATÓRIO#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[RELATÓRIO#FORNECEDOR]"
+                      name="RELATÓRIO#FORNECEDOR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      name="SumOfSumOfSumOfSALDO_CAR_ATUAL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Source 1 - 'EXCLUIR FORNECEDOR$'"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'EXCLUIR FORNECEDOR$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionExcel]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RAIZ_GRUPO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[RAIZ_GRUPO]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RAIZ_GRUPO]"
+                      name="RAIZ_GRUPO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[CONTA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[CONTA]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[CONTA]"
+                      name="CONTA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[DT_PROCESS]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[DT_PROCESS]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[DT_PROCESS]"
+                      name="DT_PROCESS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[VIVO_CARTEIRA#FORNECEDOR]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      name="VIVO_CARTEIRA#FORNECEDOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RELATÓRIO#FORNECEDOR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[RELATÓRIO#FORNECEDOR]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[RELATÓRIO#FORNECEDOR]"
+                      name="RELATÓRIO#FORNECEDOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      name="SumOfSumOfSumOfSALDO_CAR_ATUAL"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[RAIZ_GRUPO]"
+                      dataType="wstr"
+                      length="255"
+                      name="RAIZ_GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[CONTA]"
+                      dataType="wstr"
+                      length="255"
+                      name="CONTA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[DT_PROCESS]"
+                      dataType="date"
+                      name="DT_PROCESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[VIVO_CARTEIRA#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      name="VIVO_CARTEIRA#FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[RELATÓRIO#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      name="RELATÓRIO#FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output].ExternalColumns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      dataType="r8"
+                      name="SumOfSumOfSumOfSALDO_CAR_ATUAL" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[RAIZ_GRUPO]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[RAIZ_GRUPO]"
+                      name="RAIZ_GRUPO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[CONTA]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[CONTA]"
+                      name="CONTA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[DT_PROCESS]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[DT_PROCESS]"
+                      name="DT_PROCESS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[VIVO_CARTEIRA#FORNECEDOR]"
+                      name="VIVO_CARTEIRA#FORNECEDOR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[RELATÓRIO#FORNECEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[RELATÓRIO#FORNECEDOR]"
+                      name="RELATÓRIO#FORNECEDOR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[SumOfSumOfSumOfSALDO_CAR_ATUAL]"
+                      name="SumOfSumOfSumOfSALDO_CAR_ATUAL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task 1\Destination - 'TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'.Inputs[Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task 1\Source - 'CORRIGIR FORNECEDOR$'.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Excel Source Output1]"
+              endId="Package\Data Flow Task 1\Destination 1 - 'TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'.Inputs[Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task 1\Source 1 - 'EXCLUIR FORNECEDOR$'.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{9C096759-59EF-4AA4-BD23-E40997F0030A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{704520A5-7CC3-4280-B89C-8EA42ABFED5F}"
+          SQLTask:SqlStatementSource="CREATE TABLE [TRANSITO].['TMP_VALIDA_MOVEL_CORRIGIR FORNECEDOR$'] (&#xA;[RAIZ_GRUPO] nvarchar(255),&#xA;[CONTA] nvarchar(255),&#xA;[DT_PROCESS] datetime,&#xA;[VIVO_CARTEIRA#FORNECEDOR] nvarchar(255),&#xA;[RELATÓRIO#FORNECEDOR] nvarchar(255),&#xA;[SumOfSumOfSumOfSALDO_CAR_ATUAL] float&#xA;)&#xA;GO&#xA;CREATE TABLE [TRANSITO].['TMP_VALIDA_MOVEL_EXCLUIR FORNECEDOR$'] (&#xA;[RAIZ_GRUPO] nvarchar(255),&#xA;[CONTA] nvarchar(255),&#xA;[DT_PROCESS] datetime,&#xA;[VIVO_CARTEIRA#FORNECEDOR] nvarchar(255),&#xA;[RELATÓRIO#FORNECEDOR] nvarchar(255),&#xA;[SumOfSumOfSumOfSALDO_CAR_ATUAL] float&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{231813AE-BE7B-452B-A9EC-D2A5F827E696\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{231813AE-BE7B-452B-A9EC-D2A5F827E696}"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{231813AE-BE7B-452B-A9EC-D2A5F827E696}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+</DTS:Executable>

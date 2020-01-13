@@ -1,0 +1,8 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA\runVBA\bin\Debug\runVBA.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA\runVBA\bin\Debug\runVBA.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA\runVBA\bin\Debug\runVBA.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA\runVBA\obj\Debug\runVBA.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA\runVBA\obj\Debug\runVBA.Properties.Resources.resources
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA\runVBA\obj\Debug\runVBA.csproj.GenerateResource.Cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA\runVBA\obj\Debug\runVBA.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runVBA\runVBA\obj\Debug\runVBA.pdb

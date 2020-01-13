@@ -1,0 +1,28 @@
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\bin\Debug\excel_01.exe.config
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\bin\Debug\excel_01.exe
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\bin\Debug\excel_01.pdb
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\obj\Debug\excel_01.csprojResolveAssemblyReference.cache
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\obj\Debug\excel_01.csproj.ResolveComReference.cache
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\obj\Debug\excel_01.Form1.resources
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\obj\Debug\excel_01.Properties.Resources.resources
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\obj\Debug\excel_01.csproj.GenerateResource.Cache
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\obj\Debug\excel_01.exe
+C:\tmp\wkspace\EAD_CSCHARP\excel\excel_01\excel_01\obj\Debug\excel_01.pdb
+C:\Users\l.a.junior\Desktop\wkspace\excel\excel_01\excel_01\bin\Debug\excel_01.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\excel\excel_01\excel_01\obj\Debug\excel_01.csproj.ResolveComReference.cache
+C:\Users\l.a.junior\Desktop\wkspace\excel\excel_01\excel_01\obj\Debug\excel_01.exe
+C:\Users\l.a.junior\Desktop\wkspace\excel\excel_01\excel_01\obj\Debug\excel_01.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\bin\Debug\excel_01.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\obj\Debug\excel_01.csproj.ResolveComReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\obj\Debug\excel_01.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\obj\Debug\excel_01.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\bin\Debug\excel_01.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\bin\Debug\excel_01.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\obj\Debug\excel_01.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\obj\Debug\excel_01.Form1.resources
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\obj\Debug\excel_01.Properties.Resources.resources
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\excel\excel_01\excel_01\obj\Debug\excel_01.csproj.GenerateResource.Cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Estudos\excel\excel_01\excel_01\bin\Debug\excel_01.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Estudos\excel\excel_01\excel_01\obj\Debug\excel_01.csproj.ResolveComReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Estudos\excel\excel_01\excel_01\obj\Debug\excel_01.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Estudos\excel\excel_01\excel_01\obj\Debug\excel_01.pdb

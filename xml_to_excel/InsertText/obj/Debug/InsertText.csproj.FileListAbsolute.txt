@@ -1,0 +1,7 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\InsertText\bin\Debug\InsertText.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\InsertText\bin\Debug\InsertText.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\InsertText\bin\Debug\InsertText.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\InsertText\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\InsertText\obj\Debug\InsertText.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\InsertText\obj\Debug\InsertText.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\xml_to_excel\xml_to_excel\InsertText\obj\Debug\InsertText.pdb

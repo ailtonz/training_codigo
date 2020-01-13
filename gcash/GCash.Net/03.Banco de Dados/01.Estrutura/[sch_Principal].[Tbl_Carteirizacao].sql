@@ -1,0 +1,26 @@
+USE [DB_G_CASH_BBRIL]
+GO
+
+/****** Object:  Table [sch_Principal].[Tbl_Carteirizacao]    Script Date: 4/24/2017 4:47:32 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [sch_Principal].[Tbl_Carteirizacao](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ID_CLIENTE] [int] NOT NULL,
+	[ID_USER] [int] NULL,
+	[ID_USER_ANALISTA] [int] NULL,
+	[DT_ATUALIZACAO] [datetime] NULL,
+	[ID_ANALISTA_ATUALIZACA] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+

@@ -1,0 +1,36 @@
+ -- update [DB_SISCOB_HML].[TRANSITO_PAGAMENTO_AJUSTE].[tmp_ATELECOM] 
+ -- set 
+	--[VlMovimento] = replace([VlMovimento],',','.')
+	--,[VlCorrecao] = replace([VlCorrecao],',','.')
+
+
+SELECT 
+	AJUSTE.[NotaFiscal] AS CONTA
+	, ISNULL(AJUSTE.[DtMovimento],0) AS DT_CORTE
+
+	,CASE 
+		WHEN 
+			AJUSTE.[VlCorrecao] < 0  THEN 0
+		ELSE 
+			AJUSTE.[VlMovimento]
+	END AS VALOR_PAGTO
+	
+	--, ISNULL(AJUSTE.[VlMovimento],0)  AS VALOR_PAGTO		 								
+
+	, ISNULL(AJUSTE.[VlCorrecao],0)  AS VALOR_AJUSTE
+
+	, CONCAT(AJUSTE.[NotaFiscal], CONVERT(DATE,AJUSTE.[DtMovimento]),ISNULL(REPLACE(AJUSTE.[VlMovimento],'.',''),'')) AS CHAVE
+	--INTO [DB_SISCOB_HML].[TRANSITO_PAGAMENTO_AJUSTE].[ATELECOM]
+FROM
+	[DB_SISCOB_HML].[TRANSITO_PAGAMENTO_AJUSTE].[tmp_ATELECOM] AJUSTE
+	--WHEN TI.ID_TIPO = 2 Then ISNULL(FI.TITULO,'') + ISNULL(FI.DTCONTA ,'') + TI.RAIZ_CPF_CNPJ
+
+	SELECT 
+		COUNT(*) AS CONTADOR
+		,CONVERT(DECIMAL(10,2),[VlCorrecao]) AS VALOR
+	FROM
+		[DB_SISCOB_HML].[TRANSITO_PAGAMENTO_AJUSTE].[tmp_ATELECOM]
+	--WHERE 
+	--	CONVERT(DECIMAL(10,2),[VlCorrecao]) < 0 
+	GROUP BY 
+		CONVERT(DECIMAL(10,2),[VlCorrecao])

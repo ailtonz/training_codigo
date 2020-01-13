@@ -1,0 +1,6 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\exportAcordo\exportAcordo\bin\Debug\exportAcordo.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\exportAcordo\exportAcordo\bin\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\exportAcordo\exportAcordo\bin\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\exportAcordo\exportAcordo\obj\Debug\exportAcordo.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\exportAcordo\exportAcordo\obj\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\exportAcordo\exportAcordo\obj\Debug\exportAcordo.pdb

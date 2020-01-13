@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectInfo>
+    <Name>PagamentosAjustesFixa</Name>
+    <LastWriteTime>2017-03-08T20:50:43.379679Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+  </ProjectInfo>
+  <LastBuildInfos>
+    <ProjectBuildItemInfo>
+      <Name>Car_Talao_Seg_1___tmp_CAR_MANUAL.dtsx</Name>
+      <LastWriteTime>2017-03-03T17:56:19.8415135Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>mov_0117__tmp_LEGADO.dtsx</Name>
+      <LastWriteTime>2017-03-03T18:06:08.4496483Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>mov_0217__tmp_LEGADO.dtsx</Name>
+      <LastWriteTime>2017-03-03T18:06:30.3006687Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>MOV_20170202__tmp_ATELECOM.dtsx</Name>
+      <LastWriteTime>2017-03-08T20:51:42.104677Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Ajustes e pagamentos - FIXA_0202_v1__tmp_ATLYS_AJUSTES.dtsx</Name>
+      <LastWriteTime>2017-03-03T18:17:49.5930142Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>F_CAR_Talao___tmp_CAR_MANUAL.dtsx</Name>
+      <LastWriteTime>2017-03-08T20:30:11.8713274Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+  </LastBuildInfos>
+</BuildLog>

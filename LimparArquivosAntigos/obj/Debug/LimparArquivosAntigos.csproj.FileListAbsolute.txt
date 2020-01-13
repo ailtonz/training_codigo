@@ -1,0 +1,24 @@
+C:\tmp\wkspace\EAD_CSCHARP\files\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.exe.config
+C:\tmp\wkspace\EAD_CSCHARP\files\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.exe
+C:\tmp\wkspace\EAD_CSCHARP\files\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.pdb
+C:\tmp\wkspace\EAD_CSCHARP\files\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.csprojResolveAssemblyReference.cache
+C:\tmp\wkspace\EAD_CSCHARP\files\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.exe
+C:\tmp\wkspace\EAD_CSCHARP\files\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.pdb
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.exe
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.pdb
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.exe
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.pdb
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.pdb
+C:\Users\a.dasilva\Desktop\G-CASH\Arquivos\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.exe.config
+C:\Users\a.dasilva\Desktop\G-CASH\Arquivos\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.exe
+C:\Users\a.dasilva\Desktop\G-CASH\Arquivos\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\LimparArquivosAntigos\bin\Debug\LimparArquivosAntigos.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\LimparArquivosAntigos\obj\Debug\LimparArquivosAntigos.pdb

@@ -1,0 +1,2024 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/6/2017 12:16:06 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TLF-PRD-WBD04"
+  DTS:CreatorName="TLF-PRD-WBD04\a.dasilva"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{50FADD8A-3602-4BB4-A4AF-D40AE9CDE995}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.4100.1"
+  DTS:LocaleID="1033"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Package2"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{03D2D82B-CFF6-40B8-941C-B9661C865657}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EF86BC02-9E41-4FB8-AEC0-E64720DF5E3C}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=191.234.188.49;User ID=a.dasilva;Initial Catalog=db_siscob;Provider=SQLOLEDB;Auto Translate=false;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkGaXyRkAn0G4hgJTiw72gQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD6C79f9j6oYsN2Lftw1FThUuSZWS01W0w50/qq8BvOVAAAAAAOgAAAAAIAACAAAABkUkVE5th78vPGoTDQdKTmttxwQkaD3pc87A9ZF5zWTiAAAACtPvaWwqYsysDJiZPsd2WRzOznXZmYMK2+WHwXdnkwj0AAAACCzpZoxpgyuCQRlFMVL93WsER04S5moGfJ+vrUR49p0mC9LsxQnMklJB0/QiOP+omHxpqqpNDK0jPGZWGP4ste</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E3CB6348-1A86-4C14-A058-AF158815BB8F}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=Z:\_siscob\vivo_Carteira.mdb;Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info=False;OLE DB Services=0;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{4DEF6E55-9B3A-4E18-A042-54986A8B97A9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - tmp__VW_VIVO_CARTEIRA_v02"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[tmp__VW_VIVO_CARTEIRA_v02]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[INTERCOMPANY]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="INTERCOMPANY"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[INTERCOMPANY]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[INTERCOMPANY]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[GRUPO_ANALISE]"
+                      cachedDataType="nText"
+                      cachedName="GRUPO_ANALISE"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[GRUPO_ANALISE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[GRUPO_ANALISE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[MAIOR_01_COBRAVEL]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="MAIOR_01_COBRAVEL"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[MAIOR_01_COBRAVEL]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[MAIOR_01_COBRAVEL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[GRUPO]"
+                      cachedDataType="nText"
+                      cachedName="GRUPO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[GRUPO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[GRUPO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[FORNECEDOR]"
+                      cachedDataType="nText"
+                      cachedName="FORNECEDOR"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[FORNECEDOR]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[FORNECEDOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[SEGMENTO_ARRECADACAO]"
+                      cachedDataType="nText"
+                      cachedName="SEGMENTO_ARRECADACAO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SEGMENTO_ARRECADACAO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SEGMENTO_ARRECADACAO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[SEGMENTO_GERENCIA]"
+                      cachedDataType="nText"
+                      cachedName="SEGMENTO_GERENCIA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SEGMENTO_GERENCIA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SEGMENTO_GERENCIA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[NV_FX_ARRECADA]"
+                      cachedDataType="nText"
+                      cachedName="NV_FX_ARRECADA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[NV_FX_ARRECADA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NV_FX_ARRECADA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[NV_FX_FECHO]"
+                      cachedDataType="nText"
+                      cachedName="NV_FX_FECHO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[NV_FX_FECHO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NV_FX_FECHO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[NV_FX_FORNECE]"
+                      cachedDataType="nText"
+                      cachedName="NV_FX_FORNECE"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[NV_FX_FORNECE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NV_FX_FORNECE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[ANALISE_CONTA]"
+                      cachedDataType="nText"
+                      cachedName="ANALISE_CONTA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[ANALISE_CONTA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ANALISE_CONTA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DEFINE_LD]"
+                      cachedDataType="i4"
+                      cachedName="DEFINE_LD"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DEFINE_LD]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DEFINE_LD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[CARTEIRA]"
+                      cachedDataType="nText"
+                      cachedName="CARTEIRA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CARTEIRA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CARTEIRA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[ANALISTA_TLF_VIVO]"
+                      cachedDataType="nText"
+                      cachedName="ANALISTA_TLF_VIVO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[ANALISTA_TLF_VIVO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ANALISTA_TLF_VIVO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[FAIXA]"
+                      cachedDataType="nText"
+                      cachedName="FAIXA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[FAIXA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[FAIXA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[CONTA]"
+                      cachedDataType="nText"
+                      cachedName="CONTA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CONTA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CONTA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[CNPJ]"
+                      cachedDataType="nText"
+                      cachedName="CNPJ"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CNPJ]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CNPJ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[CLASSE]"
+                      cachedDataType="nText"
+                      cachedName="CLASSE"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CLASSE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CLASSE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[NOME]"
+                      cachedDataType="nText"
+                      cachedName="NOME"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[NOME]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NOME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DT_VENC]"
+                      cachedDataType="nText"
+                      cachedName="DT_VENC"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DT_VENC]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_VENC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DT_PROCESS]"
+                      cachedDataType="nText"
+                      cachedName="DT_PROCESS"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DT_PROCESS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_PROCESS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[ANOMES]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="ANOMES"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[ANOMES]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ANOMES]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DT_CADASTRO]"
+                      cachedDataType="nText"
+                      cachedName="DT_CADASTRO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DT_CADASTRO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_CADASTRO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DA]"
+                      cachedDataType="nText"
+                      cachedName="DA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[STATUS]"
+                      cachedDataType="nText"
+                      cachedName="STATUS"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[STATUS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[STATUS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[UF]"
+                      cachedDataType="nText"
+                      cachedName="UF"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[UF]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[UF]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[RAIZ]"
+                      cachedDataType="nText"
+                      cachedName="RAIZ"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[RAIZ]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[RAIZ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[RAIZ_GRUPO]"
+                      cachedDataType="nText"
+                      cachedName="RAIZ_GRUPO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[RAIZ_GRUPO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[RAIZ_GRUPO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[REGIONAL]"
+                      cachedDataType="nText"
+                      cachedName="REGIONAL"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[REGIONAL]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[REGIONAL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DIAS_POST]"
+                      cachedDataType="nText"
+                      cachedName="DIAS_POST"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DIAS_POST]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DIAS_POST]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DIAS]"
+                      cachedDataType="nText"
+                      cachedName="DIAS"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DIAS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DIAS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[MC]"
+                      cachedDataType="nText"
+                      cachedName="MC"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[MC]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[MC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[MC2]"
+                      cachedDataType="nText"
+                      cachedName="MC2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[MC2]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[MC2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[CONTA2]"
+                      cachedDataType="numeric"
+                      cachedName="CONTA2"
+                      cachedPrecision="19"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CONTA2]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CONTA2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[LDS]"
+                      cachedDataType="numeric"
+                      cachedName="LDS"
+                      cachedPrecision="28"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[LDS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[LDS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[LD15_FIXA]"
+                      cachedDataType="numeric"
+                      cachedName="LD15_FIXA"
+                      cachedPrecision="28"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[LD15_FIXA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[LD15_FIXA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[LD15_MOVEL]"
+                      cachedDataType="numeric"
+                      cachedName="LD15_MOVEL"
+                      cachedPrecision="28"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[LD15_MOVEL]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[LD15_MOVEL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[TDATA]"
+                      cachedDataType="numeric"
+                      cachedName="TDATA"
+                      cachedPrecision="28"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[TDATA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[TDATA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[VIVO_MOVEL]"
+                      cachedDataType="numeric"
+                      cachedName="VIVO_MOVEL"
+                      cachedPrecision="28"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[VIVO_MOVEL]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[VIVO_MOVEL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[SALDO_TOTAL]"
+                      cachedDataType="numeric"
+                      cachedName="SALDO_TOTAL"
+                      cachedPrecision="28"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SALDO_TOTAL]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SALDO_TOTAL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[SALDO_FX_ENT]"
+                      cachedDataType="numeric"
+                      cachedName="SALDO_FX_ENT"
+                      cachedPrecision="28"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SALDO_FX_ENT]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SALDO_FX_ENT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[SALDO_PDD]"
+                      cachedDataType="numeric"
+                      cachedName="SALDO_PDD"
+                      cachedPrecision="28"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SALDO_PDD]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SALDO_PDD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[CONTATO_GC]"
+                      cachedDataType="nText"
+                      cachedName="CONTATO_GC"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CONTATO_GC]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CONTATO_GC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[GER_SENIOR]"
+                      cachedDataType="nText"
+                      cachedName="GER_SENIOR"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[GER_SENIOR]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[GER_SENIOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DIRETOR]"
+                      cachedDataType="nText"
+                      cachedName="DIRETOR"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DIRETOR]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DIRETOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[CICLO]"
+                      cachedDataType="nText"
+                      cachedName="CICLO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CICLO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CICLO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[FILTRO]"
+                      cachedDataType="nText"
+                      cachedName="FILTRO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[FILTRO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[FILTRO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[BYPASS]"
+                      cachedDataType="i4"
+                      cachedName="BYPASS"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[BYPASS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[BYPASS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[PARCELAMENTO]"
+                      cachedDataType="nText"
+                      cachedName="PARCELAMENTO"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[PARCELAMENTO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[PARCELAMENTO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[REGRA_PDD]"
+                      cachedDataType="nText"
+                      cachedName="REGRA_PDD"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[REGRA_PDD]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[REGRA_PDD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[ID_ANALISE]"
+                      cachedDataType="nText"
+                      cachedName="ID_ANALISE"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[ID_ANALISE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ID_ANALISE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DATA_ENTRADA]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="DATA_ENTRADA"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DATA_ENTRADA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DATA_ENTRADA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[PRODUTO_ORIGEM]"
+                      cachedDataType="nText"
+                      cachedName="PRODUTO_ORIGEM"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[PRODUTO_ORIGEM]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[PRODUTO_ORIGEM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[DT_CORTE]"
+                      cachedDataType="nText"
+                      cachedName="DT_CORTE"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DT_CORTE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_CORTE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].Columns[TASK_FORCE]"
+                      cachedDataType="nText"
+                      cachedName="TASK_FORCE"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[TASK_FORCE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[TASK_FORCE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[INTERCOMPANY]"
+                      dataType="wstr"
+                      length="3"
+                      name="INTERCOMPANY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[GRUPO_ANALISE]"
+                      dataType="nText"
+                      name="GRUPO_ANALISE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[MAIOR_01_COBRAVEL]"
+                      dataType="wstr"
+                      length="1"
+                      name="MAIOR_01_COBRAVEL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[GRUPO]"
+                      dataType="nText"
+                      name="GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[FORNECEDOR]"
+                      dataType="nText"
+                      name="FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SEGMENTO_ARRECADACAO]"
+                      dataType="nText"
+                      name="SEGMENTO_ARRECADACAO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SEGMENTO_GERENCIA]"
+                      dataType="nText"
+                      name="SEGMENTO_GERENCIA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[NV_FX_ARRECADA]"
+                      dataType="nText"
+                      name="NV_FX_ARRECADA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[NV_FX_FECHO]"
+                      dataType="nText"
+                      name="NV_FX_FECHO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[NV_FX_FORNECE]"
+                      dataType="nText"
+                      name="NV_FX_FORNECE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[ANALISE_CONTA]"
+                      dataType="nText"
+                      name="ANALISE_CONTA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DEFINE_LD]"
+                      dataType="i4"
+                      name="DEFINE_LD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CARTEIRA]"
+                      dataType="nText"
+                      name="CARTEIRA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[ANALISTA_TLF_VIVO]"
+                      dataType="nText"
+                      name="ANALISTA_TLF_VIVO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[FAIXA]"
+                      dataType="nText"
+                      name="FAIXA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CONTA]"
+                      dataType="nText"
+                      name="CONTA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CNPJ]"
+                      dataType="nText"
+                      name="CNPJ" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CLASSE]"
+                      dataType="nText"
+                      name="CLASSE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[NOME]"
+                      dataType="nText"
+                      name="NOME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DT_VENC]"
+                      dataType="nText"
+                      name="DT_VENC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DT_PROCESS]"
+                      dataType="nText"
+                      name="DT_PROCESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[ANOMES]"
+                      dataType="wstr"
+                      length="6"
+                      name="ANOMES" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DT_CADASTRO]"
+                      dataType="nText"
+                      name="DT_CADASTRO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DA]"
+                      dataType="nText"
+                      name="DA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[STATUS]"
+                      dataType="nText"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[UF]"
+                      dataType="nText"
+                      name="UF" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[RAIZ]"
+                      dataType="nText"
+                      name="RAIZ" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[RAIZ_GRUPO]"
+                      dataType="nText"
+                      name="RAIZ_GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[REGIONAL]"
+                      dataType="nText"
+                      name="REGIONAL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DIAS_POST]"
+                      dataType="nText"
+                      name="DIAS_POST" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DIAS]"
+                      dataType="nText"
+                      name="DIAS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[MC]"
+                      dataType="nText"
+                      name="MC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[MC2]"
+                      dataType="nText"
+                      name="MC2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CONTA2]"
+                      dataType="numeric"
+                      name="CONTA2"
+                      precision="19" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[LDS]"
+                      dataType="numeric"
+                      name="LDS"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[LD15_FIXA]"
+                      dataType="numeric"
+                      name="LD15_FIXA"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[LD15_MOVEL]"
+                      dataType="numeric"
+                      name="LD15_MOVEL"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[TDATA]"
+                      dataType="numeric"
+                      name="TDATA"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[VIVO_MOVEL]"
+                      dataType="numeric"
+                      name="VIVO_MOVEL"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SALDO_TOTAL]"
+                      dataType="numeric"
+                      name="SALDO_TOTAL"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SALDO_FX_ENT]"
+                      dataType="numeric"
+                      name="SALDO_FX_ENT"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[SALDO_PDD]"
+                      dataType="numeric"
+                      name="SALDO_PDD"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CONTATO_GC]"
+                      dataType="nText"
+                      name="CONTATO_GC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[GER_SENIOR]"
+                      dataType="nText"
+                      name="GER_SENIOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DIRETOR]"
+                      dataType="nText"
+                      name="DIRETOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[CICLO]"
+                      dataType="nText"
+                      name="CICLO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[FILTRO]"
+                      dataType="nText"
+                      name="FILTRO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[BYPASS]"
+                      dataType="i4"
+                      name="BYPASS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[PARCELAMENTO]"
+                      dataType="nText"
+                      name="PARCELAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[REGRA_PDD]"
+                      dataType="nText"
+                      name="REGRA_PDD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[ID_ANALISE]"
+                      dataType="nText"
+                      name="ID_ANALISE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DATA_ENTRADA]"
+                      dataType="wstr"
+                      length="10"
+                      name="DATA_ENTRADA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[PRODUTO_ORIGEM]"
+                      dataType="nText"
+                      name="PRODUTO_ORIGEM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[DT_CORTE]"
+                      dataType="nText"
+                      name="DT_CORTE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input].ExternalColumns[TASK_FORCE]"
+                      dataType="nText"
+                      name="TASK_FORCE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - tmp__VW_VIVO_CARTEIRA"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">tmp__VW_VIVO_CARTEIRA</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[INTERCOMPANY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[INTERCOMPANY]"
+                      length="3"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[INTERCOMPANY]"
+                      name="INTERCOMPANY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[GRUPO_ANALISE]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[GRUPO_ANALISE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[GRUPO_ANALISE]"
+                      name="GRUPO_ANALISE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[MAIOR_01_COBRAVEL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[MAIOR_01_COBRAVEL]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[MAIOR_01_COBRAVEL]"
+                      name="MAIOR_01_COBRAVEL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[GRUPO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[GRUPO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[GRUPO]"
+                      name="GRUPO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[FORNECEDOR]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[FORNECEDOR]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[FORNECEDOR]"
+                      name="FORNECEDOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SEGMENTO_ARRECADACAO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SEGMENTO_ARRECADACAO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SEGMENTO_ARRECADACAO]"
+                      name="SEGMENTO_ARRECADACAO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SEGMENTO_GERENCIA]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SEGMENTO_GERENCIA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SEGMENTO_GERENCIA]"
+                      name="SEGMENTO_GERENCIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NV_FX_ARRECADA]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[NV_FX_ARRECADA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NV_FX_ARRECADA]"
+                      name="NV_FX_ARRECADA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NV_FX_FECHO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[NV_FX_FECHO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NV_FX_FECHO]"
+                      name="NV_FX_FECHO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NV_FX_FORNECE]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[NV_FX_FORNECE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NV_FX_FORNECE]"
+                      name="NV_FX_FORNECE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ANALISE_CONTA]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[ANALISE_CONTA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ANALISE_CONTA]"
+                      name="ANALISE_CONTA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DEFINE_LD]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DEFINE_LD]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DEFINE_LD]"
+                      name="DEFINE_LD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CARTEIRA]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CARTEIRA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CARTEIRA]"
+                      name="CARTEIRA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ANALISTA_TLF_VIVO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[ANALISTA_TLF_VIVO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ANALISTA_TLF_VIVO]"
+                      name="ANALISTA_TLF_VIVO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[FAIXA]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[FAIXA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[FAIXA]"
+                      name="FAIXA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CONTA]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CONTA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CONTA]"
+                      name="CONTA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CNPJ]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CNPJ]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CNPJ]"
+                      name="CNPJ"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CLASSE]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CLASSE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CLASSE]"
+                      name="CLASSE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NOME]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[NOME]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[NOME]"
+                      name="NOME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_VENC]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DT_VENC]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_VENC]"
+                      name="DT_VENC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_PROCESS]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DT_PROCESS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_PROCESS]"
+                      name="DT_PROCESS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ANOMES]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[ANOMES]"
+                      length="6"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ANOMES]"
+                      name="ANOMES"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_CADASTRO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DT_CADASTRO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_CADASTRO]"
+                      name="DT_CADASTRO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DA]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DA]"
+                      name="DA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[STATUS]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[STATUS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[STATUS]"
+                      name="STATUS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[UF]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[UF]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[UF]"
+                      name="UF"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[RAIZ]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[RAIZ]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[RAIZ]"
+                      name="RAIZ"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[RAIZ_GRUPO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[RAIZ_GRUPO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[RAIZ_GRUPO]"
+                      name="RAIZ_GRUPO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[REGIONAL]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[REGIONAL]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[REGIONAL]"
+                      name="REGIONAL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DIAS_POST]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DIAS_POST]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DIAS_POST]"
+                      name="DIAS_POST"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DIAS]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DIAS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DIAS]"
+                      name="DIAS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[MC]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[MC]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[MC]"
+                      name="MC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[MC2]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[MC2]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[MC2]"
+                      name="MC2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CONTA2]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CONTA2]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CONTA2]"
+                      name="CONTA2"
+                      precision="19"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[LDS]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[LDS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[LDS]"
+                      name="LDS"
+                      precision="28"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[LD15_FIXA]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[LD15_FIXA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[LD15_FIXA]"
+                      name="LD15_FIXA"
+                      precision="28"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[LD15_MOVEL]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[LD15_MOVEL]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[LD15_MOVEL]"
+                      name="LD15_MOVEL"
+                      precision="28"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[TDATA]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[TDATA]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[TDATA]"
+                      name="TDATA"
+                      precision="28"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[VIVO_MOVEL]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[VIVO_MOVEL]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[VIVO_MOVEL]"
+                      name="VIVO_MOVEL"
+                      precision="28"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SALDO_TOTAL]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SALDO_TOTAL]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SALDO_TOTAL]"
+                      name="SALDO_TOTAL"
+                      precision="28"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SALDO_FX_ENT]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SALDO_FX_ENT]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SALDO_FX_ENT]"
+                      name="SALDO_FX_ENT"
+                      precision="28"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SALDO_PDD]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SALDO_PDD]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[SALDO_PDD]"
+                      name="SALDO_PDD"
+                      precision="28"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CONTATO_GC]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CONTATO_GC]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CONTATO_GC]"
+                      name="CONTATO_GC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[GER_SENIOR]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[GER_SENIOR]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[GER_SENIOR]"
+                      name="GER_SENIOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DIRETOR]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DIRETOR]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DIRETOR]"
+                      name="DIRETOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CICLO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CICLO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[CICLO]"
+                      name="CICLO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[FILTRO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[FILTRO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[FILTRO]"
+                      name="FILTRO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[BYPASS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[BYPASS]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[BYPASS]"
+                      name="BYPASS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[PARCELAMENTO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[PARCELAMENTO]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[PARCELAMENTO]"
+                      name="PARCELAMENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[REGRA_PDD]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[REGRA_PDD]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[REGRA_PDD]"
+                      name="REGRA_PDD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ID_ANALISE]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[ID_ANALISE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[ID_ANALISE]"
+                      name="ID_ANALISE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DATA_ENTRADA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DATA_ENTRADA]"
+                      length="10"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DATA_ENTRADA]"
+                      name="DATA_ENTRADA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[PRODUTO_ORIGEM]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[PRODUTO_ORIGEM]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[PRODUTO_ORIGEM]"
+                      name="PRODUTO_ORIGEM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_CORTE]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DT_CORTE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[DT_CORTE]"
+                      name="DT_CORTE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[TASK_FORCE]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[TASK_FORCE]"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].Columns[TASK_FORCE]"
+                      name="TASK_FORCE"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[INTERCOMPANY]"
+                      dataType="wstr"
+                      length="3"
+                      name="INTERCOMPANY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[GRUPO_ANALISE]"
+                      dataType="nText"
+                      name="GRUPO_ANALISE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[MAIOR_01_COBRAVEL]"
+                      dataType="wstr"
+                      length="1"
+                      name="MAIOR_01_COBRAVEL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[GRUPO]"
+                      dataType="nText"
+                      name="GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[FORNECEDOR]"
+                      dataType="nText"
+                      name="FORNECEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SEGMENTO_ARRECADACAO]"
+                      dataType="nText"
+                      name="SEGMENTO_ARRECADACAO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SEGMENTO_GERENCIA]"
+                      dataType="nText"
+                      name="SEGMENTO_GERENCIA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[NV_FX_ARRECADA]"
+                      dataType="nText"
+                      name="NV_FX_ARRECADA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[NV_FX_FECHO]"
+                      dataType="nText"
+                      name="NV_FX_FECHO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[NV_FX_FORNECE]"
+                      dataType="nText"
+                      name="NV_FX_FORNECE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[ANALISE_CONTA]"
+                      dataType="nText"
+                      name="ANALISE_CONTA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DEFINE_LD]"
+                      dataType="i4"
+                      name="DEFINE_LD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CARTEIRA]"
+                      dataType="nText"
+                      name="CARTEIRA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[ANALISTA_TLF_VIVO]"
+                      dataType="nText"
+                      name="ANALISTA_TLF_VIVO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[FAIXA]"
+                      dataType="nText"
+                      name="FAIXA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CONTA]"
+                      dataType="nText"
+                      name="CONTA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CNPJ]"
+                      dataType="nText"
+                      name="CNPJ" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CLASSE]"
+                      dataType="nText"
+                      name="CLASSE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[NOME]"
+                      dataType="nText"
+                      name="NOME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DT_VENC]"
+                      dataType="nText"
+                      name="DT_VENC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DT_PROCESS]"
+                      dataType="nText"
+                      name="DT_PROCESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[ANOMES]"
+                      dataType="wstr"
+                      length="6"
+                      name="ANOMES" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DT_CADASTRO]"
+                      dataType="nText"
+                      name="DT_CADASTRO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DA]"
+                      dataType="nText"
+                      name="DA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[STATUS]"
+                      dataType="nText"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[UF]"
+                      dataType="nText"
+                      name="UF" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[RAIZ]"
+                      dataType="nText"
+                      name="RAIZ" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[RAIZ_GRUPO]"
+                      dataType="nText"
+                      name="RAIZ_GRUPO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[REGIONAL]"
+                      dataType="nText"
+                      name="REGIONAL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DIAS_POST]"
+                      dataType="nText"
+                      name="DIAS_POST" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DIAS]"
+                      dataType="nText"
+                      name="DIAS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[MC]"
+                      dataType="nText"
+                      name="MC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[MC2]"
+                      dataType="nText"
+                      name="MC2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CONTA2]"
+                      dataType="numeric"
+                      name="CONTA2"
+                      precision="19" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[LDS]"
+                      dataType="numeric"
+                      name="LDS"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[LD15_FIXA]"
+                      dataType="numeric"
+                      name="LD15_FIXA"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[LD15_MOVEL]"
+                      dataType="numeric"
+                      name="LD15_MOVEL"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[TDATA]"
+                      dataType="numeric"
+                      name="TDATA"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[VIVO_MOVEL]"
+                      dataType="numeric"
+                      name="VIVO_MOVEL"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SALDO_TOTAL]"
+                      dataType="numeric"
+                      name="SALDO_TOTAL"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SALDO_FX_ENT]"
+                      dataType="numeric"
+                      name="SALDO_FX_ENT"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[SALDO_PDD]"
+                      dataType="numeric"
+                      name="SALDO_PDD"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CONTATO_GC]"
+                      dataType="nText"
+                      name="CONTATO_GC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[GER_SENIOR]"
+                      dataType="nText"
+                      name="GER_SENIOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DIRETOR]"
+                      dataType="nText"
+                      name="DIRETOR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[CICLO]"
+                      dataType="nText"
+                      name="CICLO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[FILTRO]"
+                      dataType="nText"
+                      name="FILTRO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[BYPASS]"
+                      dataType="i4"
+                      name="BYPASS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[PARCELAMENTO]"
+                      dataType="nText"
+                      name="PARCELAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[REGRA_PDD]"
+                      dataType="nText"
+                      name="REGRA_PDD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[ID_ANALISE]"
+                      dataType="nText"
+                      name="ID_ANALISE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DATA_ENTRADA]"
+                      dataType="wstr"
+                      length="10"
+                      name="DATA_ENTRADA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[PRODUTO_ORIGEM]"
+                      dataType="nText"
+                      name="PRODUTO_ORIGEM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[DT_CORTE]"
+                      dataType="nText"
+                      name="DT_CORTE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output].ExternalColumns[TASK_FORCE]"
+                      dataType="nText"
+                      name="TASK_FORCE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[INTERCOMPANY]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[INTERCOMPANY]"
+                      name="INTERCOMPANY" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[GRUPO_ANALISE]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[GRUPO_ANALISE]"
+                      name="GRUPO_ANALISE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[MAIOR_01_COBRAVEL]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[MAIOR_01_COBRAVEL]"
+                      name="MAIOR_01_COBRAVEL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[GRUPO]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[GRUPO]"
+                      name="GRUPO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[FORNECEDOR]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[FORNECEDOR]"
+                      name="FORNECEDOR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SEGMENTO_ARRECADACAO]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SEGMENTO_ARRECADACAO]"
+                      name="SEGMENTO_ARRECADACAO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SEGMENTO_GERENCIA]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SEGMENTO_GERENCIA]"
+                      name="SEGMENTO_GERENCIA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[NV_FX_ARRECADA]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[NV_FX_ARRECADA]"
+                      name="NV_FX_ARRECADA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[NV_FX_FECHO]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[NV_FX_FECHO]"
+                      name="NV_FX_FECHO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[NV_FX_FORNECE]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[NV_FX_FORNECE]"
+                      name="NV_FX_FORNECE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ANALISE_CONTA]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ANALISE_CONTA]"
+                      name="ANALISE_CONTA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DEFINE_LD]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DEFINE_LD]"
+                      name="DEFINE_LD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CARTEIRA]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CARTEIRA]"
+                      name="CARTEIRA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ANALISTA_TLF_VIVO]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ANALISTA_TLF_VIVO]"
+                      name="ANALISTA_TLF_VIVO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[FAIXA]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[FAIXA]"
+                      name="FAIXA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CONTA]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CONTA]"
+                      name="CONTA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CNPJ]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CNPJ]"
+                      name="CNPJ" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CLASSE]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CLASSE]"
+                      name="CLASSE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[NOME]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[NOME]"
+                      name="NOME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DT_VENC]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DT_VENC]"
+                      name="DT_VENC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DT_PROCESS]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DT_PROCESS]"
+                      name="DT_PROCESS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ANOMES]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ANOMES]"
+                      name="ANOMES" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DT_CADASTRO]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DT_CADASTRO]"
+                      name="DT_CADASTRO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DA]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DA]"
+                      name="DA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[STATUS]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[STATUS]"
+                      name="STATUS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[UF]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[UF]"
+                      name="UF" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[RAIZ]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[RAIZ]"
+                      name="RAIZ" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[RAIZ_GRUPO]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[RAIZ_GRUPO]"
+                      name="RAIZ_GRUPO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[REGIONAL]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[REGIONAL]"
+                      name="REGIONAL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DIAS_POST]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DIAS_POST]"
+                      name="DIAS_POST" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DIAS]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DIAS]"
+                      name="DIAS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[MC]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[MC]"
+                      name="MC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[MC2]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[MC2]"
+                      name="MC2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CONTA2]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CONTA2]"
+                      name="CONTA2"
+                      precision="19" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[LDS]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[LDS]"
+                      name="LDS"
+                      precision="28"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[LD15_FIXA]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[LD15_FIXA]"
+                      name="LD15_FIXA"
+                      precision="28"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[LD15_MOVEL]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[LD15_MOVEL]"
+                      name="LD15_MOVEL"
+                      precision="28"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[TDATA]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[TDATA]"
+                      name="TDATA"
+                      precision="28"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[VIVO_MOVEL]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[VIVO_MOVEL]"
+                      name="VIVO_MOVEL"
+                      precision="28"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SALDO_TOTAL]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SALDO_TOTAL]"
+                      name="SALDO_TOTAL"
+                      precision="28"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SALDO_FX_ENT]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SALDO_FX_ENT]"
+                      name="SALDO_FX_ENT"
+                      precision="28"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SALDO_PDD]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[SALDO_PDD]"
+                      name="SALDO_PDD"
+                      precision="28"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CONTATO_GC]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CONTATO_GC]"
+                      name="CONTATO_GC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[GER_SENIOR]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[GER_SENIOR]"
+                      name="GER_SENIOR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DIRETOR]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DIRETOR]"
+                      name="DIRETOR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CICLO]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[CICLO]"
+                      name="CICLO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[FILTRO]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[FILTRO]"
+                      name="FILTRO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[BYPASS]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[BYPASS]"
+                      name="BYPASS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[PARCELAMENTO]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[PARCELAMENTO]"
+                      name="PARCELAMENTO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[REGRA_PDD]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[REGRA_PDD]"
+                      name="REGRA_PDD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ID_ANALISE]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ID_ANALISE]"
+                      name="ID_ANALISE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DATA_ENTRADA]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DATA_ENTRADA]"
+                      name="DATA_ENTRADA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[PRODUTO_ORIGEM]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[PRODUTO_ORIGEM]"
+                      name="PRODUTO_ORIGEM" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DT_CORTE]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[DT_CORTE]"
+                      name="DT_CORTE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[TASK_FORCE]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[TASK_FORCE]"
+                      name="TASK_FORCE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02.Inputs[Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{D091A980-7206-4F1E-8C04-81BF3B3599B4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EF86BC02-9E41-4FB8-AEC0-E64720DF5E3C}"
+          SQLTask:SqlStatementSource="drop TABLE [dbo].[tmp__VW_VIVO_CARTEIRA_v02] &#xA;go&#xA;&#xA;CREATE TABLE [dbo].[tmp__VW_VIVO_CARTEIRA_v02] (&#xA;[INTERCOMPANY] nvarchar(3),&#xA;[GRUPO_ANALISE] nvarchar(max),&#xA;[MAIOR_01_COBRAVEL] nvarchar(1),&#xA;[GRUPO] nvarchar(max),&#xA;[FORNECEDOR] nvarchar(max),&#xA;[SEGMENTO_ARRECADACAO] nvarchar(max),&#xA;[SEGMENTO_GERENCIA] nvarchar(max),&#xA;[NV_FX_ARRECADA] nvarchar(max),&#xA;[NV_FX_FECHO] nvarchar(max),&#xA;[NV_FX_FORNECE] nvarchar(max),&#xA;[ANALISE_CONTA] nvarchar(max) NOT NULL,&#xA;[DEFINE_LD] int,&#xA;[CARTEIRA] nvarchar(max),&#xA;[ANALISTA_TLF_VIVO] nvarchar(max),&#xA;[FAIXA] nvarchar(max),&#xA;[CONTA] nvarchar(max),&#xA;[CNPJ] nvarchar(max),&#xA;[CLASSE] nvarchar(max),&#xA;[NOME] nvarchar(max),&#xA;[DT_VENC] nvarchar(max),&#xA;[DT_PROCESS] nvarchar(max),&#xA;[ANOMES] nvarchar(6),&#xA;[DT_CADASTRO] nvarchar(max),&#xA;[DA] nvarchar(max),&#xA;[STATUS] nvarchar(max),&#xA;[UF] nvarchar(max),&#xA;[RAIZ] nvarchar(max),&#xA;[RAIZ_GRUPO] nvarchar(max),&#xA;[REGIONAL] nvarchar(max),&#xA;[DIAS_POST] nvarchar(max),&#xA;[DIAS] nvarchar(max),&#xA;[MC] nvarchar(max),&#xA;[MC2] nvarchar(max),&#xA;[CONTA2] decimal(19,0),&#xA;[LDS] decimal(28,2) NOT NULL,&#xA;[LD15_FIXA] decimal(28,2) NOT NULL,&#xA;[LD15_MOVEL] decimal(28,2) NOT NULL,&#xA;[TDATA] decimal(28,2) NOT NULL,&#xA;[VIVO_MOVEL] decimal(28,2) NOT NULL,&#xA;[SALDO_TOTAL] decimal(28,2),&#xA;[SALDO_FX_ENT] decimal(28,2) NOT NULL,&#xA;[SALDO_PDD] decimal(28,2) NOT NULL,&#xA;[CONTATO_GC] nvarchar(max),&#xA;[GER_SENIOR] nvarchar(max),&#xA;[DIRETOR] nvarchar(max),&#xA;[CICLO] nvarchar(max),&#xA;[FILTRO] nvarchar(max),&#xA;[BYPASS] int,&#xA;[PARCELAMENTO] nvarchar(max),&#xA;[REGRA_PDD] nvarchar(max),&#xA;[ID_ANALISE] nvarchar(max),&#xA;[DATA_ENTRADA] nvarchar(10),&#xA;[PRODUTO_ORIGEM] nvarchar(max),&#xA;[DT_CORTE] nvarchar(max),&#xA;[TASK_FORCE] nvarchar(max)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{A92CA03D-FC1D-40AA-9008-2F31A8FE9873\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{A92CA03D-FC1D-40AA-9008-2F31A8FE9873}"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{A92CA03D-FC1D-40AA-9008-2F31A8FE9873}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="20.5,107.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Preparation SQL Task 1"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{A92CA03D-FC1D-40AA-9008-2F31A8FE9873\}]"
+          TopLeft="100.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="252,42"
+          Id="Package\Data Flow Task 1\Source - tmp__VW_VIVO_CARTEIRA"
+          TopLeft="27.5,5.5" />
+        <NodeLayout
+          Size="296,42"
+          Id="Package\Data Flow Task 1\Destination - tmp__VW_VIVO_CARTEIRA_v02"
+          TopLeft="5.50000000000003,107.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+          TopLeft="153.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

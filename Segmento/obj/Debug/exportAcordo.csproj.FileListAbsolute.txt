@@ -1,0 +1,27 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\bin\Debug\exportAcordo.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\bin\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\bin\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\obj\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\obj\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\consoleXml\Cenario\obj\Debug\exportAcordo.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\Desktop\G-CASH\Cenario\bin\Debug\exportAcordo.exe.config
+C:\Users\a.dasilva\Desktop\G-CASH\Cenario\obj\Debug\exportAcordo.exe
+C:\Users\a.dasilva\Desktop\G-CASH\Cenario\obj\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\Desktop\G-CASH\Relatorios\Acordo\bin\Debug\exportAcordo.exe.config
+C:\Users\a.dasilva\Desktop\G-CASH\Relatorios\Acordo\obj\Debug\exportAcordo.exe
+C:\Users\a.dasilva\Desktop\G-CASH\Relatorios\Acordo\obj\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\Acordo\bin\Debug\exportAcordo.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\Acordo\obj\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\Acordo\obj\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\Acordo\bin\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\Acordo\bin\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\Acordo\obj\Debug\exportAcordo.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Acordo\bin\Debug\exportAcordo.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Acordo\obj\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Acordo\obj\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Acordo\bin\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Acordo\bin\Debug\exportAcordo.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Acordo\obj\Debug\exportAcordo.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Segmento\bin\Debug\exportAcordo.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Segmento\obj\Debug\exportAcordo.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Segmento\obj\Debug\exportAcordo.pdb

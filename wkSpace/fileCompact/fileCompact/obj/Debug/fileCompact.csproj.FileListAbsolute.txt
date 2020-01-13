@@ -1,0 +1,6 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\fileCompact\fileCompact\bin\Debug\fileCompact.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\fileCompact\fileCompact\bin\Debug\fileCompact.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\fileCompact\fileCompact\bin\Debug\fileCompact.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\fileCompact\fileCompact\obj\Debug\fileCompact.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\fileCompact\fileCompact\obj\Debug\fileCompact.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\wkSpace\fileCompact\fileCompact\obj\Debug\fileCompact.pdb

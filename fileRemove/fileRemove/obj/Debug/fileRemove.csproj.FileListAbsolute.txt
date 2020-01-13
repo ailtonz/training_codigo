@@ -1,0 +1,27 @@
+C:\tmp\wkspace\EAD_CSCHARP\files\fileRemove\fileRemove\bin\Debug\fileRemove.exe.config
+C:\tmp\wkspace\EAD_CSCHARP\files\fileRemove\fileRemove\bin\Debug\fileRemove.exe
+C:\tmp\wkspace\EAD_CSCHARP\files\fileRemove\fileRemove\bin\Debug\fileRemove.pdb
+C:\tmp\wkspace\EAD_CSCHARP\files\fileRemove\fileRemove\obj\Debug\fileRemove.csprojResolveAssemblyReference.cache
+C:\tmp\wkspace\EAD_CSCHARP\files\fileRemove\fileRemove\obj\Debug\fileRemove.exe
+C:\tmp\wkspace\EAD_CSCHARP\files\fileRemove\fileRemove\obj\Debug\fileRemove.pdb
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileRemove\fileRemove\bin\Debug\fileRemove.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileRemove\fileRemove\obj\Debug\fileRemove.exe
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileRemove\fileRemove\obj\Debug\fileRemove.pdb
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileRemove\fileRemove\bin\Debug\fileRemove.exe
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileRemove\fileRemove\bin\Debug\fileRemove.pdb
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\files\fileRemove\fileRemove\obj\Debug\fileRemove.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileRemove\fileRemove\bin\Debug\fileRemove.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileRemove\fileRemove\bin\Debug\fileRemove.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileRemove\fileRemove\bin\Debug\fileRemove.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileRemove\fileRemove\obj\Debug\fileRemove.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileRemove\fileRemove\obj\Debug\fileRemove.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\files\fileRemove\fileRemove\obj\Debug\fileRemove.pdb
+C:\Users\a.dasilva\Desktop\G-CASH\Arquivos\fileRemove\fileRemove\bin\Debug\fileRemove.exe.config
+C:\Users\a.dasilva\Desktop\G-CASH\Arquivos\fileRemove\fileRemove\obj\Debug\fileRemove.exe
+C:\Users\a.dasilva\Desktop\G-CASH\Arquivos\fileRemove\fileRemove\obj\Debug\fileRemove.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Arquivos\fileRemove\fileRemove\bin\Debug\fileRemove.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Arquivos\fileRemove\fileRemove\obj\Debug\fileRemove.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Arquivos\fileRemove\fileRemove\obj\Debug\fileRemove.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\fileRemove\fileRemove\bin\Debug\fileRemove.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\fileRemove\fileRemove\obj\Debug\fileRemove.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\fileRemove\fileRemove\obj\Debug\fileRemove.pdb

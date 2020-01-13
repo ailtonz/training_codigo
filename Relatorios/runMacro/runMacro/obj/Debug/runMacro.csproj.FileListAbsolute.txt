@@ -1,0 +1,13 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\bin\Debug\runMacro.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\obj\Debug\runMacro.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\obj\Debug\runMacro.csproj.ResolveComReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\bin\Debug\runMacro.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\bin\Debug\runMacro.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\obj\Debug\runMacro.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\obj\Debug\runMacro.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\bin\Debug\runMacro.exe.manifest
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\bin\Debug\runMacro.application
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\obj\Debug\runMacro.exe.manifest
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\obj\Debug\runMacro.application
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\obj\Debug\runMacro.Properties.Resources.resources
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Relatorios\runMacro\runMacro\obj\Debug\runMacro.csproj.GenerateResource.Cache

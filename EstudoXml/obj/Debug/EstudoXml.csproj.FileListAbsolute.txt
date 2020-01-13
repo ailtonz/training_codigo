@@ -1,0 +1,21 @@
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\EstudoXml\bin\Debug\EstudoXml.exe.config
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\EstudoXml\bin\Debug\EstudoXml.exe
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\EstudoXml\bin\Debug\EstudoXml.pdb
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\EstudoXml\obj\Debug\EstudoXml.csprojResolveAssemblyReference.cache
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\EstudoXml\obj\Debug\EstudoXml.frmAgenda.resources
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\EstudoXml\obj\Debug\EstudoXml.Properties.Resources.resources
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\EstudoXml\obj\Debug\EstudoXml.csproj.GenerateResource.Cache
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\EstudoXml\obj\Debug\EstudoXml.exe
+C:\Users\l.a.junior\Documents\Visual Studio 2012\Projects\TreinaWeb.CSharpIntermediario\EstudoXml\obj\Debug\EstudoXml.pdb
+C:\Users\l.a.junior\Desktop\wkspace\EstudoXml\bin\Debug\EstudoXml.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\EstudoXml\obj\Debug\EstudoXml.exe
+C:\Users\l.a.junior\Desktop\wkspace\EstudoXml\obj\Debug\EstudoXml.pdb
+C:\Users\l.a.junior\Desktop\wkspace\EstudoXml\bin\Debug\EstudoXml.exe
+C:\Users\l.a.junior\Desktop\wkspace\EstudoXml\bin\Debug\EstudoXml.pdb
+C:\Users\l.a.junior\Desktop\wkspace\EstudoXml\obj\Debug\EstudoXml.csprojResolveAssemblyReference.cache
+C:\Users\l.a.junior\Desktop\wkspace\EstudoXml\obj\Debug\EstudoXml.frmAgenda.resources
+C:\Users\l.a.junior\Desktop\wkspace\EstudoXml\obj\Debug\EstudoXml.Properties.Resources.resources
+C:\Users\l.a.junior\Desktop\wkspace\EstudoXml\obj\Debug\EstudoXml.csproj.GenerateResource.Cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\EstudoXml\bin\Debug\EstudoXml.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\EstudoXml\obj\Debug\EstudoXml.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\EstudoXml\obj\Debug\EstudoXml.pdb

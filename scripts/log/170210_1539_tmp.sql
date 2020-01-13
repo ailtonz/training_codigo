@@ -1,0 +1,94 @@
+declare @CRITERIO VARCHAR(MAX),
+@ID_FOCO_FEEDBACK VARCHAR(1000),
+@ID_TIPO_PGTO VARCHAR(1000),
+@ID_ANALISTA VARCHAR(1000),
+@DT_FOLLOW VARCHAR(1000),
+@DT_CONTATO VARCHAR(1000),
+@DT_PGTO VARCHAR(1000),
+@RESPONSAVEL VARCHAR(1500),
+@RE_PRBLMA VARCHAR(1500),
+@RE_ACAO VARCHAR(1500),
+@HD VARCHAR(1500),
+@CBPM VARCHAR(50),
+@ID_PORTAL_DEMANDA VARCHAR(1000),
+@NUMERO_BOLETO VARCHAR(1000),
+@DATA_EMISSAO_BOLETO VARCHAR(1000),
+@ID_GESTAO_CONTA VARCHAR(1000),
+@OBS VARCHAR(1000)
+
+
+
+set @ID_FOCO_FEEDBACK  = '10'
+set @ID_TIPO_PGTO = '1'
+set @ID_ANALISTA ='9'
+set @DT_FOLLOW ='2017-02-10'
+set @DT_CONTATO ='2017-02-08'
+set @DT_PGTO ='2017-02-08'
+set @RESPONSAVEL ='Responsável'
+set @RE_PRBLMA='Descrição do Problema' 
+set @RE_ACAO =  'Plano de Ação' 
+set @HD ='Historico Detalhado' 
+set @CBPM ='null'
+set @ID_PORTAL_DEMANDA ='null'
+set @NUMERO_BOLETO='null'
+set @DATA_EMISSAO_BOLETO='null'
+set @ID_GESTAO_CONTA ='null'
+set @OBS='##### AILTON ####'
+
+
+
+DECLARE @qry 					varchar(max);
+
+set @CRITERIO = 'WHERE ( ID_ANALISTA = 9 OR ID_ANALISTA_TMP = 9) AND RAIZ_GRUPO = ''4060701190'' and ID_TIPO IN (7,9) and ID_AREA_OFENSORA IN (1,2,3,7)';
+
+	
+SET @qry = 'INSERT INTO [CONSOLIDADO].[TB_HISTORICO] 
+	 (
+		[ID_CONSOLIDADO]
+	   ,[ID_SEMANA]
+	   ,[ID_FOCO_FEEDBACK]
+	   ,[ID_TIPO_PAGAMENTO]
+	   ,[ID_ANALISTA]
+	   ,[TIME_STAMP]
+	   ,[DT_FOLLOW]
+	   ,[DT_CONTATO]
+	   ,[DT_PAGAMENTO]
+	   ,[VALOR_PAGO]
+	   ,[VALOR_AJUSTE]   
+	   ,[RESPONSAVEL]
+	   ,[RE_PROBLEMA]
+	   ,[RE_ACAO]
+	   ,[HISTORICO_DETALHADO]
+	   ,[CBPM]
+	   ,[ID_PORTAL_DEMANDA]
+	   ,[NUMERO_BOLETO]
+	   ,[DATA_EMISSAO_BOLETO]
+	   ,[ID_GESTAO_CONTA]
+	   ,[OBS]
+	 )
+	 SELECT
+		 ID
+		,(SELECT ID FROM AUXILIAR.TB_STATUS_CAR WHERE STATUS = 1)
+		, CONVERT(bigint, ' + @ID_FOCO_FEEDBACK + ' ) 
+		, CONVERT(bigint, ' + @ID_TIPO_PGTO +') 
+		,' + @ID_ANALISTA + '
+		,GETDATE()
+		, CONVERT(date, ' + @DT_FOLLOW + ', 103)
+		, CONVERT(date, ' + @DT_CONTATO +', 103) 
+		, CONVERT(date, ' + @DT_PGTO +',  103)
+		,[SALDO_CAR]
+		,0
+		,Replace(' + @RESPONSAVEL + ','';'','''')
+		,Replace(' + @RE_PRBLMA + ','';'','''')			
+		,Replace(' + @RE_ACAO + ','';'','''')			
+		,CONVERT(VARCHAR(10),CONVERT(DATE,GETDATE())) + '' - '' + Replace(' + @HD + ' ,'';'','''')
+		,' + @CBPM + '
+		,CONVERT(bigint, ' + @ID_PORTAL_DEMANDA + ')
+		,CONVERT(bigint, ' + @NUMERO_BOLETO +')
+		,CONVERT(date, ' + @DATA_EMISSAO_BOLETO +', 103)
+		,CONVERT(bigint, ' + @ID_GESTAO_CONTA + ') 
+		,Replace(' + @OBS + ','';'','''')
+	 FROM
+		[APP_WEB].[VW_FILTRO_DINAMICO] ' + @CRITERIO + ''
+	PRINT @QRY
+	--EXEC(@qry) 

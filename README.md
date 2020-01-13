@@ -1,2 +1,2 @@
 # estudos_codigo
-Exemplo de códigos
+Repositório de testes de scripts e apps

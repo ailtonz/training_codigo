@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<agenda>
+  <titulo>Agenda para teste XML</titulo>
+  <contatos>
+    <contato id="1" nome="João da Silva" idade="25" />
+    <contato id="2" nome="Maria da Silva" idade="30" />
+    <contato id="3" nome="José da Silva" idade="40" />
+    <contato id="5" nome="Teste Novo Nome" idade="45" />
+  </contatos>
+</agenda>

@@ -1,0 +1,9 @@
+﻿<#@ output extension=".txt" #>  
+<#  
+    for(int i = 0; i < 48; i++)  
+    {  
+#>  
+This is hello number <#= i+1 #>: Hello!  
+<#  
+    }   
+#>  

@@ -1,0 +1,6 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportMIS\exportMIS\bin\Debug\exportMIS.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportMIS\exportMIS\bin\Debug\exportMIS.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportMIS\exportMIS\bin\Debug\exportMIS.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportMIS\exportMIS\obj\Debug\exportMIS.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportMIS\exportMIS\obj\Debug\exportMIS.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportMIS\exportMIS\obj\Debug\exportMIS.pdb

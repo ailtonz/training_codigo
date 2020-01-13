@@ -1,0 +1,5 @@
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\connect\bin\Debug\connect.dll.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\connect\bin\Debug\connect.dll
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\connect\bin\Debug\connect.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\connect\obj\Debug\connect.dll
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\exportHistorico\connect\obj\Debug\connect.pdb

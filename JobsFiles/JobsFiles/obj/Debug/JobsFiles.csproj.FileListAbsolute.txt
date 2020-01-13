@@ -1,0 +1,15 @@
+C:\Users\a.dasilva\OneDrive\tmp\OneDrive\tmp\_PROJETOS\EAD_CSCHARP\Estudos\JobsFiles\JobsFiles\bin\Debug\JobsFiles.exe.config
+C:\Users\a.dasilva\OneDrive\tmp\OneDrive\tmp\_PROJETOS\EAD_CSCHARP\Estudos\JobsFiles\JobsFiles\bin\Debug\JobsFiles.exe
+C:\Users\a.dasilva\OneDrive\tmp\OneDrive\tmp\_PROJETOS\EAD_CSCHARP\Estudos\JobsFiles\JobsFiles\bin\Debug\JobsFiles.pdb
+C:\Users\a.dasilva\OneDrive\tmp\OneDrive\tmp\_PROJETOS\EAD_CSCHARP\Estudos\JobsFiles\JobsFiles\obj\Debug\JobsFiles.csprojResolveAssemblyReference.cache
+C:\Users\a.dasilva\OneDrive\tmp\OneDrive\tmp\_PROJETOS\EAD_CSCHARP\Estudos\JobsFiles\JobsFiles\obj\Debug\JobsFiles.Form1.resources
+C:\Users\a.dasilva\OneDrive\tmp\OneDrive\tmp\_PROJETOS\EAD_CSCHARP\Estudos\JobsFiles\JobsFiles\obj\Debug\JobsFiles.Properties.Resources.resources
+C:\Users\a.dasilva\OneDrive\tmp\OneDrive\tmp\_PROJETOS\EAD_CSCHARP\Estudos\JobsFiles\JobsFiles\obj\Debug\JobsFiles.csproj.GenerateResource.Cache
+C:\Users\a.dasilva\OneDrive\tmp\OneDrive\tmp\_PROJETOS\EAD_CSCHARP\Estudos\JobsFiles\JobsFiles\obj\Debug\JobsFiles.exe
+C:\Users\a.dasilva\OneDrive\tmp\OneDrive\tmp\_PROJETOS\EAD_CSCHARP\Estudos\JobsFiles\JobsFiles\obj\Debug\JobsFiles.pdb
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\JobsFiles\JobsFiles\bin\Debug\JobsFiles.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\JobsFiles\JobsFiles\obj\Debug\JobsFiles.exe
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\JobsFiles\JobsFiles\obj\Debug\JobsFiles.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\JobsFiles\JobsFiles\bin\Debug\JobsFiles.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\JobsFiles\JobsFiles\obj\Debug\JobsFiles.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\JobsFiles\JobsFiles\obj\Debug\JobsFiles.pdb

@@ -1,0 +1,21 @@
+C:\tmp\wkspace\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\tmp\wkspace\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\tmp\wkspace\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\tmp\wkspace\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\obj\Debug\_CONSOLE_FILE_CAR.csprojResolveAssemblyReference.cache
+C:\tmp\wkspace\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\tmp\wkspace\EAD_CSCHARP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\tmp\wkspace\EAD_CSCHARP\_Estudos\CONSOLE_FILE_CAR\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\tmp\wkspace\EAD_CSCHARP\_Estudos\CONSOLE_FILE_CAR\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\tmp\wkspace\EAD_CSCHARP\_Estudos\CONSOLE_FILE_CAR\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\tmp\wkspace\EAD_CSCHARP\_Estudos\CONSOLE_FILE_CAR\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\tmp\wkspace\EAD_CSCHARP\_Estudos\CONSOLE_FILE_CAR\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\tmp\wkspace\EAD_CSCHARP\_Estudos\CONSOLE_FILE_CAR\ConsoleApplication1\obj\Debug\_CONSOLE_FILE_CAR.csprojResolveAssemblyReference.cache
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\CONSOLE_FILE_CAR\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\CONSOLE_FILE_CAR\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\l.a.junior\Desktop\wkspace\transferencias\CONSOLE_FILE_CAR\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\CONSOLE_FILE_CAR\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\CONSOLE_FILE_CAR\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Estudos\Csharp\transferencias\CONSOLE_FILE_CAR\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Arquivos\CONSOLE_FILE_CAR\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Arquivos\CONSOLE_FILE_CAR\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\a.dasilva\OneDrive - Accenture\_wkspace\Projetos\Ferramentas\Arquivos\CONSOLE_FILE_CAR\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
